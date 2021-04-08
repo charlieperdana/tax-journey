@@ -15,6 +15,17 @@
 		55ADF5A7261C5BE8004EAE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ADF5A5261C5BE8004EAE18 /* LaunchScreen.storyboard */; };
 		55ADF5B2261C5BE8004EAE18 /* TaxJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5B1261C5BE8004EAE18 /* TaxJourneyTests.swift */; };
 		55ADF5BD261C5BE8004EAE18 /* TaxJourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5BC261C5BE8004EAE18 /* TaxJourneyUITests.swift */; };
+		F848A1D5261D62A00001256C /* StatusPTKP.xib in Resources */ = {isa = PBXBuildFile; fileRef = F848A1D4261D62A00001256C /* StatusPTKP.xib */; };
+		F848A1DA261D67B50001256C /* TotalPTKP.xib in Resources */ = {isa = PBXBuildFile; fileRef = F848A1D9261D67B50001256C /* TotalPTKP.xib */; };
+		F848A1E7261D6AB40001256C /* RincianPTKPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848A1E6261D6AB40001256C /* RincianPTKPViewController.swift */; };
+		F848A1F2261D72210001256C /* TotalPTKP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848A1F1261D72210001256C /* TotalPTKP.swift */; };
+		F848A202261D9EAD0001256C /* StatusPTKP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848A201261D9EAD0001256C /* StatusPTKP.swift */; };
+		F849172A261C878E006F8712 /* RincianPenghasilan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8491729261C878E006F8712 /* RincianPenghasilan.storyboard */; };
+		F849172F261C9208006F8712 /* RPenghasilanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F849172E261C9208006F8712 /* RPenghasilanViewController.swift */; };
+		F8491734261C9723006F8712 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8491733261C9723006F8712 /* PresentationController.swift */; };
+		F8491739261C9818006F8712 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8491738261C9818006F8712 /* OverlayView.xib */; };
+		F849173E261C9B55006F8712 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F849173D261C9B55006F8712 /* OverlayView.swift */; };
+		F8491743261CAD66006F8712 /* RincianPTKP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8491742261CAD66006F8712 /* RincianPTKP.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,17 @@
 		55ADF5B8261C5BE8004EAE18 /* TaxJourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxJourneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55ADF5BC261C5BE8004EAE18 /* TaxJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxJourneyUITests.swift; sourceTree = "<group>"; };
 		55ADF5BE261C5BE8004EAE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F848A1D4261D62A00001256C /* StatusPTKP.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusPTKP.xib; sourceTree = "<group>"; };
+		F848A1D9261D67B50001256C /* TotalPTKP.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalPTKP.xib; sourceTree = "<group>"; };
+		F848A1E6261D6AB40001256C /* RincianPTKPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RincianPTKPViewController.swift; sourceTree = "<group>"; };
+		F848A1F1261D72210001256C /* TotalPTKP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPTKP.swift; sourceTree = "<group>"; };
+		F848A201261D9EAD0001256C /* StatusPTKP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPTKP.swift; sourceTree = "<group>"; };
+		F8491729261C878E006F8712 /* RincianPenghasilan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RincianPenghasilan.storyboard; sourceTree = "<group>"; };
+		F849172E261C9208006F8712 /* RPenghasilanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPenghasilanViewController.swift; sourceTree = "<group>"; };
+		F8491733261C9723006F8712 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		F8491738261C9818006F8712 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		F849173D261C9B55006F8712 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		F8491742261CAD66006F8712 /* RincianPTKP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RincianPTKP.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +128,17 @@
 				55ADF5A3261C5BE8004EAE18 /* Assets.xcassets */,
 				55ADF5A5261C5BE8004EAE18 /* LaunchScreen.storyboard */,
 				55ADF5A8261C5BE8004EAE18 /* Info.plist */,
+				F8491729261C878E006F8712 /* RincianPenghasilan.storyboard */,
+				F849172E261C9208006F8712 /* RPenghasilanViewController.swift */,
+				F8491733261C9723006F8712 /* PresentationController.swift */,
+				F8491738261C9818006F8712 /* OverlayView.xib */,
+				F849173D261C9B55006F8712 /* OverlayView.swift */,
+				F848A1E6261D6AB40001256C /* RincianPTKPViewController.swift */,
+				F8491742261CAD66006F8712 /* RincianPTKP.storyboard */,
+				F848A1D4261D62A00001256C /* StatusPTKP.xib */,
+				F848A201261D9EAD0001256C /* StatusPTKP.swift */,
+				F848A1D9261D67B50001256C /* TotalPTKP.xib */,
+				F848A1F1261D72210001256C /* TotalPTKP.swift */,
 			);
 			path = TaxJourney;
 			sourceTree = "<group>";
@@ -231,8 +264,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8491743261CAD66006F8712 /* RincianPTKP.storyboard in Resources */,
+				F848A1DA261D67B50001256C /* TotalPTKP.xib in Resources */,
+				F848A1D5261D62A00001256C /* StatusPTKP.xib in Resources */,
 				55ADF5A7261C5BE8004EAE18 /* LaunchScreen.storyboard in Resources */,
 				55ADF5A4261C5BE8004EAE18 /* Assets.xcassets in Resources */,
+				F8491739261C9818006F8712 /* OverlayView.xib in Resources */,
+				F849172A261C878E006F8712 /* RincianPenghasilan.storyboard in Resources */,
 				55ADF5A2261C5BE3004EAE18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F849172F261C9208006F8712 /* RPenghasilanViewController.swift in Sources */,
 				55ADF59F261C5BE3004EAE18 /* ViewController.swift in Sources */,
+				F848A1F2261D72210001256C /* TotalPTKP.swift in Sources */,
 				55ADF59B261C5BE3004EAE18 /* AppDelegate.swift in Sources */,
+				F848A1E7261D6AB40001256C /* RincianPTKPViewController.swift in Sources */,
+				F849173E261C9B55006F8712 /* OverlayView.swift in Sources */,
+				F848A202261D9EAD0001256C /* StatusPTKP.swift in Sources */,
 				55ADF59D261C5BE3004EAE18 /* SceneDelegate.swift in Sources */,
+				F8491734261C9723006F8712 /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
