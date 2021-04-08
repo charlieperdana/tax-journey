@@ -72,7 +72,7 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
         lihatRngkasanBtn.layer.cornerRadius = 10
         lihatRngkasanBtn.clipsToBounds = true
         lihatRngkasanBtn.layer.borderWidth = 2
-        lihatRngkasanBtn.layer.borderColor = UIColor.black.cgColor
+        lihatRngkasanBtn.layer.borderColor = #colorLiteral(red: 0.2082082033, green: 0.2140741646, blue: 0.3454431593, alpha: 1)
         
         selesaiBtn.layer.cornerRadius = 10
         selesaiBtn.clipsToBounds = true
