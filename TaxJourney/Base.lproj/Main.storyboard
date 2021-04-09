@@ -50,6 +50,9 @@
                                 <state key="normal" title="Mulai Menghitung Pajak">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="startBtnDipTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="788-0e-gqX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -73,11 +76,32 @@
                     <connections>
                         <outlet property="btnStart" destination="Ljm-8D-TAK" id="RCe-MR-TcM"/>
                         <outlet property="haiLabel" destination="QUt-BA-cfd" id="Jfl-qA-I54"/>
+                        <segue destination="Wcp-dO-Kgn" kind="show" identifier="toPenghasilanPerTahun" id="H6J-md-HWz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.76923076923077" y="115.16587677725119"/>
+        </scene>
+        <!--PenghasilanPerTahun-->
+        <scene sceneID="Nzf-1e-99D">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PenghasilanPerTahun" id="Wcp-dO-Kgn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="48T-f6-IFX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRY-qh-GMd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="-19"/>
+        </scene>
+        <!--Kesimpulan-->
+        <scene sceneID="Gu0-t6-Bw1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KesimpulanStoryboard" referencedIdentifier="Kesimpulan" id="xia-OZ-tJQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vmy-YJ-ztB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2b-eP-0fe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="74"/>
         </scene>
     </scenes>
     <resources>
