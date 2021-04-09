@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var haiLabel: UILabel!
     @IBOutlet weak var btnStart: UIButton!
     
@@ -26,5 +25,8 @@ class ViewController: UIViewController {
     
 
 
+    @IBAction func startBtnDipTap(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toPenghasilanPerTahun", sender: self)
+    }
 }
 
