@@ -112,9 +112,6 @@ penghasilan sebesar Rp100.000.000</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="next"/>
-                                <connections>
-                                    <segue destination="kDd-gx-BtU" kind="show" identifier="RincianPTKP" id="0RA-z2-fV2"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TVA-KX-ry2"/>
@@ -130,16 +127,6 @@ penghasilan sebesar Rp100.000.000</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dm-99-0Ww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.615384615384613" y="193.3649289099526"/>
-        </scene>
-        <!--RincianPTKP-->
-        <scene sceneID="cKa-fH-MiZ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RincianPTKP" referencedIdentifier="RincianPTKP" id="kDd-gx-BtU" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="gjf-s8-ly9"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zfq-P1-NqY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="833" y="362"/>
         </scene>
     </scenes>
     <resources>

@@ -20,7 +20,7 @@ class RPenghasilanViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @objc func miniView() {
-            let slideVC = OverlayView()
+            let slideVC = PenghasilanNettoViewController()
             slideVC.modalPresentationStyle = .custom
             slideVC.transitioningDelegate = self
             self.present(slideVC, animated: true, completion: nil)
