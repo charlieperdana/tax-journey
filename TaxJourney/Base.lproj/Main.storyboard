@@ -41,7 +41,7 @@
                                     <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xia-OZ-tJQ" kind="show" id="1ZK-3G-Lso"/>
+                                    <action selector="startBtnDipTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="788-0e-gqX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,11 +51,22 @@
                     <connections>
                         <outlet property="btnStart" destination="Ljm-8D-TAK" id="RCe-MR-TcM"/>
                         <outlet property="haiLabel" destination="QUt-BA-cfd" id="Jfl-qA-I54"/>
+                        <segue destination="Wcp-dO-Kgn" kind="show" identifier="toPenghasilanPerTahun" id="H6J-md-HWz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+        <!--PenghasilanPerTahun-->
+        <scene sceneID="Nzf-1e-99D">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PenghasilanPerTahun" id="Wcp-dO-Kgn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="48T-f6-IFX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRY-qh-GMd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="-19"/>
         </scene>
         <!--Kesimpulan-->
         <scene sceneID="Gu0-t6-Bw1">

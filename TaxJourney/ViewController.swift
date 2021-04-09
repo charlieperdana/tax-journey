@@ -26,5 +26,8 @@ class ViewController: UIViewController {
     
 
 
+    @IBAction func startBtnDipTap(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toPenghasilanPerTahun", sender: self)
+    }
 }
 
