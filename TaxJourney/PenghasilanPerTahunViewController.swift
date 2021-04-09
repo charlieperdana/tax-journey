@@ -52,7 +52,7 @@ class PenghasilanPerTahunViewController: UIViewController{
     
 }
 
-extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDataSource{
+extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate{
    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,6 +78,15 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
 //        let myPicker = UISwitch()
 //        myPicker.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
 //        cell.accessoryView = myPicker
+        
+        if indexPath.row == 3 {
+            let nppnBtn = UIButton(type: .detailDisclosure)
+            nppnBtn.frame = CGRect(x: 45, y: 7, width: 80, height: 40)
+            nppnBtn.addTarget(self, action: #selector(showNppnHalfModal), for: .touchUpInside)
+//            myPicker.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
+//            cell.accessoryView = nppnBtn
+            cell.contentView.addSubview(nppnBtn)
+        }
         
         
         return cell
@@ -112,16 +121,17 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
             title.font = UIFont.boldSystemFont(ofSize: 17.0)
             headerView.addSubview(title)
 
-            let button = UIButton(type: .system)
+            let button = UIButton(type: .contactAdd)
+
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.setTitle("+", for: .normal)
-            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+//            button.setTitle("+", for: .normal)
+//            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
             button.addTarget(self, action: #selector(btnAddJumlahPotong), for: .touchUpInside)
             //set backgroung circle
-            button.backgroundColor = .clear
-            button.layer.cornerRadius = 10
-            button.layer.borderWidth = 1
-            button.layer.borderColor = UIColor.black.cgColor
+//            button.backgroundColor = .clear
+//            button.layer.cornerRadius = 10
+//            button.layer.borderWidth = 1
+//            button.layer.borderColor = UIColor.black.cgColor
 //            button.center = self.view.center
             headerView.addSubview(button)
 
@@ -129,7 +139,7 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
             headerViews["title"] = title
             headerViews["button"] = button
             
-            headerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[title]-[button]-45-|", options: [], metrics: nil, views: headerViews))
+            headerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[title]-[button]-30-|", options: [], metrics: nil, views: headerViews))
             headerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[title]-|", options: [], metrics: nil, views: headerViews))
             headerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[button]-|", options: [], metrics: nil, views: headerViews))
             
@@ -180,11 +190,26 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
     
     @objc func btnAddJumlahPotong(sender: UIButton!) {
       print("Button tapped")
-        var indexPotong = itemJumlahPotong.count
+        let indexPotong = itemJumlahPotong.count
         itemJumlahPotong.append(JumlahPotongModel(item: "Jumlah pada Bukti Potong \(indexPotong+1)", jumlah: 0))
         tablePenghasilanView.beginUpdates()
         tablePenghasilanView.insertRows(at: [IndexPath(row: indexPotong-1, section: 1)], with: .automatic)
         tablePenghasilanView.endUpdates()
+    }
+    
+    
+    //for half modal nppn
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PresentationController(presentedViewController: presented, presenting: presenting)
+    }
+    
+    @objc func showNppnHalfModal(sender: UIButton!) {
+        print("nppn tapped")
+        let slideNPPN = NppnOverlayView()
+        slideNPPN.modalPresentationStyle = .custom
+        slideNPPN.transitioningDelegate = self
+        self.present(slideNPPN, animated: true, completion: nil)
+
     }
     
 }
