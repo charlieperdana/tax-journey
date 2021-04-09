@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0019AB12261C99E70066AEAA /* KendraStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0019AB11261C99E70066AEAA /* KendraStoryboard.storyboard */; };
+		0019AB17261C9A260066AEAA /* PerhitunganPTKPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019AB16261C9A260066AEAA /* PerhitunganPTKPViewController.swift */; };
+		0019AB1C261CA71E0066AEAA /* PerkawinanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019AB1B261CA71E0066AEAA /* PerkawinanTableViewCell.swift */; };
+		00D65023261F458E00A7221E /* PTKPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D65022261F458E00A7221E /* PTKPViewController.swift */; };
 		55ADF59B261C5BE3004EAE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF59A261C5BE3004EAE18 /* AppDelegate.swift */; };
 		55ADF59D261C5BE3004EAE18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF59C261C5BE3004EAE18 /* SceneDelegate.swift */; };
 		55ADF59F261C5BE3004EAE18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF59E261C5BE3004EAE18 /* ViewController.swift */; };
@@ -37,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		0019AB11261C99E70066AEAA /* KendraStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KendraStoryboard.storyboard; sourceTree = "<group>"; };
+		0019AB16261C9A260066AEAA /* PerhitunganPTKPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerhitunganPTKPViewController.swift; sourceTree = "<group>"; };
+		0019AB1B261CA71E0066AEAA /* PerkawinanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkawinanTableViewCell.swift; sourceTree = "<group>"; };
+		00D65022261F458E00A7221E /* PTKPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTKPViewController.swift; sourceTree = "<group>"; };
 		55ADF597261C5BE3004EAE18 /* TaxJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55ADF59A261C5BE3004EAE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55ADF59C261C5BE3004EAE18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +115,9 @@
 				55ADF5A5261C5BE8004EAE18 /* LaunchScreen.storyboard */,
 				55ADF5A8261C5BE8004EAE18 /* Info.plist */,
 				0019AB11261C99E70066AEAA /* KendraStoryboard.storyboard */,
+				0019AB16261C9A260066AEAA /* PerhitunganPTKPViewController.swift */,
+				0019AB1B261CA71E0066AEAA /* PerkawinanTableViewCell.swift */,
+				00D65022261F458E00A7221E /* PTKPViewController.swift */,
 			);
 			path = TaxJourney;
 			sourceTree = "<group>";
@@ -262,7 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0019AB1C261CA71E0066AEAA /* PerkawinanTableViewCell.swift in Sources */,
+				00D65023261F458E00A7221E /* PTKPViewController.swift in Sources */,
 				55ADF59F261C5BE3004EAE18 /* ViewController.swift in Sources */,
+				0019AB17261C9A260066AEAA /* PerhitunganPTKPViewController.swift in Sources */,
 				55ADF59B261C5BE3004EAE18 /* AppDelegate.swift in Sources */,
 				55ADF59D261C5BE3004EAE18 /* SceneDelegate.swift in Sources */,
 			);
