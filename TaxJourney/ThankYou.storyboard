@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Thank You Controller-->
+        <scene sceneID="6YP-tw-NIw">
+            <objects>
+                <viewController id="qEi-Re-pVo" customClass="ThankYouController" customModule="TaxJourney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oIf-dZ-r7v">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oEs-f1-uzm">
+                                <rect key="frame" x="75" y="96" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="mfC-KU-tqa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙌 Terima kasih" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBS-Of-W8c">
+                                <rect key="frame" x="24" y="368" width="342" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="IgN-ZS-N8o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEn-L3-Umf">
+                                <rect key="frame" x="24" y="404" width="342" height="40.666666666666686"/>
+                                <string key="text">sudah melakukan simulasi perhitungan
+pajakmu dengan TaxJourney!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyW-Bg-NCu">
+                                <rect key="frame" x="24" y="676" width="342" height="56"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="k44-u8-uEd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Cara Lapor SPT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOg-fL-bMx">
+                                <rect key="frame" x="24" y="740" width="342" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Yzm-qy-0MN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Lakukan Simulasi Lagi">
+                                    <color key="titleColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj4-jz-feJ">
+                                <rect key="frame" x="24" y="452.66666666666669" width="342" height="101.66666666666669"/>
+                                <string key="text">Terima kasih juga sudah membayar pajakmu dengan jumlah yang sesuai! Setelah ini, jangan lupa untuk melaporkan SPT-mu ya. Untuk tata cara pelaporan SPT, kamu bisa klik tombol Cara Lapor SPT di bawah ini.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V5w-oI-Zje"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EBS-Of-W8c" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="24" id="2K3-Ai-kP0"/>
+                            <constraint firstItem="oEs-f1-uzm" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="75" id="2Tv-xH-e8R"/>
+                            <constraint firstItem="Qj4-jz-feJ" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="24" id="3NO-U7-okg"/>
+                            <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="oEs-f1-uzm" secondAttribute="trailing" constant="75" id="45g-wS-Gf2"/>
+                            <constraint firstItem="rOg-fL-bMx" firstAttribute="top" secondItem="DyW-Bg-NCu" secondAttribute="bottom" constant="8" id="8hT-Mg-CCw"/>
+                            <constraint firstItem="rOg-fL-bMx" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="24" id="C3O-hG-Opp"/>
+                            <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="jEn-L3-Umf" secondAttribute="trailing" constant="24" id="PRF-q0-nlD"/>
+                            <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="DyW-Bg-NCu" secondAttribute="trailing" constant="24" id="Qhe-s7-jhY"/>
+                            <constraint firstItem="jEn-L3-Umf" firstAttribute="top" secondItem="EBS-Of-W8c" secondAttribute="bottom" constant="4" id="Th3-Q1-xWq"/>
+                            <constraint firstItem="EBS-Of-W8c" firstAttribute="top" secondItem="oEs-f1-uzm" secondAttribute="bottom" constant="32" id="WZK-QR-SgO"/>
+                            <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="rOg-fL-bMx" secondAttribute="trailing" constant="24" id="Yig-t7-Byn"/>
+                            <constraint firstItem="oEs-f1-uzm" firstAttribute="top" secondItem="V5w-oI-Zje" secondAttribute="top" constant="52" id="cbr-27-ufx"/>
+                            <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="EBS-Of-W8c" secondAttribute="trailing" constant="24" id="dAk-Wa-Abs"/>
+                            <constraint firstItem="jEn-L3-Umf" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="24" id="dM2-wv-vdq"/>
+                            <constraint firstItem="DyW-Bg-NCu" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="24" id="hf2-cd-kXN"/>
+                            <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="Qj4-jz-feJ" secondAttribute="trailing" constant="24" id="jVV-JO-bR0"/>
+                            <constraint firstItem="Qj4-jz-feJ" firstAttribute="top" secondItem="jEn-L3-Umf" secondAttribute="bottom" constant="8" id="t8a-ik-Lyi"/>
+                            <constraint firstItem="V5w-oI-Zje" firstAttribute="bottom" secondItem="rOg-fL-bMx" secondAttribute="bottom" constant="14" id="zKd-sq-YnG"/>
+                            <constraint firstItem="DyW-Bg-NCu" firstAttribute="top" secondItem="Qj4-jz-feJ" secondAttribute="bottom" constant="121.66666666666663" id="zZD-Zo-qv0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnNext" destination="DyW-Bg-NCu" id="ZlW-P4-o5c"/>
+                        <outlet property="btnRestart" destination="rOg-fL-bMx" id="Jr1-p6-nOq"/>
+                        <outlet property="thankYouImg" destination="oEs-f1-uzm" id="8gI-Hk-Qlf"/>
+                        <outlet property="thankYouLabel" destination="Qj4-jz-feJ" id="gLy-w5-kwq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7G-1z-Vlk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186.15384615384616" y="175.59241706161137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

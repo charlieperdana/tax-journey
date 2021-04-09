@@ -1,8 +1,8 @@
 //
 //  PresentationController.swift
-//  TaxJourney
+//  SlideOverTutorial
 //
-//  Created by Natalia fellyana Laurensia on 07/04/21.
+//  Created by Scaltiel Gloria on 06/04/21.
 //
 
 import UIKit
@@ -23,9 +23,9 @@ class PresentationController: UIPresentationController {
   }
   
   override var frameOfPresentedViewInContainerView: CGRect {
-      CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height * 0.5),
+      CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height * 0.4),
              size: CGSize(width: self.containerView!.frame.width, height: self.containerView!.frame.height *
-              0.7))
+              0.6))
   }
 
   override func presentationTransitionWillBegin() {

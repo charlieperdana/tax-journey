@@ -92,6 +92,9 @@
                                 <state key="normal" title="Lanjut">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonLanjut:" destination="nhb-y3-10l" eventType="touchUpInside" id="jw5-Vi-LSO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lNz-lK-Edx"/>
@@ -102,11 +105,22 @@
                         <outlet property="btnLanjut" destination="yPk-ux-kD4" id="zrf-pr-hR2"/>
                         <outlet property="btnLihatRincian" destination="Cgz-pe-zM8" id="3BA-H7-xmv"/>
                         <outlet property="tablePenghasilanView" destination="nXd-e7-mCU" id="OsG-eu-U2D"/>
+                        <segue destination="gFb-XV-xzd" kind="show" identifier="toPTKP" id="Z2T-hH-HAN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jka-RG-Wnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="973.84615384615381" y="164.21800947867297"/>
+        </scene>
+        <!--KendraStoryboard-->
+        <scene sceneID="gj9-Kt-jnK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KendraStoryboard" id="gFb-XV-xzd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Wyt-VG-qBf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o30-T8-G5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1636" y="165"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xlt-05-5LD">
