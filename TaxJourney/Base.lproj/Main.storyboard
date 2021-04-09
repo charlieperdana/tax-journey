@@ -81,7 +81,7 @@
                     <connections>
                         <outlet property="btnStart" destination="Ljm-8D-TAK" id="RCe-MR-TcM"/>
                         <outlet property="haiLabel" destination="QUt-BA-cfd" id="Jfl-qA-I54"/>
-                        <segue destination="Wcp-dO-Kgn" kind="show" identifier="toPenghasilanPerTahun" id="H6J-md-HWz"/>
+                        <segue destination="Wcp-dO-Kgn" kind="presentation" identifier="toPenghasilanPerTahun" modalPresentationStyle="fullScreen" id="H6J-md-HWz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -107,6 +107,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2b-eP-0fe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028" y="74"/>
+        </scene>
+        <!--KendraStoryboard-->
+        <scene sceneID="IyE-pt-uft">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KendraStoryboard" id="bWb-xT-du0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pTr-NZ-bJP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ksq-MJ-0Sw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="108"/>
         </scene>
     </scenes>
     <resources>
