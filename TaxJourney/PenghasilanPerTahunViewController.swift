@@ -46,7 +46,10 @@ class PenghasilanPerTahunViewController: UIViewController{
         btnLihatRincian.layer.borderColor = UIColor.black.cgColor
     }
     
-
+    @IBAction func buttonLanjut(_ sender: Any) {
+        performSegue(withIdentifier: "toPTKP", sender: self)
+    }
+    
 }
 
 extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDataSource{
