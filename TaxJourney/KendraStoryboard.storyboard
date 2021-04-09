@@ -216,9 +216,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSY-j8-0OM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278.46153846153845" y="-211.13744075829382"/>
+            <point key="canvasLocation" x="-675" y="-212"/>
         </scene>
-        <!--View Controller-->
+        <!--PTKP-->
         <scene sceneID="hjm-m8-VX8">
             <objects>
                 <viewController id="OQu-7K-9M2" customClass="PTKPViewController" customModule="TaxJourney" customModuleProvider="target" sceneMemberID="viewController">
@@ -227,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U0e-Xh-SKp">
-                                <rect key="frame" x="0.0" y="132" width="390" height="678"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="cellTitle" textLabel="NEw-dR-MR7" rowHeight="44" style="IBUITableViewCellStyleDefault" id="JpP-ct-9mp" customClass="TitleCell" customModule="TaxJourney" customModuleProvider="target">
@@ -330,8 +330,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6F-2z-hWn">
-                                                    <rect key="frame" x="200" y="10" width="170" height="22"/>
+                                                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6F-2z-hWn">
+                                                    <rect key="frame" x="200" y="-0.33333333333333215" width="170" height="44.333333333333329"/>
                                                     <color key="backgroundColor" red="0.1578393579" green="0.1503329873" blue="0.27452227470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="2S3-ba-mVl"/>
@@ -361,6 +361,7 @@
                                             <constraints>
                                                 <constraint firstItem="be1-TI-6vN" firstAttribute="top" secondItem="H0F-gN-L84" secondAttribute="top" id="HmR-Kf-mvQ"/>
                                                 <constraint firstItem="be1-TI-6vN" firstAttribute="leading" secondItem="H0F-gN-L84" secondAttribute="leading" constant="20" id="QlT-q8-oHL"/>
+                                                <constraint firstItem="G6F-2z-hWn" firstAttribute="centerY" secondItem="H0F-gN-L84" secondAttribute="centerY" id="dFq-a4-mEA"/>
                                                 <constraint firstItem="be1-TI-6vN" firstAttribute="top" secondItem="H0F-gN-L84" secondAttribute="top" id="ijw-uz-1te"/>
                                                 <constraint firstItem="G6F-2z-hWn" firstAttribute="leading" secondItem="be1-TI-6vN" secondAttribute="trailing" constant="10" id="upr-Qs-l5j"/>
                                             </constraints>
@@ -424,16 +425,33 @@
                             <constraint firstItem="U0e-Xh-SKp" firstAttribute="leading" secondItem="RTS-xr-06y" secondAttribute="leading" id="2UX-JH-ndN"/>
                             <constraint firstItem="U0e-Xh-SKp" firstAttribute="trailing" secondItem="RTS-xr-06y" secondAttribute="trailing" id="6NW-wf-5LT"/>
                             <constraint firstItem="U0e-Xh-SKp" firstAttribute="bottom" secondItem="RTS-xr-06y" secondAttribute="bottom" id="UnS-wJ-unq"/>
-                            <constraint firstItem="U0e-Xh-SKp" firstAttribute="top" secondItem="RTS-xr-06y" secondAttribute="top" constant="88" id="eaD-9n-mHp"/>
+                            <constraint firstItem="U0e-Xh-SKp" firstAttribute="top" secondItem="RTS-xr-06y" secondAttribute="top" id="eaD-9n-mHp"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="PTKP" id="la9-o0-wCy"/>
                     <connections>
                         <outlet property="tvPTKP" destination="U0e-Xh-SKp" id="v3m-rf-6yE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uas-wt-wUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="573.84615384615381" y="-231.042654028436"/>
+            <point key="canvasLocation" x="1240" y="-231"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yv8-jp-Xon">
+            <objects>
+                <navigationController id="z7l-qU-asT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YKw-q0-9WC">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OQu-7K-9M2" kind="relationship" relationship="rootViewController" id="RHf-3y-Jsm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6mu-oV-WRH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="-231"/>
         </scene>
     </scenes>
     <resources>

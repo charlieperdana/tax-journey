@@ -32,8 +32,8 @@
                                     <constraint firstAttribute="height" constant="240" id="hCd-OQ-Uc6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4t-AQ-PPM">
-                                <rect key="frame" x="24" y="444" width="342" height="107"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4t-AQ-PPM">
+                                <rect key="frame" x="24" y="444" width="342" height="101.66666666666663"/>
                                 <string key="text">Selamat datang di TaxJourney! Di sini, TaxJourney akan membantu dan memudahkan perhitungan pajak penghasilan pribadimu. Yuk, mulai hitung pajakmu sekarang!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
