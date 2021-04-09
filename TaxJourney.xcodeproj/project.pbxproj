@@ -26,6 +26,28 @@
 		F8491743261CAD66006F8712 /* RincianPTKP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8491742261CAD66006F8712 /* RincianPTKP.storyboard */; };
 		F8B0A07E26204CEB006A6297 /* PenghasilanNettoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B0A07C26204CEB006A6297 /* PenghasilanNettoViewController.swift */; };
 		F8B0A07F26204CEB006A6297 /* PenghasilanNettoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8B0A07D26204CEB006A6297 /* PenghasilanNettoViewController.xib */; };
+
+		95EDB56D261D9EAB005724D1 /* ThankYou.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EDB56C261D9EAB005724D1 /* ThankYou.storyboard */; };
+		95EDB572261DA691005724D1 /* ThankYouController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDB571261DA691005724D1 /* ThankYouController.swift */; };
+		55ADF5D6261C959E004EAE18 /* PenghasilanPerTahun.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ADF5D5261C959E004EAE18 /* PenghasilanPerTahun.storyboard */; };
+		55ADF5DB261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5DA261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift */; };
+		55ADF5E0261DA067004EAE18 /* ListPenghasilanItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5DF261DA067004EAE18 /* ListPenghasilanItemModel.swift */; };
+		55ADF5E5261DEB40004EAE18 /* PenghasilanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5E4261DEB40004EAE18 /* PenghasilanTableViewCell.swift */; };
+		55ADF5EA261EF021004EAE18 /* JumlahPotongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5E9261EF021004EAE18 /* JumlahPotongTableViewCell.swift */; };
+		FC24EB67261D7E1D00E20474 /* KesimpulanStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC24EB66261D7E1D00E20474 /* KesimpulanStoryboard.storyboard */; };
+		FC24EB6C261D7E7000E20474 /* KesimpulanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24EB6B261D7E7000E20474 /* KesimpulanViewController.swift */; };
+		FC24EB7F261DEAAC00E20474 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24EB7E261DEAAC00E20474 /* InfoTableViewCell.swift */; };
+		FC24EB87261DF38300E20474 /* KesimpulanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24EB86261DF38300E20474 /* KesimpulanTableViewCell.swift */; };
+		FC35EAF4261CCD4F008D27E2 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35EAF3261CCD4F008D27E2 /* PresentationController.swift */; };
+		FC35EB01261CD05F008D27E2 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC35EB00261CD05F008D27E2 /* OverlayView.xib */; };
+		FC35EB06261CD18B008D27E2 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35EB05261CD18B008D27E2 /* OverlayView.swift */; };
+		FC7CD04D261C9CA30098B2E0 /* AllSummaryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7CD04C261C9CA30098B2E0 /* AllSummaryStoryboard.storyboard */; };
+		FC7CD052261C9CB70098B2E0 /* AllSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CD051261C9CB70098B2E0 /* AllSummaryViewController.swift */; };
+		FCD05926261EE759000A4CD8 /* Presentation2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD05925261EE759000A4CD8 /* Presentation2Controller.swift */; };
+		FCD0592B261EE8C4000A4CD8 /* Overlay2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCD0592A261EE8C4000A4CD8 /* Overlay2View.xib */; };
+		FCD05930261EEA68000A4CD8 /* Overlay2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD0592F261EEA68000A4CD8 /* Overlay2View.swift */; };
+
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +82,7 @@
 		55ADF5B8261C5BE8004EAE18 /* TaxJourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxJourneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55ADF5BC261C5BE8004EAE18 /* TaxJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxJourneyUITests.swift; sourceTree = "<group>"; };
 		55ADF5BE261C5BE8004EAE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+
 		F848A1D4261D62A00001256C /* StatusPTKP.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusPTKP.xib; sourceTree = "<group>"; };
 		F848A1D9261D67B50001256C /* TotalPTKP.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalPTKP.xib; sourceTree = "<group>"; };
 		F848A1E6261D6AB40001256C /* RincianPTKPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RincianPTKPViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +94,27 @@
 		F8491742261CAD66006F8712 /* RincianPTKP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RincianPTKP.storyboard; sourceTree = "<group>"; };
 		F8B0A07C26204CEB006A6297 /* PenghasilanNettoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenghasilanNettoViewController.swift; sourceTree = "<group>"; };
 		F8B0A07D26204CEB006A6297 /* PenghasilanNettoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PenghasilanNettoViewController.xib; sourceTree = "<group>"; };
+
+		95EDB56C261D9EAB005724D1 /* ThankYou.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThankYou.storyboard; sourceTree = "<group>"; };
+		95EDB571261DA691005724D1 /* ThankYouController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouController.swift; sourceTree = "<group>"; };
+		55ADF5D5261C959E004EAE18 /* PenghasilanPerTahun.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PenghasilanPerTahun.storyboard; sourceTree = "<group>"; };
+		55ADF5DA261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenghasilanPerTahunViewController.swift; sourceTree = "<group>"; };
+		55ADF5DF261DA067004EAE18 /* ListPenghasilanItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPenghasilanItemModel.swift; sourceTree = "<group>"; };
+		55ADF5E4261DEB40004EAE18 /* PenghasilanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenghasilanTableViewCell.swift; sourceTree = "<group>"; };
+		55ADF5E9261EF021004EAE18 /* JumlahPotongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumlahPotongTableViewCell.swift; sourceTree = "<group>"; };
+		FC24EB66261D7E1D00E20474 /* KesimpulanStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KesimpulanStoryboard.storyboard; sourceTree = "<group>"; };
+		FC24EB6B261D7E7000E20474 /* KesimpulanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KesimpulanViewController.swift; sourceTree = "<group>"; };
+		FC24EB7E261DEAAC00E20474 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		FC24EB86261DF38300E20474 /* KesimpulanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KesimpulanTableViewCell.swift; sourceTree = "<group>"; };
+		FC35EAF3261CCD4F008D27E2 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		FC35EB00261CD05F008D27E2 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		FC35EB05261CD18B008D27E2 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		FC7CD04C261C9CA30098B2E0 /* AllSummaryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AllSummaryStoryboard.storyboard; sourceTree = "<group>"; };
+		FC7CD051261C9CB70098B2E0 /* AllSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSummaryViewController.swift; sourceTree = "<group>"; };
+		FCD05925261EE759000A4CD8 /* Presentation2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentation2Controller.swift; sourceTree = "<group>"; };
+		FCD0592A261EE8C4000A4CD8 /* Overlay2View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Overlay2View.xib; sourceTree = "<group>"; };
+		FCD0592F261EEA68000A4CD8 /* Overlay2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlay2View.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +169,17 @@
 				55ADF59C261C5BE3004EAE18 /* SceneDelegate.swift */,
 				55ADF59E261C5BE3004EAE18 /* ViewController.swift */,
 				55ADF5A0261C5BE3004EAE18 /* Main.storyboard */,
+				95EDB56C261D9EAB005724D1 /* ThankYou.storyboard */,
+				95EDB571261DA691005724D1 /* ThankYouController.swift */,
+				55ADF5D5261C959E004EAE18 /* PenghasilanPerTahun.storyboard */,
+				55ADF5E4261DEB40004EAE18 /* PenghasilanTableViewCell.swift */,
+				55ADF5E9261EF021004EAE18 /* JumlahPotongTableViewCell.swift */,
+				55ADF5DA261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift */,
+				55ADF5DF261DA067004EAE18 /* ListPenghasilanItemModel.swift */,
 				55ADF5A3261C5BE8004EAE18 /* Assets.xcassets */,
 				55ADF5A5261C5BE8004EAE18 /* LaunchScreen.storyboard */,
 				55ADF5A8261C5BE8004EAE18 /* Info.plist */,
+
 				F8491729261C878E006F8712 /* RincianPenghasilan.storyboard */,
 				F849172E261C9208006F8712 /* RPenghasilanViewController.swift */,
 				F8491733261C9723006F8712 /* PresentationController.swift */,
@@ -139,6 +191,20 @@
 				F848A1F1261D72210001256C /* TotalPTKP.swift */,
 				F8B0A07C26204CEB006A6297 /* PenghasilanNettoViewController.swift */,
 				F8B0A07D26204CEB006A6297 /* PenghasilanNettoViewController.xib */,
+
+				FC7CD04C261C9CA30098B2E0 /* AllSummaryStoryboard.storyboard */,
+				FC35EB05261CD18B008D27E2 /* OverlayView.swift */,
+				FC35EB00261CD05F008D27E2 /* OverlayView.xib */,
+				FC35EAF3261CCD4F008D27E2 /* PresentationController.swift */,
+				FC7CD051261C9CB70098B2E0 /* AllSummaryViewController.swift */,
+				FC24EB66261D7E1D00E20474 /* KesimpulanStoryboard.storyboard */,
+				FC24EB7E261DEAAC00E20474 /* InfoTableViewCell.swift */,
+				FC24EB6B261D7E7000E20474 /* KesimpulanViewController.swift */,
+				FCD05925261EE759000A4CD8 /* Presentation2Controller.swift */,
+				FCD0592A261EE8C4000A4CD8 /* Overlay2View.xib */,
+				FCD0592F261EEA68000A4CD8 /* Overlay2View.swift */,
+				FC24EB86261DF38300E20474 /* KesimpulanTableViewCell.swift */,
+
 			);
 			path = TaxJourney;
 			sourceTree = "<group>";
@@ -264,13 +330,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				F8491743261CAD66006F8712 /* RincianPTKP.storyboard in Resources */,
 				F848A1DA261D67B50001256C /* TotalPTKP.xib in Resources */,
 				F848A1D5261D62A00001256C /* StatusPTKP.xib in Resources */,
+
+				FCD0592B261EE8C4000A4CD8 /* Overlay2View.xib in Resources */,
+
 				55ADF5A7261C5BE8004EAE18 /* LaunchScreen.storyboard in Resources */,
+				95EDB56D261D9EAB005724D1 /* ThankYou.storyboard in Resources */,
 				55ADF5A4261C5BE8004EAE18 /* Assets.xcassets in Resources */,
+
 				F8B0A07F26204CEB006A6297 /* PenghasilanNettoViewController.xib in Resources */,
 				F849172A261C878E006F8712 /* RincianPenghasilan.storyboard in Resources */,
+
+				55ADF5D6261C959E004EAE18 /* PenghasilanPerTahun.storyboard in Resources */,
+				FC35EB01261CD05F008D27E2 /* OverlayView.xib in Resources */,
+				FC7CD04D261C9CA30098B2E0 /* AllSummaryStoryboard.storyboard in Resources */,
+				FC24EB67261D7E1D00E20474 /* KesimpulanStoryboard.storyboard in Resources */,
+
 				55ADF5A2261C5BE3004EAE18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,11 +378,28 @@
 				55ADF59F261C5BE3004EAE18 /* ViewController.swift in Sources */,
 				F848A1F2261D72210001256C /* TotalPTKP.swift in Sources */,
 				55ADF59B261C5BE3004EAE18 /* AppDelegate.swift in Sources */,
+
 				F8B0A07E26204CEB006A6297 /* PenghasilanNettoViewController.swift in Sources */,
 				F848A1E7261D6AB40001256C /* RincianPTKPViewController.swift in Sources */,
 				F848A202261D9EAD0001256C /* StatusPTKP.swift in Sources */,
 				55ADF59D261C5BE3004EAE18 /* SceneDelegate.swift in Sources */,
-				F8491734261C9723006F8712 /* PresentationController.swift in Sources */,
+				
+
+				95EDB572261DA691005724D1 /* ThankYouController.swift in Sources */,
+				55ADF5E5261DEB40004EAE18 /* PenghasilanTableViewCell.swift in Sources */,
+				55ADF5EA261EF021004EAE18 /* JumlahPotongTableViewCell.swift in Sources */,
+				55ADF5DB261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift in Sources */,
+				55ADF59D261C5BE3004EAE18 /* SceneDelegate.swift in Sources */,
+				55ADF5E0261DA067004EAE18 /* ListPenghasilanItemModel.swift in Sources */,
+				FC24EB7F261DEAAC00E20474 /* InfoTableViewCell.swift in Sources */,
+				FC35EB06261CD18B008D27E2 /* OverlayView.swift in Sources */,
+				FCD05930261EEA68000A4CD8 /* Overlay2View.swift in Sources */,
+				FC7CD052261C9CB70098B2E0 /* AllSummaryViewController.swift in Sources */,
+				FC24EB87261DF38300E20474 /* KesimpulanTableViewCell.swift in Sources */,
+				FC24EB6C261D7E7000E20474 /* KesimpulanViewController.swift in Sources */,
+				FCD05926261EE759000A4CD8 /* Presentation2Controller.swift in Sources */,
+				FC35EAF4261CCD4F008D27E2 /* PresentationController.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

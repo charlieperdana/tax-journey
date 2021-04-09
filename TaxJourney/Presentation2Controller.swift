@@ -1,13 +1,13 @@
 //
-//  PresentationController.swift
-//  SlideOverTutorial
+//  Presentation2Controller.swift
+//  TaxJourney
 //
-//  Created by Scaltiel Gloria on 06/04/21.
+//  Created by Natalia fellyana Laurensia on 08/04/21.
 //
 
 import UIKit
 
-class PresentationController: UIPresentationController {
+class Presentation2Controller: UIPresentationController {
 
   let blurEffectView: UIVisualEffectView!
   var tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer()
@@ -23,9 +23,9 @@ class PresentationController: UIPresentationController {
   }
   
   override var frameOfPresentedViewInContainerView: CGRect {
-      CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height * 0.4),
+      CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height * 0.5),
              size: CGSize(width: self.containerView!.frame.width, height: self.containerView!.frame.height *
-              0.6))
+              0.7))
   }
 
   override func presentationTransitionWillBegin() {
@@ -61,7 +61,7 @@ class PresentationController: UIPresentationController {
 }
 
 extension UIView {
-  func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+  func roundCorners2(_ corners: UIRectCorner, radius: CGFloat) {
       let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners,
                               cornerRadii: CGSize(width: radius, height: radius))
       let mask = CAShapeLayer()
@@ -69,4 +69,3 @@ extension UIView {
       layer.mask = mask
   }
 }
-
