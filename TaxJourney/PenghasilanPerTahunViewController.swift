@@ -177,7 +177,14 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
     
     @objc func btnAddJumlahPotong(sender: UIButton!) {
       print("Button tapped")
+        itemJumlahPotong.append(JumlahPotongModel(item: "Jumlah pada Bukti Potong 3", jumlah: 0))
+        tablePenghasilanView.beginUpdates()
+        tablePenghasilanView.insertRows(at: [IndexPath(row: 2, section: 1)], with: .bottom)
+        tablePenghasilanView.endUpdates()
+        
     }
+    
+    
     
 }
 
