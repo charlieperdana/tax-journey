@@ -293,7 +293,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="358.66666666666669" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qnd-kw-EGq">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qnd-kw-EGq">
                                                     <rect key="frame" x="20" y="11.333333333333334" width="19" height="21.000000000000004"/>
                                                     <color key="tintColor" red="0.0" green="0.45882352941176469" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -337,6 +337,7 @@
                                                         <constraint firstAttribute="height" constant="44" id="2S3-ba-mVl"/>
                                                         <constraint firstAttribute="width" constant="170" id="udp-Zd-gtP"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Lanjut ">
                                                         <imageReference key="image" image="chevron.right" catalog="system" symbolScale="default"/>
@@ -351,6 +352,7 @@
                                                         <constraint firstAttribute="height" constant="44" id="c0Y-wX-aAa"/>
                                                         <constraint firstAttribute="width" constant="170" id="rgu-3D-dms"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="tintColor" red="0.1578393579" green="0.1503329873" blue="0.27452227470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Lihat Rincian"/>
                                                     <connections>
@@ -431,6 +433,7 @@
                     <navigationItem key="navigationItem" title="PTKP" id="la9-o0-wCy"/>
                     <connections>
                         <outlet property="tvPTKP" destination="U0e-Xh-SKp" id="v3m-rf-6yE"/>
+                        <segue destination="hi9-mp-QqZ" kind="show" identifier="toKesimpulan" id="njs-jr-bxW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uas-wt-wUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -452,6 +455,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mu-oV-WRH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325" y="-231"/>
+        </scene>
+        <!--KesimpulanStoryboard-->
+        <scene sceneID="yrE-v3-tls">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KesimpulanStoryboard" id="hi9-mp-QqZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tqZ-NN-Cs1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Us6-kZ-pSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="-231"/>
         </scene>
     </scenes>
     <resources>
