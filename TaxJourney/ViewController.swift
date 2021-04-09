@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var haiLabel: UILabel!
     @IBOutlet weak var btnStart: UIButton!
     

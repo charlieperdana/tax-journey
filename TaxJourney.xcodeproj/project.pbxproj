@@ -15,6 +15,8 @@
 		55ADF5A7261C5BE8004EAE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ADF5A5261C5BE8004EAE18 /* LaunchScreen.storyboard */; };
 		55ADF5B2261C5BE8004EAE18 /* TaxJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5B1261C5BE8004EAE18 /* TaxJourneyTests.swift */; };
 		55ADF5BD261C5BE8004EAE18 /* TaxJourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5BC261C5BE8004EAE18 /* TaxJourneyUITests.swift */; };
+		95EDB56D261D9EAB005724D1 /* ThankYou.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EDB56C261D9EAB005724D1 /* ThankYou.storyboard */; };
+		95EDB572261DA691005724D1 /* ThankYouController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDB571261DA691005724D1 /* ThankYouController.swift */; };
 		55ADF5D6261C959E004EAE18 /* PenghasilanPerTahun.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ADF5D5261C959E004EAE18 /* PenghasilanPerTahun.storyboard */; };
 		55ADF5DB261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5DA261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift */; };
 		55ADF5E0261DA067004EAE18 /* ListPenghasilanItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5DF261DA067004EAE18 /* ListPenghasilanItemModel.swift */; };
@@ -32,6 +34,7 @@
 		FCD05926261EE759000A4CD8 /* Presentation2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD05925261EE759000A4CD8 /* Presentation2Controller.swift */; };
 		FCD0592B261EE8C4000A4CD8 /* Overlay2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCD0592A261EE8C4000A4CD8 /* Overlay2View.xib */; };
 		FCD05930261EEA68000A4CD8 /* Overlay2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD0592F261EEA68000A4CD8 /* Overlay2View.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,8 @@
 		55ADF5B8261C5BE8004EAE18 /* TaxJourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxJourneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55ADF5BC261C5BE8004EAE18 /* TaxJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxJourneyUITests.swift; sourceTree = "<group>"; };
 		55ADF5BE261C5BE8004EAE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95EDB56C261D9EAB005724D1 /* ThankYou.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThankYou.storyboard; sourceTree = "<group>"; };
+		95EDB571261DA691005724D1 /* ThankYouController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouController.swift; sourceTree = "<group>"; };
 		55ADF5D5261C959E004EAE18 /* PenghasilanPerTahun.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PenghasilanPerTahun.storyboard; sourceTree = "<group>"; };
 		55ADF5DA261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenghasilanPerTahunViewController.swift; sourceTree = "<group>"; };
 		55ADF5DF261DA067004EAE18 /* ListPenghasilanItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPenghasilanItemModel.swift; sourceTree = "<group>"; };
@@ -137,6 +142,8 @@
 				55ADF59C261C5BE3004EAE18 /* SceneDelegate.swift */,
 				55ADF59E261C5BE3004EAE18 /* ViewController.swift */,
 				55ADF5A0261C5BE3004EAE18 /* Main.storyboard */,
+				95EDB56C261D9EAB005724D1 /* ThankYou.storyboard */,
+				95EDB571261DA691005724D1 /* ThankYouController.swift */,
 				55ADF5D5261C959E004EAE18 /* PenghasilanPerTahun.storyboard */,
 				55ADF5E4261DEB40004EAE18 /* PenghasilanTableViewCell.swift */,
 				55ADF5E9261EF021004EAE18 /* JumlahPotongTableViewCell.swift */,
@@ -284,6 +291,7 @@
 			files = (
 				FCD0592B261EE8C4000A4CD8 /* Overlay2View.xib in Resources */,
 				55ADF5A7261C5BE8004EAE18 /* LaunchScreen.storyboard in Resources */,
+				95EDB56D261D9EAB005724D1 /* ThankYou.storyboard in Resources */,
 				55ADF5A4261C5BE8004EAE18 /* Assets.xcassets in Resources */,
 				55ADF5D6261C959E004EAE18 /* PenghasilanPerTahun.storyboard in Resources */,
 				FC35EB01261CD05F008D27E2 /* OverlayView.xib in Resources */,
@@ -316,6 +324,7 @@
 			files = (
 				55ADF59F261C5BE3004EAE18 /* ViewController.swift in Sources */,
 				55ADF59B261C5BE3004EAE18 /* AppDelegate.swift in Sources */,
+				95EDB572261DA691005724D1 /* ThankYouController.swift in Sources */,
 				55ADF5E5261DEB40004EAE18 /* PenghasilanTableViewCell.swift in Sources */,
 				55ADF5EA261EF021004EAE18 /* JumlahPotongTableViewCell.swift in Sources */,
 				55ADF5DB261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift in Sources */,
