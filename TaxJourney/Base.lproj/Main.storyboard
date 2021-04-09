@@ -74,6 +74,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sHC-Kd-Mnk"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="btnStart" destination="Ljm-8D-TAK" id="RCe-MR-TcM"/>
                         <outlet property="haiLabel" destination="QUt-BA-cfd" id="Jfl-qA-I54"/>

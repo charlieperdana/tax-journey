@@ -357,6 +357,7 @@
                                                     <state key="normal" title="Lihat Rincian"/>
                                                     <connections>
                                                         <action selector="btnRincian:" destination="Hny-Se-lI7" eventType="touchUpInside" id="mwk-Zy-hnb"/>
+                                                        <segue destination="lrx-Sw-m5T" kind="show" identifier="RincianPenghasilan" id="9Es-YD-5H0"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -465,6 +466,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Us6-kZ-pSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1936" y="-231"/>
+        </scene>
+        <!--RincianPTKP-->
+        <scene sceneID="1AS-1N-Mck">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RincianPTKP" referencedIdentifier="RincianPTKP" id="lrx-Sw-m5T" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZMt-NL-A2E"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xDp-dl-Qx3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="-289"/>
         </scene>
     </scenes>
     <resources>

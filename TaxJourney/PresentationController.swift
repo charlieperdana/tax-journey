@@ -1,8 +1,8 @@
 //
 //  PresentationController.swift
-//  TaxJourney
+//  SlideOverTutorial
 //
-//  Created by Natalia fellyana Laurensia on 07/04/21.
+//  Created by Scaltiel Gloria on 06/04/21.
 //
 
 import UIKit
