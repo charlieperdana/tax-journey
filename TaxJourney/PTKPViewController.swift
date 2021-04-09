@@ -100,18 +100,32 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             
             return cellPicker
         } else if indexPath.row == 4 {
-            let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
-            
-            cellPicker.lblStatus.text = "Sudah menikah"
-            cellPicker.txtPilih.tag = 101
-            if kelamin == "Laki-laki" || kelamin == "Perempuan" {
-                cellPicker.txtPilih.inputView = pickerNikah
-                cellPicker.txtPilih.inputAccessoryView = toolbar
+//            let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
+//
+//            cellPicker.lblStatus.text = "Sudah menikah"
+//            cellPicker.txtPilih.tag = 101
+//            cellPicker.txtPilih.inputView = pickerNikah
+//            cellPicker.txtPilih.inputAccessoryView = toolbar
+            if kelamin == "Perempuan" {
+                tvPTKP.insertRows(at: [IndexPath(row: 4, section: 0)], with: .automatic)
+                
+                let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
+                
+                cellPicker.lblStatus.text = "Sudah menikah"
+                cellPicker.txtPilih.tag = 101
+                
+                return cellPicker
+//                cellPicker.txtPilih.inputView = pickerNikah
+//                cellPicker.txtPilih.inputAccessoryView = toolbar
+//                cellPicker.txtPilih.isUserInteractionEnabled = true
+//                cellPicker.isHidden = false
             } else {
-                cellPicker.txtPilih.isHidden = true
+                tvPTKP.deleteRows(at: [IndexPath(row: 4, section: 0)], with: .automatic)
+//                cellPicker.isHidden = true
+//                cellPicker.txtPilih.isUserInteractionEnabled = false
             }
             
-            return cellPicker
+//            return cellPicker
         } else if indexPath.row == 5 {
             let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
             
@@ -119,6 +133,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             cellPicker.txtPilih.inputView = PickerYesNoSatu
             cellPicker.txtPilih.inputAccessoryView = toolbar
             cellPicker.txtPilih.tag = 102
+            cellPicker.isHidden = true
             
             return cellPicker
         } else if indexPath.row == 6 {
@@ -128,6 +143,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             cellPicker.txtPilih.inputView = PickerYesNoDua
             cellPicker.txtPilih.inputAccessoryView = toolbar
             cellPicker.txtPilih.tag = 103
+            cellPicker.isHidden = true
             
             return cellPicker
         } else if indexPath.row == 7 {
@@ -137,6 +153,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             cellPicker.txtPilih.inputView = PickerYesNoTiga
             cellPicker.txtPilih.inputAccessoryView = toolbar
             cellPicker.txtPilih.tag = 104
+            cellPicker.isHidden = true
             
             return cellPicker
         } else if indexPath.row == 8 {
@@ -144,6 +161,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             
             cellCaption.lblCaption.text = "Surat keterangan bahwa suami tidak berpenghasilan dari kelurahan."
             cellCaption.separatorInset = UIEdgeInsets(top: 0, left: cellCaption.bounds.size.width, bottom: 0, right: 0);
+            cellCaption.isHidden = true
             
             return cellCaption
         } else if indexPath.row == 9 {
@@ -163,7 +181,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ayah"
-            cellChevron.imgCheck.isHidden = false
+            cellChevron.imgCheck.isHidden = true
             
             return cellChevron
         } else if indexPath.row == 12 {
@@ -212,7 +230,6 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             cellButton.btnRincian.layer.borderWidth = 2
             cellButton.btnRincian.layer.cornerRadius = 10
             cellButton.btnRincian.layer.borderColor = #colorLiteral(red: 0.1594613791, green: 0.150028497, blue: 0.2833949625, alpha: 1)
-            cellButton.btnLanjut.layer.borderWidth = 2
             cellButton.btnLanjut.layer.cornerRadius = 10
             cellButton.separatorInset = UIEdgeInsets(top: 0, left: cellButton.bounds.size.width, bottom: 0, right: 0);
             
@@ -229,7 +246,6 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 11:
             showAlert(title: "Ayah", message: "ini ayah")
-            cellChevron.imgCheck.isHidden = true
         case 12:
             showAlert(title: "Ibu", message: "ini ibu")
         case 13:
@@ -241,7 +257,9 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             return
         }
-        tvPTKP.reloadData()
+//        tvPTKP.beginUpdates()
+        cellChevron.imgCheck.isHidden = false
+//        tvPTKP.endUpdates()
     }
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
@@ -267,8 +285,10 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    
+    
     @objc func lanjut() {
-        showAlert(title: "LANJOTTT", message: "lanjot gas gas gas")
+        performSegue(withIdentifier: "toKesimpulan", sender: self)
     }
     
     @objc func lihatrincian() {
@@ -288,24 +308,16 @@ extension PTKPViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView.tag {
         case 0:
-            let mytextfield = self.view.viewWithTag(100) as! UITextField
-            mytextfield.text = options[0]
+//            let mytextfield = self.view.viewWithTag(100) as! UITextField
+//            mytextfield.text = options[0]
             options = ["Laki-laki", "Perempuan"]
         case 1:
-            let mytextfield = self.view.viewWithTag(101) as! UITextField
-            mytextfield.text = options[0]
             options = ["Menikah", "Belum menikah"]
         case 2:
-            let mytextfield = self.view.viewWithTag(102) as! UITextField
-            mytextfield.text = options[0]
             options = ["Ya", "Tidak"]
         case 3:
-            let mytextfield = self.view.viewWithTag(103) as! UITextField
-            mytextfield.text = options[0]
             options = ["Ya", "Tidak"]
         case 4:
-            let mytextfield = self.view.viewWithTag(104) as! UITextField
-            mytextfield.text = options[0]
             options = ["Ya", "Tidak"]
         default:
             options = ["", ""]
@@ -318,8 +330,7 @@ extension PTKPViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 0:
             let mytextfield = self.view.viewWithTag(100) as! UITextField
             mytextfield.text = options[row]
-//            kelamin = mytextfield.text!
-//            tvPTKP.reloadData()
+            kelamin = mytextfield.text!
         case 1:
             let mytextfield = self.view.viewWithTag(101) as! UITextField
             mytextfield.text = options[row]
@@ -364,6 +375,7 @@ extension PTKPViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     @objc func done() {
         self.view.endEditing(true)
+        tvPTKP.reloadData()
     }
     
     func createPicker() -> UIPickerView {

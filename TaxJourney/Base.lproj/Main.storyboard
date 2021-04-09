@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hai! 👋" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUt-BA-cfd">
-                                <rect key="frame" x="24" y="408" width="342" height="32"/>
+                                <rect key="frame" x="24" y="452" width="342" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="TGC-TH-hsC"/>
                                 </constraints>
@@ -27,13 +27,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lsh-28-NcK">
-                                <rect key="frame" x="75" y="136" width="240" height="240"/>
+                                <rect key="frame" x="75" y="180" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="hCd-OQ-Uc6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4t-AQ-PPM">
-                                <rect key="frame" x="24" y="444" width="342" height="107"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4t-AQ-PPM">
+                                <rect key="frame" x="24" y="488.00000000000006" width="342" height="101.66666666666669"/>
                                 <string key="text">Selamat datang di TaxJourney! Di sini, TaxJourney akan membantu dan memudahkan perhitungan pajak penghasilan pribadimu. Yuk, mulai hitung pajakmu sekarang!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -51,7 +51,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="startBtnDipTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="788-0e-gqX"/>
+                                    <action selector="startBtnDipTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLB-Uy-hyc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,16 +73,33 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m4t-AQ-PPM" secondAttribute="trailing" constant="24" id="taa-Wq-yE8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sHC-Kd-Mnk"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="btnStart" destination="Ljm-8D-TAK" id="RCe-MR-TcM"/>
                         <outlet property="haiLabel" destination="QUt-BA-cfd" id="Jfl-qA-I54"/>
-                        <segue destination="Wcp-dO-Kgn" kind="presentation" identifier="toPenghasilanPerTahun" modalPresentationStyle="fullScreen" id="H6J-md-HWz"/>
+                        <segue destination="Wcp-dO-Kgn" kind="presentation" identifier="toPenghasilanPerTahun" modalPresentationStyle="fullScreen" id="TjH-6q-Z89"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.76923076923077" y="115.16587677725119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b5r-90-DBv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBP-H5-PDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="L5S-kV-saw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rgr-Sw-RCi">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nAr-If-Vv8"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-782" y="115"/>
         </scene>
         <!--PenghasilanPerTahun-->
         <scene sceneID="Nzf-1e-99D">
@@ -92,7 +109,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRY-qh-GMd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="-19"/>
+            <point key="canvasLocation" x="911" y="114"/>
         </scene>
         <!--Kesimpulan-->
         <scene sceneID="Gu0-t6-Bw1">
@@ -102,7 +119,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2b-eP-0fe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="74"/>
+            <point key="canvasLocation" x="1010" y="419"/>
         </scene>
         <!--KendraStoryboard-->
         <scene sceneID="IyE-pt-uft">
@@ -112,7 +129,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ksq-MJ-0Sw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="751" y="108"/>
+            <point key="canvasLocation" x="784" y="274"/>
         </scene>
     </scenes>
     <resources>
