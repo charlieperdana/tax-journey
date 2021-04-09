@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ljm-8D-TAK">
-                                <rect key="frame" x="20" y="723" width="367" height="57"/>
+                                <rect key="frame" x="27" y="461" width="367" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -67,6 +67,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRY-qh-GMd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="910" y="-19"/>
+        </scene>
+        <!--Kesimpulan-->
+        <scene sceneID="Gu0-t6-Bw1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KesimpulanStoryboard" referencedIdentifier="Kesimpulan" id="xia-OZ-tJQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vmy-YJ-ztB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2b-eP-0fe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="74"/>
         </scene>
     </scenes>
     <resources>
