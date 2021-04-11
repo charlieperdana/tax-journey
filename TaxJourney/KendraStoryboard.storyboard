@@ -99,6 +99,7 @@
                                                 <color key="tintColor" red="0.1578393579" green="0.1503329873" blue="0.27452227470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
                                                     <action selector="btnJumlahTanggungan:" destination="Hny-Se-lI7" eventType="touchUpInside" id="HnQ-YV-Qck"/>
+                                                    <action selector="infoButton:" destination="Hny-Se-lI7" eventType="touchUpInside" id="6ba-jb-WeA"/>
                                                 </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YeO-FR-ZVk">
@@ -216,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSY-j8-0OM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-675" y="-212"/>
+            <point key="canvasLocation" x="-694" y="-223"/>
         </scene>
         <!--PTKP-->
         <scene sceneID="hjm-m8-VX8">

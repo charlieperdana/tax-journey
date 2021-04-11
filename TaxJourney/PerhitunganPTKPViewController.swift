@@ -32,7 +32,17 @@ class PerhitunganPTKPViewController: UIViewController {
         buttonUI()
         pickerUI()
     }
+    @objc func miniView() {
+            let slideVC = JumlahTanggunganViewController()
+            slideVC.modalPresentationStyle = .custom
+            slideVC.transitioningDelegate = self
+            self.present(slideVC, animated: true, completion: nil)
+        }
+
     
+    @IBAction func infoButton(_ sender: UIButton) {
+        miniView()
+    }
     func buttonUI() {
         btnLihatRincian.layer.borderWidth = 2
         btnLihatRincian.layer.borderWidth = 2
@@ -187,5 +197,11 @@ extension PerhitunganPTKPViewController: UIPickerViewDelegate, UIPickerViewDataS
         picker.delegate = self
         picker.backgroundColor = .white
         return picker
+    }
+}
+
+extension PerhitunganPTKPViewController: UIViewControllerTransitioningDelegate{
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
