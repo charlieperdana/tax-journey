@@ -267,11 +267,11 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         if indexPath.row == 10 {
-            showAlert(title: "Halo", message: "Lagi pencet info button")
-//            let slideVC = StatusPTKP()
-//            slideVC.modalPresentationStyle = .custom
-//            slideVC.transitioningDelegate = self
-//            self.present(slideVC, animated: true, completion: nil)
+            //showAlert(title: "Halo", message: "Lagi pencet info button")
+            let slideVC = JumlahTanggunganViewController()
+            slideVC.modalPresentationStyle = .custom
+            slideVC.transitioningDelegate = self
+            self.present(slideVC, animated: true, completion: nil)
         }
     }
     
@@ -389,5 +389,11 @@ extension PTKPViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         picker.delegate = self
         picker.backgroundColor = .white
         return picker
+    }
+}
+
+extension PTKPViewController: UIViewControllerTransitioningDelegate{
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
