@@ -45,6 +45,10 @@ class PTKPViewController: UIViewController {
     var toolbar:UIToolbar?
     
     var kelamin:String = ""
+    var isMenikah:String = ""
+    var isNPWPdigabung:String = ""
+    var isSuamiBerpenghasilan:String = ""
+    var suratketerangankeluarahan:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,74 +104,76 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             
             return cellPicker
         } else if indexPath.row == 4 {
-//            let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
-//
-//            cellPicker.lblStatus.text = "Sudah menikah"
-//            cellPicker.txtPilih.tag = 101
-//            cellPicker.txtPilih.inputView = pickerNikah
-//            cellPicker.txtPilih.inputAccessoryView = toolbar
-            if kelamin == "Perempuan" {
-                tvPTKP.insertRows(at: [IndexPath(row: 4, section: 0)], with: .automatic)
+            let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
+
+            cellPicker.lblStatus.text = "Sudah menikah"
+            cellPicker.txtPilih.tag = 101
+            cellPicker.txtPilih.inputView = pickerNikah
+            cellPicker.txtPilih.inputAccessoryView = toolbar
+
+            return cellPicker
+        } else if indexPath.row == 5 {
+            if isMenikah == "Menikah" && kelamin == "Perempuan" {
+                tvPTKP.insertRows(at: [IndexPath(row: 5, section: 0)], with: .automatic)
                 
                 let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
                 
-                cellPicker.lblStatus.text = "Sudah menikah"
-                cellPicker.txtPilih.tag = 101
+                cellPicker.lblStatus.text = "NPWP digabung"
+                cellPicker.txtPilih.inputView = PickerYesNoSatu
+                cellPicker.txtPilih.inputAccessoryView = toolbar
+                cellPicker.txtPilih.tag = 102
                 
                 return cellPicker
-//                cellPicker.txtPilih.inputView = pickerNikah
-//                cellPicker.txtPilih.inputAccessoryView = toolbar
-//                cellPicker.txtPilih.isUserInteractionEnabled = true
-//                cellPicker.isHidden = false
             } else {
-                tvPTKP.deleteRows(at: [IndexPath(row: 4, section: 0)], with: .automatic)
-//                cellPicker.isHidden = true
-//                cellPicker.txtPilih.isUserInteractionEnabled = false
+                tvPTKP.deleteRows(at: [IndexPath(row: 5, section: 0)], with: .automatic)
+            }
+        } else if indexPath.row == 6 {
+            if isNPWPdigabung == "Tidak" {
+                let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
+            
+                cellPicker.lblStatus.text = "Suami berpenghasilan"
+                cellPicker.txtPilih.inputView = PickerYesNoDua
+                cellPicker.txtPilih.inputAccessoryView = toolbar
+                cellPicker.txtPilih.tag = 103
+                
+                tvPTKP.insertRows(at: [IndexPath(row: 6, section: 0)], with: .automatic)
+                
+                return cellPicker
+            } else {
+                tvPTKP.deleteRows(at: [IndexPath(row: 6, section: 0)], with: .automatic)
+            }
+        } else if indexPath.row == 7 {
+            if isSuamiBerpenghasilan == "Tidak" {
+                let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
+                
+                cellPicker.lblStatus.text = "Surat keterangan kelurahan"
+                cellPicker.txtPilih.inputView = PickerYesNoTiga
+                cellPicker.txtPilih.inputAccessoryView = toolbar
+                cellPicker.txtPilih.tag = 104
+                
+                tvPTKP.insertRows(at: [IndexPath(row: 7, section: 0)], with: .automatic)
+                
+                return cellPicker
+            } else {
+                tvPTKP.deleteRows(at: [IndexPath(row: 7, section: 0)], with: .automatic)
             }
             
-//            return cellPicker
-        } else if indexPath.row == 5 {
-            let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
-            
-            cellPicker.lblStatus.text = "NPWP digabung"
-            cellPicker.txtPilih.inputView = PickerYesNoSatu
-            cellPicker.txtPilih.inputAccessoryView = toolbar
-            cellPicker.txtPilih.tag = 102
-            cellPicker.isHidden = true
-            
-            return cellPicker
-        } else if indexPath.row == 6 {
-            let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
-            
-            cellPicker.lblStatus.text = "Suami berpenghasilan"
-            cellPicker.txtPilih.inputView = PickerYesNoDua
-            cellPicker.txtPilih.inputAccessoryView = toolbar
-            cellPicker.txtPilih.tag = 103
-            cellPicker.isHidden = true
-            
-            return cellPicker
-        } else if indexPath.row == 7 {
-            let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
-            
-            cellPicker.lblStatus.text = "Surat keterangan kelurahan"
-            cellPicker.txtPilih.inputView = PickerYesNoTiga
-            cellPicker.txtPilih.inputAccessoryView = toolbar
-            cellPicker.txtPilih.tag = 104
-            cellPicker.isHidden = true
-            
-            return cellPicker
         } else if indexPath.row == 8 {
-            let cellCaption = tableView.dequeueReusableCell(withIdentifier: "cellCaption") as! CaptionCell
-            
-            cellCaption.lblCaption.text = "Surat keterangan bahwa suami tidak berpenghasilan dari kelurahan."
-            cellCaption.separatorInset = UIEdgeInsets(top: 0, left: cellCaption.bounds.size.width, bottom: 0, right: 0);
-            cellCaption.isHidden = true
-            
-            return cellCaption
+            if isSuamiBerpenghasilan == "Tidak" {
+                let cellCaption = tableView.dequeueReusableCell(withIdentifier: "cellCaption") as! CaptionCell
+                
+                cellCaption.lblCaption.text = "Surat keterangan bahwa suami tidak berpenghasilan dari kelurahan."
+                cellCaption.separatorInset = UIEdgeInsets(top: 0, left: cellCaption.bounds.size.width, bottom: 0, right: 0);
+                
+                tvPTKP.insertRows(at: [IndexPath(row: 8, section: 0)], with: .automatic)
+                
+                return cellCaption
+            } else {
+                tvPTKP.deleteRows(at: [IndexPath(row: 8, section: 0)], with: .automatic)
+            }
         } else if indexPath.row == 9 {
             let cellCaption = tableView.dequeueReusableCell(withIdentifier: "cellCaption") as! CaptionCell
             
-            cellCaption.lblCaption.isHidden = true
             cellCaption.separatorInset = UIEdgeInsets(top: 0, left: cellCaption.bounds.size.width, bottom: 0, right: 0);
             
             return cellCaption
@@ -242,7 +248,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
+        showAlert(title: "tes", message: "\(indexPath.row)")
         switch indexPath.row {
         case 11:
             showAlert(title: "Ayah", message: "ini ayah")
@@ -257,23 +263,19 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             return
         }
-//        tvPTKP.beginUpdates()
-        cellChevron.imgCheck.isHidden = false
-//        tvPTKP.endUpdates()
     }
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         if indexPath.row == 10 {
             showAlert(title: "Halo", message: "Lagi pencet info button")
+//            let slideVC = StatusPTKP()
+//            slideVC.modalPresentationStyle = .custom
+//            slideVC.transitioningDelegate = self
+//            self.present(slideVC, animated: true, completion: nil)
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if (cellishidden) {
-//            return 0
-//        } else {
-//            return 44
-//        }
         if indexPath.row == 0 {
             return 102
         } else if indexPath.row == 1 || indexPath.row == 9 {
@@ -292,7 +294,6 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     @objc func lihatrincian() {
-        showAlert(title: "RINCIAN", message: "lihaaaaattt")
     }
 }
 
@@ -334,15 +335,19 @@ extension PTKPViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 1:
             let mytextfield = self.view.viewWithTag(101) as! UITextField
             mytextfield.text = options[row]
+            isMenikah = mytextfield.text!
         case 2:
             let mytextfield = self.view.viewWithTag(102) as! UITextField
             mytextfield.text = options[row]
+            isNPWPdigabung = mytextfield.text!
         case 3:
             let mytextfield = self.view.viewWithTag(103) as! UITextField
             mytextfield.text = options[row]
+            isSuamiBerpenghasilan = mytextfield.text!
         case 4:
             let mytextfield = self.view.viewWithTag(104) as! UITextField
             mytextfield.text = options[row]
+            suratketerangankeluarahan = mytextfield.text!
         default:
             return
         }

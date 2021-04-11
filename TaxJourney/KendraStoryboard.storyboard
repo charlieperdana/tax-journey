@@ -378,7 +378,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCaption" id="Y7I-T0-x0o" customClass="CaptionCell" customModule="TaxJourney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="203.66666793823242" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y7I-T0-x0o" id="CKU-7X-27s">
+                                        <tableViewCellContentView key="contentView" hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y7I-T0-x0o" id="CKU-7X-27s">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -466,7 +466,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Us6-kZ-pSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936" y="-231"/>
+            <point key="canvasLocation" x="1935" y="-213"/>
         </scene>
         <!--RincianPTKP-->
         <scene sceneID="1AS-1N-Mck">
@@ -476,7 +476,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDp-dl-Qx3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113" y="-289"/>
+            <point key="canvasLocation" x="1888" y="-250"/>
         </scene>
     </scenes>
     <resources>
