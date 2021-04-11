@@ -15,6 +15,12 @@
 		55ADF5A7261C5BE8004EAE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ADF5A5261C5BE8004EAE18 /* LaunchScreen.storyboard */; };
 		55ADF5B2261C5BE8004EAE18 /* TaxJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5B1261C5BE8004EAE18 /* TaxJourneyTests.swift */; };
 		55ADF5BD261C5BE8004EAE18 /* TaxJourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5BC261C5BE8004EAE18 /* TaxJourneyUITests.swift */; };
+		DC5525C126214B920047E4CB /* TanggunganIbuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525C026214B920047E4CB /* TanggunganIbuController.swift */; };
+		DC5525C626214F3B0047E4CB /* TanggunganAyahMertuaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525C526214F3B0047E4CB /* TanggunganAyahMertuaController.swift */; };
+		DC5525CB26214F540047E4CB /* TanggunganIbuMertuaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525CA26214F540047E4CB /* TanggunganIbuMertuaController.swift */; };
+		DC5525D02621D45B0047E4CB /* TanggunganAnakController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525CF2621D45B0047E4CB /* TanggunganAnakController.swift */; };
+		DC6798CB261C9AD100D4E44E /* Tanggungan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6798CA261C9AD100D4E44E /* Tanggungan.storyboard */; };
+		DC6798D0261C9DC400D4E44E /* TanggunganAyahController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6798CF261C9DC400D4E44E /* TanggunganAyahController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		55ADF5B8261C5BE8004EAE18 /* TaxJourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxJourneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55ADF5BC261C5BE8004EAE18 /* TaxJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxJourneyUITests.swift; sourceTree = "<group>"; };
 		55ADF5BE261C5BE8004EAE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC5525C026214B920047E4CB /* TanggunganIbuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganIbuController.swift; sourceTree = "<group>"; };
+		DC5525C526214F3B0047E4CB /* TanggunganAyahMertuaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganAyahMertuaController.swift; sourceTree = "<group>"; };
+		DC5525CA26214F540047E4CB /* TanggunganIbuMertuaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganIbuMertuaController.swift; sourceTree = "<group>"; };
+		DC5525CF2621D45B0047E4CB /* TanggunganAnakController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganAnakController.swift; sourceTree = "<group>"; };
+		DC6798CA261C9AD100D4E44E /* Tanggungan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tanggungan.storyboard; sourceTree = "<group>"; };
+		DC6798CF261C9DC400D4E44E /* TanggunganAyahController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganAyahController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,12 @@
 				55ADF5A3261C5BE8004EAE18 /* Assets.xcassets */,
 				55ADF5A5261C5BE8004EAE18 /* LaunchScreen.storyboard */,
 				55ADF5A8261C5BE8004EAE18 /* Info.plist */,
+				DC6798CA261C9AD100D4E44E /* Tanggungan.storyboard */,
+				DC6798CF261C9DC400D4E44E /* TanggunganAyahController.swift */,
+				DC5525C026214B920047E4CB /* TanggunganIbuController.swift */,
+				DC5525C526214F3B0047E4CB /* TanggunganAyahMertuaController.swift */,
+				DC5525CA26214F540047E4CB /* TanggunganIbuMertuaController.swift */,
+				DC5525CF2621D45B0047E4CB /* TanggunganAnakController.swift */,
 			);
 			path = TaxJourney;
 			sourceTree = "<group>";
@@ -233,6 +251,7 @@
 			files = (
 				55ADF5A7261C5BE8004EAE18 /* LaunchScreen.storyboard in Resources */,
 				55ADF5A4261C5BE8004EAE18 /* Assets.xcassets in Resources */,
+				DC6798CB261C9AD100D4E44E /* Tanggungan.storyboard in Resources */,
 				55ADF5A2261C5BE3004EAE18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5525C626214F3B0047E4CB /* TanggunganAyahMertuaController.swift in Sources */,
+				DC5525C126214B920047E4CB /* TanggunganIbuController.swift in Sources */,
+				DC5525D02621D45B0047E4CB /* TanggunganAnakController.swift in Sources */,
 				55ADF59F261C5BE3004EAE18 /* ViewController.swift in Sources */,
 				55ADF59B261C5BE3004EAE18 /* AppDelegate.swift in Sources */,
+				DC6798D0261C9DC400D4E44E /* TanggunganAyahController.swift in Sources */,
+				DC5525CB26214F540047E4CB /* TanggunganIbuMertuaController.swift in Sources */,
 				55ADF59D261C5BE3004EAE18 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
