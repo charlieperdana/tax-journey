@@ -51,7 +51,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+<<<<<<< HEAD
+                                    <segue destination="LB0-wo-cOm" kind="show" id="fhZ-kl-aga"/>
+=======
                                     <action selector="startBtnDipTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLB-Uy-hyc"/>
+>>>>>>> 0d07992d5b61114a885e54d479c4d7b9f86c8597
                                 </connections>
                             </button>
                         </subviews>
@@ -131,6 +135,16 @@
             </objects>
             <point key="canvasLocation" x="784" y="274"/>
         </scene>
+        <!--tanggungan-->
+        <scene sceneID="TLr-1Q-MaG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tanggungan" referencedIdentifier="tanggungan" id="LB0-wo-cOm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sS3-0V-Hx4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JwL-XT-r3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="85"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="AccentColor">
@@ -138,6 +152,15 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+<<<<<<< HEAD
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+=======
+>>>>>>> 0d07992d5b61114a885e54d479c4d7b9f86c8597
         </systemColor>
     </resources>
 </document>
