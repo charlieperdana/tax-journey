@@ -15,13 +15,30 @@ class PenghasilanPerTahunViewController: UIViewController{
     
     @IBOutlet weak var btnLanjut: UIButton!
     
-    
-    let yearPicker = UIPickerView()
-    
+    var cell =  PenghasilanTableViewCell()
 
     var item: [ListPenghasilanItemModel] = [ListPenghasilanItemModel(item: "Periode", detailInfo: "Pilih tahun yang ingin kamu hitung jumlah pajaknya."),ListPenghasilanItemModel(item: "Penghasilan Setahun", detailInfo: "Masukkan penghasilanmu sepanjang tahun diatas"),ListPenghasilanItemModel(item: "Pekerjaan", detailInfo: ""), ListPenghasilanItemModel(item: "NPPN", detailInfo: ""), ListPenghasilanItemModel(item: "Memiliki Bukti Potong", detailInfo: "Bukti Potong adalah bukti bahwa sebagian dari penghasilanmu sudah dipotong untuk pembayaran pajak")]
 
-    var itemJumlahPotong: [JumlahPotongModel] = [JumlahPotongModel(item: "Jumlah pada Bukti Potong 1", jumlah: 0),JumlahPotongModel(item: "Jumlah pada Bukti Potong 2", jumlah: 0)]
+    var itemJumlahPotong: [JumlahPotongModel] = [JumlahPotongModel(item: "Jumlah Bukti Potong 1", jumlah: 0),JumlahPotongModel(item: "Jumlah Bukti Potong 2", jumlah: 0)]
+    
+    //for custom cell
+    var pickerData = [String]()
+    let yearPicker = UIPickerView()
+    var pickerHaveBukti: UIPickerView!
+    var pickerYear: UIPickerView!
+
+    
+    var yearsTillNow : [String] {
+        var years = [String]()
+        for i in (1970..<2022).reversed() {
+            years.append("\(i)")
+        }
+        return years
+    }
+    
+    var isBuktiPotong = ["Ya", "Tidak"]
+    
+    var dataPenghasilan = PenghasilanPertahunData()
 
     
     override func viewDidLoad() {
@@ -32,7 +49,7 @@ class PenghasilanPerTahunViewController: UIViewController{
         tablePenghasilanView?.delegate = self
         tablePenghasilanView?.dataSource = self
        
-    
+        pickerLoadUI()
     
     }
     
@@ -51,12 +68,14 @@ class PenghasilanPerTahunViewController: UIViewController{
     
 }
 
-extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDataSource{
+extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate{
    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listPenghasilanCell", for: indexPath) as! PenghasilanTableViewCell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "listPenghasilanCell", for: indexPath) as! PenghasilanTableViewCell
+        cell = tableView.dequeueReusableCell(withIdentifier: "listPenghasilanCell", for: indexPath) as! PenghasilanTableViewCell
+//        cell.indexPath = indexPath
         
         if indexPath.section == 0{
             
@@ -65,18 +84,68 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
             cell.itemLabel?.text = items.item
             cell.infoLabel?.text = items.detailInfo
             
+            //for picker cell
+            if indexPath.row == 0 {
+                cell.fieldPilih.inputView = pickerYear
+                cell.fieldPilih.text = ""
+                cell.fieldPilih.placeholder = "Pilih"
+                pickerData = yearsTillNow
+                cell.fieldPilih.tag = 100
+            }else if indexPath.row == 4 {
+                cell.fieldPilih.inputView = pickerHaveBukti
+                cell.fieldPilih.text = ""
+                cell.fieldPilih.placeholder = "Pilih"
+                pickerData = isBuktiPotong
+                cell.fieldPilih.tag = 101
+            } else {
+                cell.fieldPilih.text = ""
+                cell.fieldPilih.placeholder = "Tidak Diatur"
+//                cell.fieldPilih.frame.size.width = 100
+            }
+            
         } else if indexPath.section == 1 {
             let items = itemJumlahPotong[indexPath.row]
             
             cell.itemLabel?.text = items.item
             cell.infoLabel?.text = ""
             
+            cell.fieldPilih.text = ""
+            cell.fieldPilih.placeholder = "Tidak Diatur"
+            
         }
-        
-    
+
 //        let myPicker = UISwitch()
 //        myPicker.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
 //        cell.accessoryView = myPicker
+        
+        if indexPath.row == 3 {
+            let nppnBtn = UIButton(type: .detailDisclosure)
+            nppnBtn.frame = CGRect(x: 45, y: 7, width: 80, height: 40)
+            nppnBtn.addTarget(self, action: #selector(showNppnHalfModal), for: .touchUpInside)
+//            myPicker.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
+//            cell.accessoryView = nppnBtn
+            cell.contentView.addSubview(nppnBtn)
+        }
+        
+        /*
+        //saveDataToModel
+        switch indexPath.row {
+        case 0:
+            dataPenghasilan.periode = (cell.fieldPilih?.text)!
+        case 1:
+            dataPenghasilan.penghasilanTahun = Int((cell.fieldPilih?.text)!)!
+        case 2:
+            dataPenghasilan.pekerjaan = (cell.fieldPilih?.text)!
+        case 3:
+            dataPenghasilan.nppn = Int((cell.fieldPilih?.text)!)!
+        case 4:
+            dataPenghasilan.isBuktiPotong = (cell.fieldPilih?.text)!
+        default:
+            dataPenghasilan.periode = ""
+        }
+ */
+        
+        
         
         
         return cell
@@ -111,16 +180,17 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
             title.font = UIFont.boldSystemFont(ofSize: 17.0)
             headerView.addSubview(title)
 
-            let button = UIButton(type: .system)
+            let button = UIButton(type: .contactAdd)
+
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.setTitle("+", for: .normal)
-            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+//            button.setTitle("+", for: .normal)
+//            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
             button.addTarget(self, action: #selector(btnAddJumlahPotong), for: .touchUpInside)
             //set backgroung circle
-            button.backgroundColor = .clear
-            button.layer.cornerRadius = 10
-            button.layer.borderWidth = 1
-            button.layer.borderColor = UIColor.black.cgColor
+//            button.backgroundColor = .clear
+//            button.layer.cornerRadius = 10
+//            button.layer.borderWidth = 1
+//            button.layer.borderColor = UIColor.black.cgColor
 //            button.center = self.view.center
             headerView.addSubview(button)
 
@@ -128,7 +198,7 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
             headerViews["title"] = title
             headerViews["button"] = button
             
-            headerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[title]-[button]-45-|", options: [], metrics: nil, views: headerViews))
+            headerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[title]-[button]-30-|", options: [], metrics: nil, views: headerViews))
             headerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[title]-|", options: [], metrics: nil, views: headerViews))
             headerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[button]-|", options: [], metrics: nil, views: headerViews))
             
@@ -179,12 +249,86 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
     
     @objc func btnAddJumlahPotong(sender: UIButton!) {
       print("Button tapped")
-        var indexPotong = itemJumlahPotong.count
-        itemJumlahPotong.append(JumlahPotongModel(item: "Jumlah pada Bukti Potong \(indexPotong+1)", jumlah: 0))
+        let indexPotong = itemJumlahPotong.count
+        itemJumlahPotong.append(JumlahPotongModel(item: "Jumlah Bukti Potong \(indexPotong+1)", jumlah: 0))
         tablePenghasilanView.beginUpdates()
         tablePenghasilanView.insertRows(at: [IndexPath(row: indexPotong-1, section: 1)], with: .automatic)
         tablePenghasilanView.endUpdates()
     }
+    
+    
+    //for half modal nppn
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PresentationController(presentedViewController: presented, presenting: presenting)
+    }
+    
+    @objc func showNppnHalfModal(sender: UIButton!) {
+        print("nppn tapped")
+        let slideNPPN = NppnOverlayView()
+        slideNPPN.modalPresentationStyle = .custom
+        slideNPPN.transitioningDelegate = self
+        self.present(slideNPPN, animated: true, completion: nil)
+
+    }
+    
+}
+
+extension PenghasilanPerTahunViewController : UIPickerViewDelegate, UIPickerViewDataSource {
+    func pickerLoadUI() {
+        pickerYear = createPicker()
+        pickerYear.tag = 0
+
+        pickerHaveBukti = createPicker()
+        pickerHaveBukti.tag = 1
+    }
+    
+    func createPicker() -> UIPickerView {
+        let picker = UIPickerView(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        picker.dataSource = self
+        picker.delegate = self
+        picker.backgroundColor = .white
+        return picker
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return yearsTillNow.count
+        return pickerData.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return yearsTillNow[row]
+        switch pickerView.tag {
+        case 0:
+            pickerData = yearsTillNow
+        case 1:
+            pickerData = isBuktiPotong
+        default:
+            pickerData = ["", ""]
+        }
+        
+        return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        cell.fieldPilih.text = pickerData[row]
+//        cell.fieldPilih.resignFirstResponder()
+        switch pickerView.tag {
+        case 0:
+            let mytextfield = self.view.viewWithTag(100) as! UITextField
+            mytextfield.text = pickerData[row]
+            mytextfield.resignFirstResponder()
+        case 1:
+            let mytextfield = self.view.viewWithTag(101) as! UITextField
+            mytextfield.text = pickerData[row]
+            mytextfield.resignFirstResponder()
+        default:
+            return
+        }
+    }
+    
     
 }
 

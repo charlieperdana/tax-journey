@@ -88,7 +88,6 @@
         <!--Navigation Controller-->
         <scene sceneID="b5r-90-DBv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oBP-H5-PDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="L5S-kV-saw" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rgr-Sw-RCi">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -98,6 +97,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nAr-If-Vv8"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBP-H5-PDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-782" y="115"/>
         </scene>
@@ -130,6 +130,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ksq-MJ-0Sw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="784" y="274"/>
+        </scene>
+        <!--tanggungan-->
+        <scene sceneID="TLr-1Q-MaG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tanggungan" referencedIdentifier="tanggungan" id="LB0-wo-cOm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sS3-0V-Hx4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JwL-XT-r3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="85"/>
         </scene>
     </scenes>
     <resources>
