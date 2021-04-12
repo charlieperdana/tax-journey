@@ -34,9 +34,9 @@ class ImageCell: UITableViewCell {
 }
 
 var kelamin:String = ""
-var isMenikah:String = ""
-var isNPWPdigabung:String = ""
-var isSuamiBerpenghasilan:String = ""
+var isMenikah:Bool?
+var isNPWPdigabung:Bool?
+var isSuamiBerpenghasilan:Bool?
 var suratketerangankeluarahan:String = ""
 
 class PTKPViewController: UIViewController {
@@ -113,7 +113,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
 
             return cellPicker
         } else if indexPath.row == 5 {
-            if isMenikah == "Menikah" && kelamin == "Perempuan" {
+            if isMenikah == true && kelamin == "Perempuan" {
                 tvPTKP.insertRows(at: [IndexPath(row: 5, section: 0)], with: .automatic)
                 
                 let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
@@ -128,7 +128,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
                 tvPTKP.deleteRows(at: [IndexPath(row: 5, section: 0)], with: .automatic)
             }
         } else if indexPath.row == 6 {
-            if isNPWPdigabung == "Tidak" {
+            if isNPWPdigabung == false {
                 let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
             
                 cellPicker.lblStatus.text = "Suami berpenghasilan"
@@ -143,7 +143,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
                 tvPTKP.deleteRows(at: [IndexPath(row: 6, section: 0)], with: .automatic)
             }
         } else if indexPath.row == 7 {
-            if isSuamiBerpenghasilan == "Tidak" {
+            if isSuamiBerpenghasilan == false {
                 let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
                 
                 cellPicker.lblStatus.text = "Surat keterangan kelurahan"
@@ -159,7 +159,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
         } else if indexPath.row == 8 {
-            if isSuamiBerpenghasilan == "Tidak" {
+            if isSuamiBerpenghasilan == false {
                 let cellCaption = tableView.dequeueReusableCell(withIdentifier: "cellCaption") as! CaptionCell
                 
                 cellCaption.lblCaption.text = "Surat keterangan bahwa suami tidak berpenghasilan dari kelurahan."
@@ -335,15 +335,27 @@ extension PTKPViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 1:
             let mytextfield = self.view.viewWithTag(101) as! UITextField
             mytextfield.text = options[row]
-            isMenikah = mytextfield.text!
+            if mytextfield.text == "Menikah" {
+                isMenikah = true
+            } else {
+                isMenikah = false
+            }
         case 2:
             let mytextfield = self.view.viewWithTag(102) as! UITextField
             mytextfield.text = options[row]
-            isNPWPdigabung = mytextfield.text!
+            if mytextfield.text == "Ya" {
+                isNPWPdigabung = true
+            } else {
+                isNPWPdigabung = false
+            }
         case 3:
             let mytextfield = self.view.viewWithTag(103) as! UITextField
             mytextfield.text = options[row]
-            isSuamiBerpenghasilan = mytextfield.text!
+            if mytextfield.text == "Ya" {
+                isSuamiBerpenghasilan = true
+            } else {
+                isSuamiBerpenghasilan = false
+            }
         case 4:
             let mytextfield = self.view.viewWithTag(104) as! UITextField
             mytextfield.text = options[row]
