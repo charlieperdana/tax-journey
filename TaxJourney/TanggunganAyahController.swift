@@ -102,8 +102,6 @@ extension TanggunganAyahController: UIPickerViewDelegate, UIPickerViewDataSource
     }
 }
 
-
-
 struct tanggunganOrtu {
     var hubungan:String
     var isSerumah:Bool = false
@@ -116,4 +114,3 @@ struct tanggunganOrtu {
 }
 
 let pilihan = ["Ya", "Tidak"]
-
