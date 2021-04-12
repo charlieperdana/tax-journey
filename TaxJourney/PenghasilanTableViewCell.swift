@@ -29,15 +29,15 @@ class PenghasilanTableViewCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        fieldPilih.delegate = self
-        
-        yearPicker.delegate = self
-        yearPicker.dataSource = self
-    
-        fieldPilih.inputView = yearPicker
-        fieldPilih.textAlignment = .center
-        fieldPilih.placeholder = "Pilih"
-        
+//        fieldPilih.delegate = self
+////
+//        yearPicker.delegate = self
+//        yearPicker.dataSource = self
+//
+//        fieldPilih.inputView = yearPicker
+        fieldPilih.textAlignment = .right
+//        fieldPilih.placeholder = "Pilih"
+//        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -49,23 +49,23 @@ class PenghasilanTableViewCell: UITableViewCell, UITextFieldDelegate {
 
 }
 
-extension PenghasilanTableViewCell : UIPickerViewDelegate, UIPickerViewDataSource{
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return yearsTillNow.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return yearsTillNow[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        fieldPilih.text = yearsTillNow[row]
-        fieldPilih.resignFirstResponder()
-    }
-    
-    
-}
+//extension PenghasilanTableViewCell : UIPickerViewDelegate, UIPickerViewDataSource{
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        1
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return yearsTillNow.count
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return yearsTillNow[row]
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        fieldPilih.text = yearsTillNow[row]
+//        fieldPilih.resignFirstResponder()
+//    }
+//
+//
+//}

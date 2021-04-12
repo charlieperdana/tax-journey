@@ -11,6 +11,9 @@
 		0019AB17261C9A260066AEAA /* PerhitunganPTKPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019AB16261C9A260066AEAA /* PerhitunganPTKPViewController.swift */; };
 		0019AB1C261CA71E0066AEAA /* PerkawinanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019AB1B261CA71E0066AEAA /* PerkawinanTableViewCell.swift */; };
 		00D65023261F458E00A7221E /* PTKPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D65022261F458E00A7221E /* PTKPViewController.swift */; };
+		558712E52620B0990050BBED /* NppnPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558712E42620B0980050BBED /* NppnPresentationController.swift */; };
+		558712EA2620B8150050BBED /* NppnOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558712E92620B8150050BBED /* NppnOverlayView.xib */; };
+		558712EF2620CBE20050BBED /* NppnOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558712EE2620CBE20050BBED /* NppnOverlayView.swift */; };
 		55ADF59B261C5BE3004EAE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF59A261C5BE3004EAE18 /* AppDelegate.swift */; };
 		55ADF59D261C5BE3004EAE18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF59C261C5BE3004EAE18 /* SceneDelegate.swift */; };
 		55ADF59F261C5BE3004EAE18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF59E261C5BE3004EAE18 /* ViewController.swift */; };
@@ -74,6 +77,9 @@
 		0019AB16261C9A260066AEAA /* PerhitunganPTKPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerhitunganPTKPViewController.swift; sourceTree = "<group>"; };
 		0019AB1B261CA71E0066AEAA /* PerkawinanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkawinanTableViewCell.swift; sourceTree = "<group>"; };
 		00D65022261F458E00A7221E /* PTKPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTKPViewController.swift; sourceTree = "<group>"; };
+		558712E42620B0980050BBED /* NppnPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NppnPresentationController.swift; sourceTree = "<group>"; };
+		558712E92620B8150050BBED /* NppnOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NppnOverlayView.xib; sourceTree = "<group>"; };
+		558712EE2620CBE20050BBED /* NppnOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NppnOverlayView.swift; sourceTree = "<group>"; };
 		55ADF597261C5BE3004EAE18 /* TaxJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55ADF59A261C5BE3004EAE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55ADF59C261C5BE3004EAE18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +209,9 @@
 				00D65022261F458E00A7221E /* PTKPViewController.swift */,
 				FC7CD04C261C9CA30098B2E0 /* AllSummaryStoryboard.storyboard */,
 				FC35EB05261CD18B008D27E2 /* OverlayView.swift */,
+				558712EE2620CBE20050BBED /* NppnOverlayView.swift */,
+				558712E42620B0980050BBED /* NppnPresentationController.swift */,
+				558712E92620B8150050BBED /* NppnOverlayView.xib */,
 				FC35EB00261CD05F008D27E2 /* OverlayView.xib */,
 				FC35EAF3261CCD4F008D27E2 /* PresentationController.swift */,
 				FC7CD051261C9CB70098B2E0 /* AllSummaryViewController.swift */,
@@ -352,6 +361,7 @@
 				55ADF5D6261C959E004EAE18 /* PenghasilanPerTahun.storyboard in Resources */,
 				FC35EB01261CD05F008D27E2 /* OverlayView.xib in Resources */,
 				FC7CD04D261C9CA30098B2E0 /* AllSummaryStoryboard.storyboard in Resources */,
+				558712EA2620B8150050BBED /* NppnOverlayView.xib in Resources */,
 				FC24EB67261D7E1D00E20474 /* KesimpulanStoryboard.storyboard in Resources */,
 				55ADF5A2261C5BE3004EAE18 /* Main.storyboard in Resources */,
 			);
@@ -399,6 +409,8 @@
 				55ADF5E0261DA067004EAE18 /* ListPenghasilanItemModel.swift in Sources */,
 				FC24EB7F261DEAAC00E20474 /* InfoTableViewCell.swift in Sources */,
 				FC35EB06261CD18B008D27E2 /* OverlayView.swift in Sources */,
+				558712E52620B0990050BBED /* NppnPresentationController.swift in Sources */,
+				558712EF2620CBE20050BBED /* NppnOverlayView.swift in Sources */,
 				FCD05930261EEA68000A4CD8 /* Overlay2View.swift in Sources */,
 				FC7CD052261C9CB70098B2E0 /* AllSummaryViewController.swift in Sources */,
 				FC24EB87261DF38300E20474 /* KesimpulanTableViewCell.swift in Sources */,
