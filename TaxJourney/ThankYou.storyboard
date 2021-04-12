@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qEi-Re-pVo">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -60,9 +60,15 @@ pajakmu dengan TaxJourney!</string>
                                 <state key="normal" title="Lakukan Simulasi Lagi">
                                     <color key="titleColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="G59-tn-CzV" kind="show" id="aEG-DI-5fv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj4-jz-feJ">
-                                <rect key="frame" x="24" y="452.66666666666669" width="342" height="101.66666666666669"/>
+                                <rect key="frame" x="24" y="452.66666666666674" width="342" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Cuf-6F-cYg"/>
+                                </constraints>
                                 <string key="text">Terima kasih juga sudah membayar pajakmu dengan jumlah yang sesuai! Setelah ini, jangan lupa untuk melaporkan SPT-mu ya. Untuk tata cara pelaporan SPT, kamu bisa klik tombol Cara Lapor SPT di bawah ini.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -74,12 +80,13 @@ pajakmu dengan TaxJourney!</string>
                         <constraints>
                             <constraint firstItem="EBS-Of-W8c" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="24" id="2K3-Ai-kP0"/>
                             <constraint firstItem="oEs-f1-uzm" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="75" id="2Tv-xH-e8R"/>
-                            <constraint firstItem="Qj4-jz-feJ" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="24" id="3NO-U7-okg"/>
                             <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="oEs-f1-uzm" secondAttribute="trailing" constant="75" id="45g-wS-Gf2"/>
                             <constraint firstItem="rOg-fL-bMx" firstAttribute="top" secondItem="DyW-Bg-NCu" secondAttribute="bottom" constant="8" id="8hT-Mg-CCw"/>
                             <constraint firstItem="rOg-fL-bMx" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="24" id="C3O-hG-Opp"/>
+                            <constraint firstItem="Qj4-jz-feJ" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="24" id="Jcq-Ra-no9"/>
                             <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="jEn-L3-Umf" secondAttribute="trailing" constant="24" id="PRF-q0-nlD"/>
                             <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="DyW-Bg-NCu" secondAttribute="trailing" constant="24" id="Qhe-s7-jhY"/>
+                            <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="Qj4-jz-feJ" secondAttribute="trailing" constant="24" id="Rfw-g2-GXI"/>
                             <constraint firstItem="jEn-L3-Umf" firstAttribute="top" secondItem="EBS-Of-W8c" secondAttribute="bottom" constant="4" id="Th3-Q1-xWq"/>
                             <constraint firstItem="EBS-Of-W8c" firstAttribute="top" secondItem="oEs-f1-uzm" secondAttribute="bottom" constant="32" id="WZK-QR-SgO"/>
                             <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="rOg-fL-bMx" secondAttribute="trailing" constant="24" id="Yig-t7-Byn"/>
@@ -87,10 +94,8 @@ pajakmu dengan TaxJourney!</string>
                             <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="EBS-Of-W8c" secondAttribute="trailing" constant="24" id="dAk-Wa-Abs"/>
                             <constraint firstItem="jEn-L3-Umf" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="24" id="dM2-wv-vdq"/>
                             <constraint firstItem="DyW-Bg-NCu" firstAttribute="leading" secondItem="V5w-oI-Zje" secondAttribute="leading" constant="24" id="hf2-cd-kXN"/>
-                            <constraint firstItem="V5w-oI-Zje" firstAttribute="trailing" secondItem="Qj4-jz-feJ" secondAttribute="trailing" constant="24" id="jVV-JO-bR0"/>
-                            <constraint firstItem="Qj4-jz-feJ" firstAttribute="top" secondItem="jEn-L3-Umf" secondAttribute="bottom" constant="8" id="t8a-ik-Lyi"/>
+                            <constraint firstItem="Qj4-jz-feJ" firstAttribute="top" secondItem="jEn-L3-Umf" secondAttribute="bottom" constant="8" id="yWE-bt-4CS"/>
                             <constraint firstItem="V5w-oI-Zje" firstAttribute="bottom" secondItem="rOg-fL-bMx" secondAttribute="bottom" constant="14" id="zKd-sq-YnG"/>
-                            <constraint firstItem="DyW-Bg-NCu" firstAttribute="top" secondItem="Qj4-jz-feJ" secondAttribute="bottom" constant="121.66666666666663" id="zZD-Zo-qv0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -103,6 +108,16 @@ pajakmu dengan TaxJourney!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7G-1z-Vlk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="186.15384615384616" y="175.59241706161137"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="W3E-Pp-435">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="G59-tn-CzV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2oo-Rk-KME"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R1o-tp-Frr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="175"/>
         </scene>
     </scenes>
     <resources>

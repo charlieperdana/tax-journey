@@ -20,6 +20,9 @@
                                 <rect key="frame" x="0.0" y="155" width="390" height="588"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="505" id="n2l-ay-zX7"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listPenghasilanCell" rowHeight="91" id="q7K-tm-Cht" customClass="PenghasilanTableViewCell" customModule="TaxJourney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="390" height="91"/>
@@ -83,6 +86,9 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="tintColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.27450980392156865" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Lihat Rincian"/>
+                                <connections>
+                                    <segue destination="8ex-cD-O42" kind="show" identifier="RincianPenghasilan" id="Q9q-iz-qo4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPk-ux-kD4">
                                 <rect key="frame" x="207" y="766" width="167" height="36"/>
@@ -99,6 +105,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lNz-lK-Edx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cgz-pe-zM8" firstAttribute="top" secondItem="nXd-e7-mCU" secondAttribute="bottom" constant="72" id="2IJ-EN-CKZ"/>
+                            <constraint firstItem="nXd-e7-mCU" firstAttribute="leading" secondItem="lNz-lK-Edx" secondAttribute="leading" id="9xS-bK-zrf"/>
+                            <constraint firstItem="lNz-lK-Edx" firstAttribute="trailing" secondItem="yPk-ux-kD4" secondAttribute="trailing" constant="16" id="BWT-cQ-iiG"/>
+                            <constraint firstItem="Cgz-pe-zM8" firstAttribute="leading" secondItem="lNz-lK-Edx" secondAttribute="leading" constant="16" id="BdU-v7-ahA"/>
+                            <constraint firstItem="vOP-hW-XHA" firstAttribute="top" secondItem="lNz-lK-Edx" secondAttribute="top" id="W5M-uS-noh"/>
+                            <constraint firstItem="nXd-e7-mCU" firstAttribute="trailing" secondItem="lNz-lK-Edx" secondAttribute="trailing" id="ZAC-xf-n3K"/>
+                            <constraint firstItem="vOP-hW-XHA" firstAttribute="leading" secondItem="lNz-lK-Edx" secondAttribute="leading" id="aNL-I5-sIB"/>
+                            <constraint firstItem="yPk-ux-kD4" firstAttribute="top" secondItem="nXd-e7-mCU" secondAttribute="bottom" constant="72" id="c0A-9t-Ax9"/>
+                            <constraint firstItem="vOP-hW-XHA" firstAttribute="trailing" secondItem="lNz-lK-Edx" secondAttribute="trailing" id="qE0-rJ-oEB"/>
+                            <constraint firstItem="nXd-e7-mCU" firstAttribute="top" secondItem="vOP-hW-XHA" secondAttribute="bottom" id="vZY-9d-KLh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Penghasilan Per Tahun" id="swt-fs-yB5"/>
                     <connections>
@@ -111,6 +129,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jka-RG-Wnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="973.84615384615381" y="164.21800947867297"/>
+        </scene>
+        <!--RincianPenghasilan-->
+        <scene sceneID="QnH-aO-YxZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RincianPenghasilan" referencedIdentifier="RincianPenghasilan" id="8ex-cD-O42" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="m5C-oo-vTh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2kq-nh-d6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="559"/>
         </scene>
         <!--KendraStoryboard-->
         <scene sceneID="gj9-Kt-jnK">

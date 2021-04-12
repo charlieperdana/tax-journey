@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.isNavigationBarHidden = true
         initDisplay()
     }
     
@@ -23,10 +23,8 @@ class ViewController: UIViewController {
         btnStart.clipsToBounds = true
     }
     
-
-
-    @IBAction func startBtnDipTap(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "toPenghasilanPerTahun", sender: self)
+    @IBAction func startBtnDipTap(_ sender: Any) {
+        performSegue(withIdentifier: "toPenghasilanPerTahun", sender: self)
     }
 }
 

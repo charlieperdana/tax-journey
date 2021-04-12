@@ -17,6 +17,11 @@ class ThankYouController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
+        btnNext.layer.cornerRadius = 10
+        btnRestart.layer.borderWidth = 2
+        btnRestart.layer.cornerRadius = 10
+        btnRestart.layer.borderColor = #colorLiteral(red: 0.1594613791, green: 0.150028497, blue: 0.2833949625, alpha: 1)
 
         // Do any additional setup after loading the view.
     }

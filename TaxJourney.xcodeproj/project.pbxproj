@@ -39,6 +39,8 @@
 		F8491743261CAD66006F8712 /* RincianPTKP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8491742261CAD66006F8712 /* RincianPTKP.storyboard */; };
 		F8B0A07E26204CEB006A6297 /* PenghasilanNettoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B0A07C26204CEB006A6297 /* PenghasilanNettoViewController.swift */; };
 		F8B0A07F26204CEB006A6297 /* PenghasilanNettoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8B0A07D26204CEB006A6297 /* PenghasilanNettoViewController.xib */; };
+		F8B0A09A2620B98B006A6297 /* JumlahTanggunganViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B0A0982620B98B006A6297 /* JumlahTanggunganViewController.swift */; };
+		F8B0A09B2620B98B006A6297 /* JumlahTanggunganViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8B0A0992620B98B006A6297 /* JumlahTanggunganViewController.xib */; };
 		FC24EB67261D7E1D00E20474 /* KesimpulanStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC24EB66261D7E1D00E20474 /* KesimpulanStoryboard.storyboard */; };
 		FC24EB6C261D7E7000E20474 /* KesimpulanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24EB6B261D7E7000E20474 /* KesimpulanViewController.swift */; };
 		FC24EB7F261DEAAC00E20474 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24EB7E261DEAAC00E20474 /* InfoTableViewCell.swift */; };
@@ -110,6 +112,8 @@
 		F8491742261CAD66006F8712 /* RincianPTKP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RincianPTKP.storyboard; sourceTree = "<group>"; };
 		F8B0A07C26204CEB006A6297 /* PenghasilanNettoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenghasilanNettoViewController.swift; sourceTree = "<group>"; };
 		F8B0A07D26204CEB006A6297 /* PenghasilanNettoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PenghasilanNettoViewController.xib; sourceTree = "<group>"; };
+		F8B0A0982620B98B006A6297 /* JumlahTanggunganViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumlahTanggunganViewController.swift; sourceTree = "<group>"; };
+		F8B0A0992620B98B006A6297 /* JumlahTanggunganViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JumlahTanggunganViewController.xib; sourceTree = "<group>"; };
 		FC24EB66261D7E1D00E20474 /* KesimpulanStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KesimpulanStoryboard.storyboard; sourceTree = "<group>"; };
 		FC24EB6B261D7E7000E20474 /* KesimpulanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KesimpulanViewController.swift; sourceTree = "<group>"; };
 		FC24EB7E261DEAAC00E20474 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 				F8B0A07D26204CEB006A6297 /* PenghasilanNettoViewController.xib */,
 				0019AB11261C99E70066AEAA /* KendraStoryboard.storyboard */,
 				0019AB16261C9A260066AEAA /* PerhitunganPTKPViewController.swift */,
+				F8B0A0982620B98B006A6297 /* JumlahTanggunganViewController.swift */,
+				F8B0A0992620B98B006A6297 /* JumlahTanggunganViewController.xib */,
 				0019AB1B261CA71E0066AEAA /* PerkawinanTableViewCell.swift */,
 				00D65022261F458E00A7221E /* PTKPViewController.swift */,
 				FC7CD04C261C9CA30098B2E0 /* AllSummaryStoryboard.storyboard */,
@@ -342,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8491743261CAD66006F8712 /* RincianPTKP.storyboard in Resources */,
+				F8B0A09B2620B98B006A6297 /* JumlahTanggunganViewController.xib in Resources */,
 				F848A1DA261D67B50001256C /* TotalPTKP.xib in Resources */,
 				F848A1D5261D62A00001256C /* StatusPTKP.xib in Resources */,
 				0019AB12261C99E70066AEAA /* KendraStoryboard.storyboard in Resources */,
@@ -382,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F849172F261C9208006F8712 /* RPenghasilanViewController.swift in Sources */,
+				F8B0A09A2620B98B006A6297 /* JumlahTanggunganViewController.swift in Sources */,
 				55ADF59F261C5BE3004EAE18 /* ViewController.swift in Sources */,
 				F848A1F2261D72210001256C /* TotalPTKP.swift in Sources */,
 				0019AB1C261CA71E0066AEAA /* PerkawinanTableViewCell.swift in Sources */,
