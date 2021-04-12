@@ -55,6 +55,7 @@ class PTKPViewController: UIViewController {
         tvPTKP.delegate = self
         tvPTKP.dataSource = self
         pickerUI()
+        print("tes")
     }
     
     func showAlert(title: String, message: String) {
