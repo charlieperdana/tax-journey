@@ -39,6 +39,14 @@ var isNPWPdigabung:Bool?
 var isSuamiBerpenghasilan:Bool?
 var suratketerangankeluarahan:String = ""
 
+var jumlahTanggungam:Int = -1
+
+var checkAyah:Bool = false
+var checkIbu:Bool = false
+var checkAyahMertua:Bool = false
+var checkIbuMertua:Bool = false
+var checkAnak:Bool = false
+
 class PTKPViewController: UIViewController {
 
     @IBOutlet weak var tvPTKP: UITableView!
@@ -49,6 +57,8 @@ class PTKPViewController: UIViewController {
     var PickerYesNoTiga:UIPickerView!
     var options = [String]()
     var toolbar:UIToolbar?
+    
+    var idx:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -187,31 +197,55 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ayah"
-            cellChevron.imgCheck.isHidden = true
+            if checkAyah == false {
+                cellChevron.imgCheck.isHidden = true
+            } else {
+                cellChevron.imgCheck.isHidden = false
+            }
             
             return cellChevron
         } else if indexPath.row == 12 {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ibu"
+            if checkIbu == false {
+                cellChevron.imgCheck.isHidden = true
+            } else {
+                cellChevron.imgCheck.isHidden = false
+            }
             
             return cellChevron
         } else if indexPath.row == 13 {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ayah mertua"
+            if checkAyahMertua == false {
+                cellChevron.imgCheck.isHidden = true
+            } else {
+                cellChevron.imgCheck.isHidden = false
+            }
             
             return cellChevron
         } else if indexPath.row == 14 {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ibu Mertua"
+            if checkIbuMertua == false {
+                cellChevron.imgCheck.isHidden = true
+            } else {
+                cellChevron.imgCheck.isHidden = false
+            }
             
             return cellChevron
         } else if indexPath.row == 15 {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Anak"
+            if checkAnak == false {
+                cellChevron.imgCheck.isHidden = true
+            } else {
+                cellChevron.imgCheck.isHidden = false
+            }
             
             return cellChevron
         } else if indexPath.row == 16 {
@@ -248,18 +282,22 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showAlert(title: "tes", message: "\(indexPath.row)")
         switch indexPath.row {
         case 11:
-            showAlert(title: "Ayah", message: "ini ayah")
+            idx = 0
+            performSegue(withIdentifier: "toTanggungan", sender: self)
         case 12:
-            showAlert(title: "Ibu", message: "ini ibu")
+            idx = 1
+            performSegue(withIdentifier: "toTanggungan", sender: self)
         case 13:
-            showAlert(title: "Ayah mertua", message: "ini ayah mertua")
+            idx = 2
+            performSegue(withIdentifier: "toTanggungan", sender: self)
         case 14:
-            showAlert(title: "Ibu mertua", message: "ini ibu mertua")
+            idx = 3
+            performSegue(withIdentifier: "toTanggungan", sender: self)
         case 15:
-            showAlert(title: "Anak", message: "ini anak")
+            idx = 4
+            performSegue(withIdentifier: "toTanggungan", sender: self)
         default:
             return
         }
@@ -267,7 +305,6 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         if indexPath.row == 10 {
-            //showAlert(title: "Halo", message: "Lagi pencet info button")
             let slideVC = JumlahTanggunganViewController()
             slideVC.modalPresentationStyle = .custom
             slideVC.transitioningDelegate = self
@@ -287,7 +324,25 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toTanggungan" {
+            let dest = segue.destination as? TanggunganViewController
+            switch idx {
+            case 0:
+                dest?.titleNavBar = "Ayah"
+            case 1:
+                dest?.titleNavBar = "Ibu"
+            case 2:
+                dest?.titleNavBar = "Ayah Mertua"
+            case 3:
+                dest?.titleNavBar = "Ibu Mertua"
+            case 4:
+                dest?.titleNavBar = "Anak"
+            default:
+                return
+            }
+        }
+    }
     
     @objc func lanjut() {
         performSegue(withIdentifier: "toKesimpulan", sender: self)
@@ -309,8 +364,6 @@ extension PTKPViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView.tag {
         case 0:
-//            let mytextfield = self.view.viewWithTag(100) as! UITextField
-//            mytextfield.text = options[0]
             options = ["Laki-laki", "Perempuan"]
         case 1:
             options = ["Menikah", "Belum menikah"]

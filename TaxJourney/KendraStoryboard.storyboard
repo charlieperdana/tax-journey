@@ -436,6 +436,7 @@
                     <connections>
                         <outlet property="tvPTKP" destination="U0e-Xh-SKp" id="v3m-rf-6yE"/>
                         <segue destination="hi9-mp-QqZ" kind="show" identifier="toKesimpulan" id="njs-jr-bxW"/>
+                        <segue destination="IjY-4m-eU9" kind="show" identifier="toTanggungan" id="YMn-HR-wh3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uas-wt-wUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -467,6 +468,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Us6-kZ-pSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1935" y="-213"/>
+        </scene>
+        <!--Tanggungan-->
+        <scene sceneID="LAN-zT-InM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tanggungan" id="IjY-4m-eU9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FvS-mg-IpM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSK-dl-4Pa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1885" y="-162"/>
         </scene>
         <!--RincianPTKP-->
         <scene sceneID="1AS-1N-Mck">
