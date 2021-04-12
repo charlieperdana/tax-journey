@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gKA-Sq-pH3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,37 +8,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--All Summary View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="q7P-3q-htE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTD-JX-W0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="zEn-LR-aA2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XdW-dX-rjL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gKA-Sq-pH3" kind="relationship" relationship="rootViewController" id="89c-Uz-aOc"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="500" y="68"/>
+        </scene>
+        <!--Ringkasan Perhitungan-->
         <scene sceneID="2Sf-4h-ROc">
             <objects>
                 <viewController storyboardIdentifier="AllSummary" modalPresentationStyle="fullScreen" id="gKA-Sq-pH3" customClass="AllSummaryViewController" customModule="TaxJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ySF-xh-eVn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sb-Bh-znd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="1078"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5Q-qe-ovp">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="920"/>
                                         <subviews>
-                                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mu-4w-JiH">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                                <textAttributes key="titleTextAttributes">
-                                                    <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                </textAttributes>
-                                                <items>
-                                                    <navigationItem title="Ringkasan Perhitungan" id="PlS-rL-Bcq"/>
-                                                </items>
-                                            </navigationBar>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penghasilan Per Tahun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcR-aB-klX">
-                                                <rect key="frame" x="16" y="60" width="198" height="24"/>
+                                                <rect key="frame" x="16" y="16" width="198" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbN-Wi-MSt">
-                                                <rect key="frame" x="16" y="92" width="382" height="235"/>
+                                                <rect key="frame" x="16" y="48" width="382" height="235"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-zk-Tz9">
                                                         <rect key="frame" x="16" y="16" width="350" height="203"/>
@@ -66,13 +73,13 @@ Rp100.000.000 * 2%
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perhitungan PTKP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-Jy-V3d">
-                                                <rect key="frame" x="16" y="351" width="159" height="24"/>
+                                                <rect key="frame" x="16" y="307" width="159" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETp-gr-tS6">
-                                                <rect key="frame" x="16" y="383" width="382" height="208"/>
+                                                <rect key="frame" x="16" y="339" width="382" height="208"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-cu-9f3">
                                                         <rect key="frame" x="16" y="16" width="350" height="176"/>
@@ -96,13 +103,13 @@ Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah Utang Pajak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSo-N7-R6K">
-                                                <rect key="frame" x="16" y="615" width="174" height="24"/>
+                                                <rect key="frame" x="16" y="571" width="174" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDL-QA-4LT">
-                                                <rect key="frame" x="16" y="647" width="382" height="189"/>
+                                                <rect key="frame" x="16" y="603" width="382" height="189"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah utang pajakmu adalah sebesar:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLk-n8-Wx9">
                                                         <rect key="frame" x="16" y="16" width="296" height="21"/>
@@ -199,7 +206,7 @@ Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jK8-0j-mcA">
-                                                <rect key="frame" x="378" y="615" width="20" height="22"/>
+                                                <rect key="frame" x="378" y="571" width="20" height="22"/>
                                                 <color key="tintColor" red="0.20900556449999999" green="0.21290200949999999" blue="0.3372685909" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" image="info.circle" catalog="system"/>
                                                 <connections>
@@ -216,18 +223,15 @@ Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX
                                             <constraint firstAttribute="trailing" secondItem="ETp-gr-tS6" secondAttribute="trailing" constant="16" id="GYV-3f-Ki4"/>
                                             <constraint firstItem="SbN-Wi-MSt" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="H0y-Fe-6ek"/>
                                             <constraint firstAttribute="trailing" secondItem="jK8-0j-mcA" secondAttribute="trailing" constant="16" id="Kkc-D6-jvY"/>
-                                            <constraint firstAttribute="trailing" secondItem="1Mu-4w-JiH" secondAttribute="trailing" id="P95-6q-ESN"/>
-                                            <constraint firstAttribute="height" constant="1200" id="QUF-vh-mlE"/>
+                                            <constraint firstAttribute="height" constant="920" id="QUF-vh-mlE"/>
                                             <constraint firstItem="SDL-QA-4LT" firstAttribute="top" secondItem="oSo-N7-R6K" secondAttribute="bottom" constant="8" id="QUu-fH-c8n"/>
                                             <constraint firstItem="qCf-Jy-V3d" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="Qo4-xq-CLl"/>
-                                            <constraint firstItem="1Mu-4w-JiH" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" id="QzE-Xs-lXm"/>
                                             <constraint firstItem="oSo-N7-R6K" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="Ttj-gg-Sg8"/>
-                                            <constraint firstItem="DcR-aB-klX" firstAttribute="top" secondItem="1Mu-4w-JiH" secondAttribute="bottom" constant="16" id="Uni-5O-3Xu"/>
                                             <constraint firstItem="oSo-N7-R6K" firstAttribute="top" secondItem="ETp-gr-tS6" secondAttribute="bottom" constant="24" id="Zrd-DA-z6e"/>
                                             <constraint firstItem="DcR-aB-klX" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="cgo-YF-BPp"/>
+                                            <constraint firstItem="DcR-aB-klX" firstAttribute="top" secondItem="M5Q-qe-ovp" secondAttribute="top" constant="16" id="eOt-SI-F7J"/>
                                             <constraint firstItem="jK8-0j-mcA" firstAttribute="top" secondItem="ETp-gr-tS6" secondAttribute="bottom" constant="24" id="oPJ-lx-Lwq"/>
                                             <constraint firstItem="qCf-Jy-V3d" firstAttribute="top" secondItem="SbN-Wi-MSt" secondAttribute="bottom" constant="24" id="sOf-Mi-wwf"/>
-                                            <constraint firstItem="1Mu-4w-JiH" firstAttribute="top" secondItem="M5Q-qe-ovp" secondAttribute="top" id="tA1-UN-l5V"/>
                                             <constraint firstAttribute="trailing" secondItem="SDL-QA-4LT" secondAttribute="trailing" constant="16" id="v1y-1A-Voc"/>
                                             <constraint firstItem="SbN-Wi-MSt" firstAttribute="top" secondItem="DcR-aB-klX" secondAttribute="bottom" constant="8" id="wIo-dN-D9P"/>
                                         </constraints>
@@ -251,7 +255,8 @@ Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX
                             <constraint firstItem="3sb-Bh-znd" firstAttribute="leading" secondItem="GpX-Pa-NNM" secondAttribute="leading" id="zwT-rt-soA"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="896"/>
+                    <navigationItem key="navigationItem" title="Ringkasan Perhitungan" id="wQj-E4-bTg"/>
+                    <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="jumlah1Lbl" destination="UG3-58-00U" id="VIc-Ci-YDw"/>
                         <outlet property="jumlah2Lbl" destination="4vH-FM-zzx" id="zuf-hy-JFo"/>

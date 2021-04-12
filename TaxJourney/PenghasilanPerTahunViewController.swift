@@ -55,12 +55,11 @@ class PenghasilanPerTahunViewController: UIViewController{
     
     func btnDisplay(){
         btnLanjut.layer.cornerRadius = 10
-        btnLanjut.clipsToBounds = true
+        btnLanjut.layer.borderWidth = 2
         
         btnLihatRincian.layer.cornerRadius = 10
-        btnLihatRincian.clipsToBounds = true
-        btnLihatRincian.layer.borderWidth = 1
-        btnLihatRincian.layer.borderColor = UIColor.black.cgColor
+        btnLihatRincian.layer.borderWidth = 2
+        btnLihatRincian.layer.borderColor = #colorLiteral(red: 0.1594613791, green: 0.150028497, blue: 0.2833949625, alpha: 1)
     }
     
     @IBAction func buttonLanjut(_ sender: Any) {

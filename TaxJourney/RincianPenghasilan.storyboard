@@ -11,7 +11,7 @@
         <!--Penghasilan View Controller-->
         <scene sceneID="K1p-XP-Nc8">
             <objects>
-                <viewController storyboardIdentifier="RPenghasilanViewController" id="8q6-Pe-efd" customClass="RPenghasilanViewController" customModule="TaxJourney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RincianPenghasilan" id="8q6-Pe-efd" customClass="RPenghasilanViewController" customModule="TaxJourney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="up7-yz-tp6">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,12 +106,6 @@ penghasilan sebesar Rp100.000.000</string>
                                 <connections>
                                     <action selector="infoButton:" destination="8q6-Pe-efd" eventType="touchUpInside" id="4cS-hf-Egt"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTn-E5-Wde">
-                                <rect key="frame" x="304" y="751" width="38" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="next"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TVA-KX-ry2"/>
