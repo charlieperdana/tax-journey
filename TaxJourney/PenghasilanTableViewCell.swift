@@ -46,6 +46,10 @@ class PenghasilanTableViewCell: UITableViewCell, UITextFieldDelegate {
         // Configure the view for the selected state
     }
     
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        <#code#>
+//    }
+    
 
 }
 
