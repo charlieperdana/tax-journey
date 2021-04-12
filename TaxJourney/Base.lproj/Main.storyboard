@@ -51,11 +51,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-<<<<<<< HEAD
-                                    <segue destination="LB0-wo-cOm" kind="show" id="fhZ-kl-aga"/>
-=======
                                     <action selector="startBtnDipTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLB-Uy-hyc"/>
->>>>>>> 0d07992d5b61114a885e54d479c4d7b9f86c8597
                                 </connections>
                             </button>
                         </subviews>
@@ -92,7 +88,6 @@
         <!--Navigation Controller-->
         <scene sceneID="b5r-90-DBv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oBP-H5-PDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="L5S-kV-saw" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rgr-Sw-RCi">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -102,6 +97,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nAr-If-Vv8"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBP-H5-PDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-782" y="115"/>
         </scene>
@@ -152,15 +148,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-<<<<<<< HEAD
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-=======
->>>>>>> 0d07992d5b61114a885e54d479c4d7b9f86c8597
         </systemColor>
     </resources>
 </document>
