@@ -33,6 +33,12 @@ class ImageCell: UITableViewCell {
     
 }
 
+var kelamin:String = ""
+var isMenikah:String = ""
+var isNPWPdigabung:String = ""
+var isSuamiBerpenghasilan:String = ""
+var suratketerangankeluarahan:String = ""
+
 class PTKPViewController: UIViewController {
 
     @IBOutlet weak var tvPTKP: UITableView!
@@ -43,12 +49,6 @@ class PTKPViewController: UIViewController {
     var PickerYesNoTiga:UIPickerView!
     var options = [String]()
     var toolbar:UIToolbar?
-    
-    var kelamin:String = ""
-    var isMenikah:String = ""
-    var isNPWPdigabung:String = ""
-    var isSuamiBerpenghasilan:String = ""
-    var suratketerangankeluarahan:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
