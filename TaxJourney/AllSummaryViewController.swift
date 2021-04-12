@@ -27,6 +27,16 @@ class AllSummaryViewController: UIViewController {
     @IBOutlet weak var jumlah4Lbl: UILabel!
     @IBOutlet weak var jumlahtotalLbl: UILabel!
     
+    var penghasilan : Int?
+    var pekerjaan : String?
+    var nppn : Int?
+    var penghasilanNeto : Int?
+    var statusPernikahan : String?
+    var jumlahTanggungan : String?
+    var jumlahPTKP : Int?
+    var penghasilanKenaPajak : Int?
+    var totalHutangPajak : Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         penghasilanView.layer.cornerRadius = 10

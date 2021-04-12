@@ -12,6 +12,11 @@ import UIKit
 //    var detail: String?
 //}
 
+var statusSPT : String?
+var jumlahHutangPajak : Int?
+var pajakSudahDibayar : Int?
+var jumlahStatusSPT : Int?
+
 class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var lihatRngkasanBtn: UIButton!

@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEj-Gr-feJ">
-                    <rect key="frame" x="16" y="103" width="382" height="154"/>
+                    <rect key="frame" x="16" y="112" width="382" height="154"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="154" id="CZQ-Vg-ALr"/>
                     </constraints>
@@ -28,13 +28,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah Utang Pajak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xah-At-mho">
-                    <rect key="frame" x="116" y="52" width="182" height="24"/>
+                    <rect key="frame" x="116" y="61" width="182" height="24"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ps-OT-dbU">
-                    <rect key="frame" x="0.0" y="86" width="414" height="1"/>
+                    <rect key="frame" x="0.0" y="95" width="414" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Jah-TT-zqR"/>
@@ -49,7 +49,7 @@
                 <constraint firstItem="OEj-Gr-feJ" firstAttribute="top" secondItem="9Ps-OT-dbU" secondAttribute="bottom" constant="16" id="5re-2h-T5c"/>
                 <constraint firstItem="OEj-Gr-feJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="A4P-Py-tiZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OEj-Gr-feJ" secondAttribute="trailing" constant="16" id="CEC-MA-lpB"/>
-                <constraint firstItem="xah-At-mho" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="LrB-qk-beJ"/>
+                <constraint firstItem="xah-At-mho" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="17" id="LrB-qk-beJ"/>
                 <constraint firstItem="9Ps-OT-dbU" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="UtD-LK-SI4"/>
                 <constraint firstItem="9Ps-OT-dbU" firstAttribute="top" secondItem="xah-At-mho" secondAttribute="bottom" constant="10" id="ZEh-XT-1cs"/>
                 <constraint firstItem="9Ps-OT-dbU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jwJ-Rk-wC2"/>
