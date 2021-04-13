@@ -367,6 +367,16 @@ extension PenghasilanPerTahunViewController : UIPickerViewDelegate, UIPickerView
             mytextfield.text = pickerData[row]
             mytextfield.resignFirstResponder()
             dataPenghasilan.pekerjaan = mytextfield.text!
+            
+            let fieldNppn = self.view.viewWithTag(104) as! UITextField
+            if mytextfield.text! == "Desain Grafis" {
+                fieldNppn.text = "32"
+            } else if mytextfield.text! == "Jasa Fotografi" || mytextfield.text! == "Programmer" ||  mytextfield.text! == "Digital Marketer" {
+                fieldNppn.text = "50"
+            } else if mytextfield.text! == "Entry Data" {
+                fieldNppn.text = "55"
+            }
+            dataPenghasilan.nppn = Int(fieldNppn.text!)!
         default:
             return
         }
