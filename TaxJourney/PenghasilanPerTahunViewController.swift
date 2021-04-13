@@ -70,11 +70,16 @@ class PenghasilanPerTahunViewController: UIViewController{
         performSegue(withIdentifier: "toPTKP", sender: self)
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? PTKPViewController {
             destination.dataPenghasilanPerTahun = dataPenghasilan
         }
+        if let destinationRincian = segue.destination as? RPenghasilanViewController {
+            destinationRincian.dataPenghasilan = dataPenghasilan
+        }
     }
+    
     
 }
 
