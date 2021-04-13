@@ -24,6 +24,9 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
         
     @IBOutlet weak var kesimpulanTV: UITableView!
     
+    var cekKawin = CheckKawin()
+    var cekTanggungan = CheckTanggungan()
+    
 //    let kesimpulan:[kesimpulanDetail] = [kesimpulanDetail(title: "Jumlah hutang pajak", detail: "Rp 4.800.000.000"), kesimpulanDetail(title: "Pajak yang sudah dibayar", detail: "Rp 4.000.000.000"), kesimpulanDetail(title: "Status SPT", detail: "Kurang Bayar"), kesimpulanDetail(title: "Jumlah status SPT", detail: "Rp 800.000.000")]
     
     let sectionTitle:[String] = ["Jumlah hutang pajak", "Pajak yang sudah dibayar", "Status SPT", "Jumlah status SPT"]

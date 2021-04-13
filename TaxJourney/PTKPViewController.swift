@@ -283,8 +283,8 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             let cellCaption = tableView.dequeueReusableCell(withIdentifier: "cellCaption") as! CaptionCell
             
             cellCaption.lblCaption.isHidden = false
-            if cekTanggungan.jumlahTanggungan < 0 {
-                cellCaption.lblCaption.text = "Jumlah tanggungan: 0"
+            if cekTanggungan.jumlahTanggungan > 3 {
+                cellCaption.lblCaption.text = "Jumlah tanggungan: 3"
             } else {
                 cellCaption.lblCaption.text = "Jumlah tanggungan: \(cekTanggungan.jumlahTanggungan)"
             }
@@ -390,6 +390,14 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             default:
                 return
             }
+        } else if segue.identifier == "toRincian" {
+            let dest = segue.destination as? RincianPTKPViewController
+            dest?.cekKawin = cekKawin
+            dest?.cekTanggungan = cekTanggungan
+        } else if segue.identifier == "toKesimpulan" {
+            let dest = segue.destination as? KesimpulanViewController
+            dest?.cekKawin = cekKawin
+            dest?.cekTanggungan = cekTanggungan
         }
     }
     
