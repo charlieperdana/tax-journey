@@ -66,7 +66,7 @@ class PTKPViewController: UIViewController {
     var cekKawin = CheckKawin()
     var cekTanggungan = CheckTanggungan()
     
-    var dataPenghasilanPerTahun : PenghasilanPertahunData?
+    var dataPenghasilanPerTahun = PenghasilanPertahunData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -398,6 +398,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             let dest = segue.destination as? KesimpulanViewController
             dest?.cekKawin = cekKawin
             dest?.cekTanggungan = cekTanggungan
+            dest?.data = dataPenghasilanPerTahun
         }
     }
     

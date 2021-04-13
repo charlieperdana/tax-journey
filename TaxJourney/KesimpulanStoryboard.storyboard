@@ -212,6 +212,7 @@
                     <connections>
                         <outlet property="kesimpulanTV" destination="Z2U-Lr-yFa" id="bpd-EK-aWp"/>
                         <outlet property="lihatRngkasanBtn" destination="ZHM-OR-X7f" id="Riw-Y3-wsV"/>
+                        <outlet property="miniKesimpulan" destination="zDn-zZ-qBd" id="aem-GW-u8z"/>
                         <outlet property="selesaiBtn" destination="9lC-PU-JWh" id="7Nm-qN-CtD"/>
                     </connections>
                 </viewController>

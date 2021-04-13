@@ -21,25 +21,49 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
 
     @IBOutlet weak var lihatRngkasanBtn: UIButton!
     @IBOutlet weak var selesaiBtn: UIButton!
-        
+    @IBOutlet weak var miniKesimpulan: UILabel!
     @IBOutlet weak var kesimpulanTV: UITableView!
     
     var cekKawin = CheckKawin()
     var cekTanggungan = CheckTanggungan()
+    var data = PenghasilanPertahunData()
     
 //    let kesimpulan:[kesimpulanDetail] = [kesimpulanDetail(title: "Jumlah hutang pajak", detail: "Rp 4.800.000.000"), kesimpulanDetail(title: "Pajak yang sudah dibayar", detail: "Rp 4.000.000.000"), kesimpulanDetail(title: "Status SPT", detail: "Kurang Bayar"), kesimpulanDetail(title: "Jumlah status SPT", detail: "Rp 800.000.000")]
     
     let sectionTitle:[String] = ["Jumlah hutang pajak", "Pajak yang sudah dibayar", "Status SPT", "Jumlah status SPT"]
     
-    let sectionDetail:[String] = ["Rp 4.800.000.000", "Rp 4.000.000.000", "Kurang Bayar", "Rp 800.000.000"]
+    //let sectionDetail:[String] = ["Rp 4.800.000.000", "Rp 4.000.000.000", "Kurang Bayar", "Rp 800.000.000"]
     
     let sectionInfo:[String] = ["Jumlah hutang pajak yang belum kamu bayarkan ke negara.", "Jumlah bukti potong pajak yang sudah kamu lampirkan.", "Status SPT anda sebagai wajib pajak saat ini.", "Jumlah hutang pajak dikurangi pajak yang sudah dibayar."]
+    
+    var sectionDetail:[String] = []
+    var statusspt:String!
+    var jumlahstatusspt:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         kesimpulanTV.delegate = self
         kesimpulanTV.dataSource = self
+        //print("\(data.penghasilanTahun)")
+        let penghasilan = data.penghasilanTahun
+        var pajakDibayar : Int = 0
+        
+        for i in data.jumlahPphPotong{
+            pajakDibayar = pajakDibayar+i
+        }
+        jumlahstatusspt = penghasilan - pajakDibayar
+        if jumlahstatusspt < 0 {
+            statusspt = "Kurang Bayar"
+        } else if jumlahstatusspt == 0 {
+            statusspt = "Nihil"
+        } else if jumlahstatusspt > 0 {
+            statusspt = "Lebih Bayar"
+        }
+        
+        sectionDetail = ["Rp. \(penghasilan)", "Rp. \(pajakDibayar)", "\(statusspt!)", "Rp. \(jumlahstatusspt)"]
+        
+        miniKesimpulan.text = "Berdasarkan perhitungan di atas, kamu masih harus membayar pajak sebesar Rp. \(jumlahstatusspt)"
         
         design()
     }
