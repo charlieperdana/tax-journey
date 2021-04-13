@@ -139,6 +139,10 @@ class TanggunganViewController: UIViewController, UITableViewDataSource, UITable
         return 44
     }
     
+    override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
+        checkAyah = true
+    }
+    
 }
 
 extension TanggunganViewController: UIPickerViewDelegate, UIPickerViewDataSource {

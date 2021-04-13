@@ -205,6 +205,7 @@
 				55ADF5A5261C5BE8004EAE18 /* LaunchScreen.storyboard */,
 				55ADF5A8261C5BE8004EAE18 /* Info.plist */,
 				DC6798CA261C9AD100D4E44E /* Tanggungan.storyboard */,
+				006028B6262439CC0030CB62 /* TanggunganViewController.swift */,
 				DC6798CF261C9DC400D4E44E /* TanggunganAyahController.swift */,
 				DC5525C026214B920047E4CB /* TanggunganIbuController.swift */,
 				DC5525C526214F3B0047E4CB /* TanggunganAyahMertuaController.swift */,
@@ -242,7 +243,6 @@
 				FCD0592A261EE8C4000A4CD8 /* Overlay2View.xib */,
 				FCD0592F261EEA68000A4CD8 /* Overlay2View.swift */,
 				FC24EB86261DF38300E20474 /* KesimpulanTableViewCell.swift */,
-				006028B6262439CC0030CB62 /* TanggunganViewController.swift */,
 			);
 			path = TaxJourney;
 			sourceTree = "<group>";

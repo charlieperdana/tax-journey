@@ -39,7 +39,7 @@ var isNPWPdigabung:Bool?
 var isSuamiBerpenghasilan:Bool?
 var suratketerangankeluarahan:String = ""
 
-var jumlahTanggungam:Int = -1
+var jumlahTanggungan:Int = -1
 
 var checkAyah:Bool = false
 var checkIbu:Bool = false
@@ -75,6 +75,8 @@ class PTKPViewController: UIViewController {
         alert.addAction(buttonOK)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func unwindFromTanggungan(_ sender: UIStoryboardSegue) {}
 }
 
 extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
@@ -172,6 +174,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             if isSuamiBerpenghasilan == false {
                 let cellCaption = tableView.dequeueReusableCell(withIdentifier: "cellCaption") as! CaptionCell
                 
+                cellCaption.lblCaption.isHidden = false
                 cellCaption.lblCaption.text = "Surat keterangan bahwa suami tidak berpenghasilan dari kelurahan."
                 cellCaption.separatorInset = UIEdgeInsets(top: 0, left: cellCaption.bounds.size.width, bottom: 0, right: 0);
                 
@@ -184,6 +187,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 9 {
             let cellCaption = tableView.dequeueReusableCell(withIdentifier: "cellCaption") as! CaptionCell
             
+            cellCaption.isHidden = true
             cellCaption.separatorInset = UIEdgeInsets(top: 0, left: cellCaption.bounds.size.width, bottom: 0, right: 0);
             
             return cellCaption
@@ -251,7 +255,12 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 16 {
             let cellCaption = tableView.dequeueReusableCell(withIdentifier: "cellCaption") as! CaptionCell
             
-            cellCaption.lblCaption.text = "Jumlah tanggungan: 3"
+            cellCaption.lblCaption.isHidden = false
+            if jumlahTanggungan < 0 {
+                cellCaption.lblCaption.text = "Jumlah tanggungan: 0"
+            } else {
+                cellCaption.lblCaption.text = "Jumlah tanggungan: \(jumlahTanggungan)"
+            }
             cellCaption.lblCaption.textColor = .black
             cellCaption.lblCaption.font = UIFont.systemFont(ofSize: 17)
             cellCaption.separatorInset = UIEdgeInsets(top: 0, left: cellCaption.bounds.size.width, bottom: 0, right: 0);
