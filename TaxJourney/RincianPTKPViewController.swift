@@ -15,9 +15,23 @@ class RincianPTKPViewController: UIViewController {
     @IBOutlet weak var kawinLabel: UILabel!
     @IBOutlet weak var tanggunganLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    
+    var cekKawin = CheckKawin()
+    var cekTanggungan = CheckTanggungan()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if cekKawin.isMenikah == true && cekKawin.isSuamiBerpenghasilan == true {
+            StatusKawin.text = "Menikah dan suami berpenghasilan"
+        } else if cekKawin.isMenikah == true && cekKawin.isSuamiBerpenghasilan == false {
+            StatusKawin.text = "Menikah dan suami tidak berpenghasilan"
+        } else if cekKawin.isMenikah == false {
+            StatusKawin.text = "Belum menikah"
+        }
+        
+        if cekKawin.isMenikah == true {
+            
+        }
         // Do any additional setup after loading the view.
     }
     @objc func miniView() {
