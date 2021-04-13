@@ -13,11 +13,13 @@ class RPenghasilanViewController: UIViewController {
     @IBOutlet weak var penghasilanNeto1: UILabel!
     @IBOutlet weak var penghasilanNeto2: UILabel!
     @IBOutlet weak var JumlahPajak: UILabel!
-    
+    var dataPenghasilan = PenghasilanPertahunData()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        penghasilanSetahun.text = "Sepanjang tahun \(dataPenghasilan.periode), kamu memiliki penghasilan sebesar \(dataPenghasilan.penghasilanTahun)"
+        penghasilanNeto1.text = "Karena pekerjaanmu adalah \(dataPenghasilan.pekerjaan), maka NPPN-mu adalah sebesar \(dataPenghasilan.nppn)."
+        penghasilanNeto2.text = "Penghasilan netomu didapatkan dari jumlah penghasilan x NPPN, sehingga jumlahnya adalah \(dataPenghasilan.jumlahPphPotong)."
+        JumlahPajak.text = "Sementara itu, berdasarkan jumlah PPh Dipotong yang kamu lampirkan dari Bukti Potongmu sepanjang tahun \(dataPenghasilan.periode), kamu sudah membayar pajak sebesar \(dataPenghasilan.isBuktiPotong)."
     }
     @objc func miniView() {
             let slideVC = PenghasilanNettoViewController()
@@ -30,17 +32,6 @@ class RPenghasilanViewController: UIViewController {
         miniView()
         
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

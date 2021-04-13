@@ -41,11 +41,11 @@ var suratketerangankeluarahan:String = ""
 
 var jumlahTanggungan:Int = -1
 
-var checkAyah:Bool = false
-var checkIbu:Bool = false
-var checkAyahMertua:Bool = false
-var checkIbuMertua:Bool = false
-var checkAnak:Bool = false
+var checkAyah:Bool?
+var checkIbu:Bool?
+var checkAyahMertua:Bool?
+var checkIbuMertua:Bool?
+var checkAnak:Bool?
 
 class PTKPViewController: UIViewController {
 
@@ -59,6 +59,8 @@ class PTKPViewController: UIViewController {
     var toolbar:UIToolbar?
     
     var idx:Int = 0
+    
+    var dataPenghasilanPerTahun : PenghasilanPertahunData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +78,25 @@ class PTKPViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func unwindFromTanggungan(_ sender: UIStoryboardSegue) {}
+    @IBAction func unwindFromTanggungan(_ sender: UIStoryboardSegue) {
+        guard let sender = sender.source as? TanggunganViewController
+        else { return }
+        switch sender.id {
+        case 0:
+            checkAyah = sender.check!
+        case 1:
+            checkIbu = sender.check!
+        case 2:
+            checkAyahMertua = sender.check!
+        case 3:
+            checkIbuMertua = sender.check!
+        case 4:
+            checkAnak = sender.check!
+        default:
+            return
+        }
+        tvPTKP.reloadData()
+    }
 }
 
 extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
@@ -201,10 +221,10 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ayah"
-            if checkAyah == false {
-                cellChevron.imgCheck.isHidden = true
-            } else {
+            if checkAyah == true {
                 cellChevron.imgCheck.isHidden = false
+            } else {
+                cellChevron.imgCheck.isHidden = true
             }
             
             return cellChevron
@@ -212,10 +232,10 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ibu"
-            if checkIbu == false {
-                cellChevron.imgCheck.isHidden = true
-            } else {
+            if checkIbu == true {
                 cellChevron.imgCheck.isHidden = false
+            } else {
+                cellChevron.imgCheck.isHidden = true
             }
             
             return cellChevron
@@ -223,10 +243,10 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ayah mertua"
-            if checkAyahMertua == false {
-                cellChevron.imgCheck.isHidden = true
-            } else {
+            if checkAyahMertua == true {
                 cellChevron.imgCheck.isHidden = false
+            } else {
+                cellChevron.imgCheck.isHidden = true
             }
             
             return cellChevron
@@ -234,10 +254,10 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ibu Mertua"
-            if checkIbuMertua == false {
-                cellChevron.imgCheck.isHidden = true
-            } else {
+            if checkIbuMertua == true {
                 cellChevron.imgCheck.isHidden = false
+            } else {
+                cellChevron.imgCheck.isHidden = true
             }
             
             return cellChevron
@@ -245,10 +265,10 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Anak"
-            if checkAnak == false {
-                cellChevron.imgCheck.isHidden = true
-            } else {
+            if checkAnak == true {
                 cellChevron.imgCheck.isHidden = false
+            } else {
+                cellChevron.imgCheck.isHidden = true
             }
             
             return cellChevron
@@ -339,14 +359,19 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             switch idx {
             case 0:
                 dest?.titleNavBar = "Ayah"
+                dest?.id = 0
             case 1:
                 dest?.titleNavBar = "Ibu"
+                dest?.id = 1
             case 2:
                 dest?.titleNavBar = "Ayah Mertua"
+                dest?.id = 2
             case 3:
                 dest?.titleNavBar = "Ibu Mertua"
+                dest?.id = 3
             case 4:
                 dest?.titleNavBar = "Anak"
+                dest?.id = 4
             default:
                 return
             }

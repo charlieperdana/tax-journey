@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0019AB12261C99E70066AEAA /* KendraStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0019AB11261C99E70066AEAA /* KendraStoryboard.storyboard */; };
-		0019AB17261C9A260066AEAA /* PerhitunganPTKPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019AB16261C9A260066AEAA /* PerhitunganPTKPViewController.swift */; };
 		0019AB1C261CA71E0066AEAA /* PerkawinanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019AB1B261CA71E0066AEAA /* PerkawinanTableViewCell.swift */; };
 		006028B7262439CC0030CB62 /* TanggunganViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006028B6262439CC0030CB62 /* TanggunganViewController.swift */; };
 		00D65023261F458E00A7221E /* PTKPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D65022261F458E00A7221E /* PTKPViewController.swift */; };
@@ -82,7 +81,6 @@
 
 /* Begin PBXFileReference section */
 		0019AB11261C99E70066AEAA /* KendraStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KendraStoryboard.storyboard; sourceTree = "<group>"; };
-		0019AB16261C9A260066AEAA /* PerhitunganPTKPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerhitunganPTKPViewController.swift; sourceTree = "<group>"; };
 		0019AB1B261CA71E0066AEAA /* PerkawinanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkawinanTableViewCell.swift; sourceTree = "<group>"; };
 		006028B6262439CC0030CB62 /* TanggunganViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganViewController.swift; sourceTree = "<group>"; };
 		00D65022261F458E00A7221E /* PTKPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTKPViewController.swift; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 				F8B0A07C26204CEB006A6297 /* PenghasilanNettoViewController.swift */,
 				F8B0A07D26204CEB006A6297 /* PenghasilanNettoViewController.xib */,
 				0019AB11261C99E70066AEAA /* KendraStoryboard.storyboard */,
-				0019AB16261C9A260066AEAA /* PerhitunganPTKPViewController.swift */,
 				F8B0A0982620B98B006A6297 /* JumlahTanggunganViewController.swift */,
 				F8B0A0992620B98B006A6297 /* JumlahTanggunganViewController.xib */,
 				0019AB1B261CA71E0066AEAA /* PerkawinanTableViewCell.swift */,
@@ -424,7 +421,6 @@
 				00D65023261F458E00A7221E /* PTKPViewController.swift in Sources */,
 				DC446486262435CE00482860 /* LibDefinitionAndFunc.swift in Sources */,
 				55ADF59F261C5BE3004EAE18 /* ViewController.swift in Sources */,
-				0019AB17261C9A260066AEAA /* PerhitunganPTKPViewController.swift in Sources */,
 				55ADF59B261C5BE3004EAE18 /* AppDelegate.swift in Sources */,
 				DC6798D0261C9DC400D4E44E /* TanggunganAyahController.swift in Sources */,
 				DC5525CB26214F540047E4CB /* TanggunganIbuMertuaController.swift in Sources */,
