@@ -50,9 +50,16 @@ class TanggunganViewController: UIViewController, UITableViewDataSource, UITable
     @objc func buttonBackTapped() {
         navigationController?.popViewController(animated: true)
 //        print(id!)
-        if cekPilihan1 == "Tidak" || (cekPilihan1 == "Ya" && !cekPilihan2.isEmpty) {
-            check = true
-        } else { check = false }
+        if titleNavBar == "Anak"{
+            if cekPilihan1 == "Tidak" || (cekPilihan1 == "Ya" && jumlahanak > 0) {
+                check = true
+            } else { check = false }
+        } else {
+            if cekPilihan1 == "Tidak" || (cekPilihan1 == "Ya" && !cekPilihan2.isEmpty) {
+                check = true
+            } else { check = false }
+        }
+//        check = true
         performSegue(withIdentifier: "goToPTKP", sender: self)
     }
     
@@ -158,11 +165,6 @@ class TanggunganViewController: UIViewController, UITableViewDataSource, UITable
         }
         return 44
     }
-    
-    override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
-        checkAyah = true
-    }
-    
 }
 
 extension TanggunganViewController: UIPickerViewDelegate, UIPickerViewDataSource {
