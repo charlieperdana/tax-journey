@@ -223,7 +223,7 @@
                         <outlet property="tvPTKP" destination="U0e-Xh-SKp" id="v3m-rf-6yE"/>
                         <segue destination="hi9-mp-QqZ" kind="show" identifier="toKesimpulan" id="njs-jr-bxW"/>
                         <segue destination="IjY-4m-eU9" kind="show" identifier="toTanggungan" id="YMn-HR-wh3"/>
-                        <segue destination="ner-kY-sO9" kind="unwind" identifier="goToPTKP" unwindAction="unwindFromTanggungan:" id="ez8-3P-5Pl"/>
+                        <segue destination="ner-kY-sO9" kind="unwind" identifier="goToPTKP" unwindAction="unwindFromTanggungan:" id="01Q-VM-sdy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uas-wt-wUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

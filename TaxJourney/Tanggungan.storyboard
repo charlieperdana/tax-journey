@@ -415,9 +415,11 @@
                     <connections>
                         <outlet property="stepperAnak" destination="Eo9-I7-eEk" id="553-Lf-pMa"/>
                         <outlet property="tvTanggungan" destination="XAH-wB-wrH" id="oao-sm-Eqk"/>
+                        <segue destination="B5t-TZ-EH4" kind="unwind" identifier="goToPTKP" unwindAction="unwindFromTanggungan:" id="fGo-J6-yzu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sl5-F1-ZSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="B5t-TZ-EH4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1562" y="807"/>
         </scene>
