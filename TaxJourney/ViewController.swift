@@ -8,13 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var haiLabel: UILabel!
+
     @IBOutlet weak var btnStart: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
+        
         initDisplay()
     }
     
@@ -22,9 +22,7 @@ class ViewController: UIViewController {
         btnStart.layer.cornerRadius = 10
         btnStart.clipsToBounds = true
     }
-    
-    @IBAction func startBtnDipTap(_ sender: Any) {
-        performSegue(withIdentifier: "toPenghasilanPerTahun", sender: self)
-    }
+
+
 }
 
