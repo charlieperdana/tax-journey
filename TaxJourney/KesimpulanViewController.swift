@@ -122,6 +122,14 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
         showMiracle()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAllSummary"{
+            let dest = segue.destination as? AllSummaryViewController
+            dest?.data2 = data
+            dest?.cekkawin = cekKawin
+            dest?.cektanggungan = cekTanggungan
+        }
+    }
     
     /*
     // MARK: - Navigation

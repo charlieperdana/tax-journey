@@ -13,8 +13,12 @@ class AllSummaryViewController: UIViewController {
     @IBOutlet weak var perhitunganView: UIView!
     @IBOutlet weak var jumlahView: UIView!
     
-    @IBOutlet weak var penghasilanLbl: UILabel!
-    @IBOutlet weak var perhitunganLbl: UILabel!
+    @IBOutlet weak var penghasilan: UILabel!
+    @IBOutlet weak var nppn: UILabel!
+    @IBOutlet weak var neto: UILabel!
+    
+    @IBOutlet weak var tanggungan: UILabel!
+    @IBOutlet weak var penghasilanKenaPajak: UILabel!
     
     @IBOutlet weak var utang1Lbl: UILabel!
     @IBOutlet weak var utang2Lbl: UILabel!
@@ -27,15 +31,15 @@ class AllSummaryViewController: UIViewController {
     @IBOutlet weak var jumlah4Lbl: UILabel!
     @IBOutlet weak var jumlahtotalLbl: UILabel!
     
-    var penghasilan : Int?
-    var pekerjaan : String?
-    var nppn : Int?
-    var penghasilanNeto : Int?
-    var statusPernikahan : String?
-    var jumlahTanggungan : String?
-    var jumlahPTKP : Int?
-    var penghasilanKenaPajak : Int?
-    var totalHutangPajak : Int?
+    var data2 = PenghasilanPertahunData()
+    var totalNeto : Int = 0
+    var totalpenghasilan : Int = 0
+    var totalnppn : Int = 0
+    
+    var cekkawin = CheckKawin()
+    var cektanggungan = CheckTanggungan()
+    var kawin : String!
+    var jmlhtanggungan : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +51,8 @@ class AllSummaryViewController: UIViewController {
         
         jumlahView.layer.cornerRadius = 10
         jumlahView.clipsToBounds = true
+        
+        showDetail()
     }
     
     @objc func showMiracle() {
@@ -60,6 +66,39 @@ class AllSummaryViewController: UIViewController {
         showMiracle()
     }
     
+    func cek() {
+        if cekkawin.isMenikah == true {
+            kawin = "sudah menikah"
+        }
+        else{
+            kawin = "belum menikah"
+        }
+        
+        if cektanggungan.jumlahTanggungan >= 3 {
+            jmlhtanggungan = 3
+        }
+        else{
+            jmlhtanggungan = cektanggungan.jumlahTanggungan
+        }
+    }
+    
+    func showDetail() {
+        
+        cek()
+        
+        let totalpenghasilan = data2.penghasilanTahun
+        print(totalpenghasilan)
+        let totalnppn = data2.nppn / 100
+        print(totalnppn)
+        totalNeto = totalpenghasilan * totalnppn
+        
+        penghasilan.text = "Sepanjang tahun \(data2.periode), kamu memiliki penghasilan sebesar Rp \(data2.penghasilanTahun)."
+        nppn.text = "Karena pekerjaanmu \(data2.pekerjaan), maka NPPN-mu adalah sebesar \(data2.nppn)%."
+        neto.text = "Dengan begitu, kamu memiliki penghasilan neto sebesar Rp \(data2.penghasilanTahun) * \(data2.nppn)% = Rp \(totalNeto)."
+        
+        tanggungan.text = "Karena kamu \(kawin!) dan memiliki \(jmlhtanggungan) orang tanggungan, maka jumlah PTKP-mu berjumlah RpXXX.XXX"
+        penghasilanKenaPajak.text = "Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX = RpXXX.XXX"
+    }
     
     /*
     // MARK: - Navigation
