@@ -143,9 +143,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="tintColor" red="0.1578393579" green="0.1503329873" blue="0.27452227470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Lihat Rincian"/>
-                                                    <connections>
-                                                        <segue destination="lrx-Sw-m5T" kind="show" identifier="RincianPenghasilan" id="9Es-YD-5H0"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -224,6 +221,7 @@
                         <segue destination="hi9-mp-QqZ" kind="show" identifier="toKesimpulan" id="njs-jr-bxW"/>
                         <segue destination="IjY-4m-eU9" kind="show" identifier="toTanggungan" id="YMn-HR-wh3"/>
                         <segue destination="ner-kY-sO9" kind="unwind" identifier="goToPTKP" unwindAction="unwindFromTanggungan:" id="01Q-VM-sdy"/>
+                        <segue destination="lrx-Sw-m5T" kind="show" identifier="toRincian" id="Deu-lT-TtU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uas-wt-wUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -255,7 +253,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Us6-kZ-pSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="-213"/>
+            <point key="canvasLocation" x="1935" y="-231"/>
         </scene>
         <!--Tanggungan-->
         <scene sceneID="LAN-zT-InM">
@@ -265,7 +263,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSK-dl-4Pa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1885" y="-162"/>
+            <point key="canvasLocation" x="1885" y="-182"/>
         </scene>
         <!--RincianPTKP-->
         <scene sceneID="1AS-1N-Mck">
@@ -275,7 +273,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDp-dl-Qx3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="-250"/>
+            <point key="canvasLocation" x="1888" y="-284"/>
         </scene>
     </scenes>
     <resources>

@@ -8,6 +8,7 @@
 import UIKit
 
 var jumlahanak:Int = 0
+var jumlahtanggungan:Int = 0
 
 class Tanggungan:UITableViewCell {
     @IBOutlet weak var label:UILabel!
@@ -33,6 +34,7 @@ class TanggunganViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        stepperAnak.value = 0
 //        print(id!)
         tvTanggungan.delegate = self
         tvTanggungan.dataSource = self
@@ -52,10 +54,12 @@ class TanggunganViewController: UIViewController, UITableViewDataSource, UITable
 //        print(id!)
         if titleNavBar == "Anak"{
             if cekPilihan1 == "Tidak" || (cekPilihan1 == "Ya" && jumlahanak > 0) {
+                jumlahtanggungan += jumlahanak
                 check = true
             } else { check = false }
         } else {
             if cekPilihan1 == "Tidak" || (cekPilihan1 == "Ya" && !cekPilihan2.isEmpty) {
+                if cekPilihan2 == "Ya" { jumlahtanggungan += 1 }
                 check = true
             } else { check = false }
         }
