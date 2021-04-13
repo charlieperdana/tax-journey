@@ -10,6 +10,7 @@
 		0019AB12261C99E70066AEAA /* KendraStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0019AB11261C99E70066AEAA /* KendraStoryboard.storyboard */; };
 		0019AB17261C9A260066AEAA /* PerhitunganPTKPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019AB16261C9A260066AEAA /* PerhitunganPTKPViewController.swift */; };
 		0019AB1C261CA71E0066AEAA /* PerkawinanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019AB1B261CA71E0066AEAA /* PerkawinanTableViewCell.swift */; };
+		006028B7262439CC0030CB62 /* TanggunganViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006028B6262439CC0030CB62 /* TanggunganViewController.swift */; };
 		00D65023261F458E00A7221E /* PTKPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D65022261F458E00A7221E /* PTKPViewController.swift */; };
 		558712E52620B0990050BBED /* NppnPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558712E42620B0980050BBED /* NppnPresentationController.swift */; };
 		558712EA2620B8150050BBED /* NppnOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558712E92620B8150050BBED /* NppnOverlayView.xib */; };
@@ -83,6 +84,7 @@
 		0019AB11261C99E70066AEAA /* KendraStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KendraStoryboard.storyboard; sourceTree = "<group>"; };
 		0019AB16261C9A260066AEAA /* PerhitunganPTKPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerhitunganPTKPViewController.swift; sourceTree = "<group>"; };
 		0019AB1B261CA71E0066AEAA /* PerkawinanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkawinanTableViewCell.swift; sourceTree = "<group>"; };
+		006028B6262439CC0030CB62 /* TanggunganViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganViewController.swift; sourceTree = "<group>"; };
 		00D65022261F458E00A7221E /* PTKPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTKPViewController.swift; sourceTree = "<group>"; };
 		558712E42620B0980050BBED /* NppnPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NppnPresentationController.swift; sourceTree = "<group>"; };
 		558712E92620B8150050BBED /* NppnOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NppnOverlayView.xib; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				55ADF5A5261C5BE8004EAE18 /* LaunchScreen.storyboard */,
 				55ADF5A8261C5BE8004EAE18 /* Info.plist */,
 				DC6798CA261C9AD100D4E44E /* Tanggungan.storyboard */,
+				006028B6262439CC0030CB62 /* TanggunganViewController.swift */,
 				DC6798CF261C9DC400D4E44E /* TanggunganAyahController.swift */,
 				DC5525C026214B920047E4CB /* TanggunganIbuController.swift */,
 				DC5525C526214F3B0047E4CB /* TanggunganAyahMertuaController.swift */,
@@ -435,6 +438,7 @@
 				55ADF5DB261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift in Sources */,
 				55ADF59D261C5BE3004EAE18 /* SceneDelegate.swift in Sources */,
 				55ADF5E0261DA067004EAE18 /* ListPenghasilanItemModel.swift in Sources */,
+				006028B7262439CC0030CB62 /* TanggunganViewController.swift in Sources */,
 				FC24EB7F261DEAAC00E20474 /* InfoTableViewCell.swift in Sources */,
 				FC35EB06261CD18B008D27E2 /* OverlayView.swift in Sources */,
 				558712E52620B0990050BBED /* NppnPresentationController.swift in Sources */,

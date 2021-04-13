@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Ku-RC-Jb3">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -337,6 +337,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoa-YL-rHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="814" y="807"/>
+        </scene>
+        <!--Tanggungan View Controller-->
+        <scene sceneID="SL5-gW-xQc">
+            <objects>
+                <viewController id="2Ku-RC-Jb3" customClass="TanggunganViewController" customModule="TaxJourney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v2w-l1-FV3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XAH-wB-wrH">
+                                <rect key="frame" x="0.0" y="44" width="390" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="FSF-Gf-cvz"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellTanggungan" rowHeight="44" id="Lns-ue-m2J" customClass="Tanggungan" customModule="TaxJourney" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lns-ue-m2J" id="8di-Nl-4vA">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4F-gK-wkf">
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="350" height="20.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="350" id="KSE-to-niT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pilih" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RH4-xe-xcK">
+                                                    <rect key="frame" x="270" y="10.000000000000002" width="100" height="18.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="mql-pR-cub"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="m4F-gK-wkf" firstAttribute="top" secondItem="8di-Nl-4vA" secondAttribute="topMargin" id="DYW-hA-reB"/>
+                                                <constraint firstAttribute="trailing" secondItem="RH4-xe-xcK" secondAttribute="trailing" constant="20" symbolic="YES" id="M9Q-PT-ayU"/>
+                                                <constraint firstItem="RH4-xe-xcK" firstAttribute="top" secondItem="8di-Nl-4vA" secondAttribute="top" constant="10" id="NCl-He-Svj"/>
+                                                <constraint firstItem="m4F-gK-wkf" firstAttribute="leading" secondItem="8di-Nl-4vA" secondAttribute="leadingMargin" id="ZNa-QE-qkp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="m4F-gK-wkf" id="hFO-eU-FE5"/>
+                                            <outlet property="picker" destination="RH4-xe-xcK" id="HnS-jb-ans"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <stepper hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Eo9-I7-eEk">
+                                <rect key="frame" x="276" y="94" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepper:" destination="2Ku-RC-Jb3" eventType="valueChanged" id="1vU-O1-mAy"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZYL-fW-XDk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZYL-fW-XDk" firstAttribute="trailing" secondItem="Eo9-I7-eEk" secondAttribute="trailing" constant="20" id="2Ix-LK-QEP"/>
+                            <constraint firstItem="XAH-wB-wrH" firstAttribute="top" secondItem="ZYL-fW-XDk" secondAttribute="top" id="4DJ-qa-G5M"/>
+                            <constraint firstItem="ZYL-fW-XDk" firstAttribute="trailing" secondItem="XAH-wB-wrH" secondAttribute="trailing" id="EXR-Vu-lN2"/>
+                            <constraint firstItem="XAH-wB-wrH" firstAttribute="leading" secondItem="ZYL-fW-XDk" secondAttribute="leading" id="WBa-2D-fLe"/>
+                            <constraint firstItem="Eo9-I7-eEk" firstAttribute="top" secondItem="ZYL-fW-XDk" secondAttribute="top" constant="50" id="fXK-43-c6b"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Px0-jL-xG3"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="stepperAnak" destination="Eo9-I7-eEk" id="553-Lf-pMa"/>
+                        <outlet property="tvTanggungan" destination="XAH-wB-wrH" id="oao-sm-Eqk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sl5-F1-ZSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="807"/>
         </scene>
     </scenes>
     <resources>

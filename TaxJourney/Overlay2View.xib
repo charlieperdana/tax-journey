@@ -18,13 +18,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F35-U4-9ys">
-                    <rect key="frame" x="177" y="52" width="60" height="24"/>
+                    <rect key="frame" x="177" y="61" width="60" height="24"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blj-e0-fBy">
-                    <rect key="frame" x="31" y="103" width="354" height="304.5"/>
+                    <rect key="frame" x="31" y="112" width="354" height="304.5"/>
                     <string key="text">Status SPT melambangkan hubungan
 antara jumlah pajak yang harus dibayar
 dan jumlah pajak yang sudah dibayar.
@@ -45,7 +45,7 @@ pajak yang harus kamu bayarkan.</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="750-cg-3UF">
-                    <rect key="frame" x="0.0" y="86" width="414" height="1"/>
+                    <rect key="frame" x="0.0" y="95" width="414" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="414" id="pC7-CJ-3Te"/>
@@ -59,7 +59,7 @@ pajak yang harus kamu bayarkan.</string>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="blj-e0-fBy" secondAttribute="trailing" constant="29" id="7gc-vd-bQH"/>
                 <constraint firstItem="750-cg-3UF" firstAttribute="top" secondItem="F35-U4-9ys" secondAttribute="bottom" constant="10" id="DhP-WJ-vQS"/>
                 <constraint firstItem="blj-e0-fBy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="Dt9-wA-l4N"/>
-                <constraint firstItem="F35-U4-9ys" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="K2H-i1-86i"/>
+                <constraint firstItem="F35-U4-9ys" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="17" id="K2H-i1-86i"/>
                 <constraint firstItem="750-cg-3UF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bGM-Ux-ryt"/>
                 <constraint firstItem="blj-e0-fBy" firstAttribute="top" secondItem="750-cg-3UF" secondAttribute="bottom" constant="16" id="bv3-pr-7mE"/>
                 <constraint firstItem="F35-U4-9ys" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ckg-XH-6X4"/>

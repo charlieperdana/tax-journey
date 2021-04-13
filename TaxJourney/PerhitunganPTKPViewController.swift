@@ -22,6 +22,9 @@ class PerhitunganPTKPViewController: UIViewController {
     var PickerYesNoTiga:UIPickerView!
     var options = [String]()
     
+    //for data Penghasialn Per Tahun Page
+    var dataPenghasilanPerTahun : PenghasilanPertahunData?
+    
     var toolbar:UIToolbar?
     
     override func viewDidLoad() {

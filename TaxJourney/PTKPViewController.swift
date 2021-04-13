@@ -33,6 +33,20 @@ class ImageCell: UITableViewCell {
     
 }
 
+var kelamin:String = ""
+var isMenikah:Bool?
+var isNPWPdigabung:Bool?
+var isSuamiBerpenghasilan:Bool?
+var suratketerangankeluarahan:String = ""
+
+var jumlahTanggungan:Int = -1
+
+var checkAyah:Bool = false
+var checkIbu:Bool = false
+var checkAyahMertua:Bool = false
+var checkIbuMertua:Bool = false
+var checkAnak:Bool = false
+
 class PTKPViewController: UIViewController {
 
     @IBOutlet weak var tvPTKP: UITableView!
@@ -44,11 +58,7 @@ class PTKPViewController: UIViewController {
     var options = [String]()
     var toolbar:UIToolbar?
     
-    var kelamin:String = ""
-    var isMenikah:String = ""
-    var isNPWPdigabung:String = ""
-    var isSuamiBerpenghasilan:String = ""
-    var suratketerangankeluarahan:String = ""
+    var idx:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +75,8 @@ class PTKPViewController: UIViewController {
         alert.addAction(buttonOK)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func unwindFromTanggungan(_ sender: UIStoryboardSegue) {}
 }
 
 extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
@@ -113,7 +125,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
 
             return cellPicker
         } else if indexPath.row == 5 {
-            if isMenikah == "Menikah" && kelamin == "Perempuan" {
+            if isMenikah == true && kelamin == "Perempuan" {
                 tvPTKP.insertRows(at: [IndexPath(row: 5, section: 0)], with: .automatic)
                 
                 let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
@@ -128,7 +140,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
                 tvPTKP.deleteRows(at: [IndexPath(row: 5, section: 0)], with: .automatic)
             }
         } else if indexPath.row == 6 {
-            if isNPWPdigabung == "Tidak" {
+            if isNPWPdigabung == false {
                 let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
             
                 cellPicker.lblStatus.text = "Suami berpenghasilan"
@@ -143,7 +155,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
                 tvPTKP.deleteRows(at: [IndexPath(row: 6, section: 0)], with: .automatic)
             }
         } else if indexPath.row == 7 {
-            if isSuamiBerpenghasilan == "Tidak" {
+            if isSuamiBerpenghasilan == false {
                 let cellPicker = tableView.dequeueReusableCell(withIdentifier: "cellPicker") as! PickerCell
                 
                 cellPicker.lblStatus.text = "Surat keterangan kelurahan"
@@ -159,9 +171,10 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
         } else if indexPath.row == 8 {
-            if isSuamiBerpenghasilan == "Tidak" {
+            if isSuamiBerpenghasilan == false {
                 let cellCaption = tableView.dequeueReusableCell(withIdentifier: "cellCaption") as! CaptionCell
                 
+                cellCaption.lblCaption.isHidden = false
                 cellCaption.lblCaption.text = "Surat keterangan bahwa suami tidak berpenghasilan dari kelurahan."
                 cellCaption.separatorInset = UIEdgeInsets(top: 0, left: cellCaption.bounds.size.width, bottom: 0, right: 0);
                 
@@ -174,6 +187,7 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 9 {
             let cellCaption = tableView.dequeueReusableCell(withIdentifier: "cellCaption") as! CaptionCell
             
+            cellCaption.isHidden = true
             cellCaption.separatorInset = UIEdgeInsets(top: 0, left: cellCaption.bounds.size.width, bottom: 0, right: 0);
             
             return cellCaption
@@ -187,37 +201,66 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ayah"
-            cellChevron.imgCheck.isHidden = true
+            if checkAyah == false {
+                cellChevron.imgCheck.isHidden = true
+            } else {
+                cellChevron.imgCheck.isHidden = false
+            }
             
             return cellChevron
         } else if indexPath.row == 12 {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ibu"
+            if checkIbu == false {
+                cellChevron.imgCheck.isHidden = true
+            } else {
+                cellChevron.imgCheck.isHidden = false
+            }
             
             return cellChevron
         } else if indexPath.row == 13 {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ayah mertua"
+            if checkAyahMertua == false {
+                cellChevron.imgCheck.isHidden = true
+            } else {
+                cellChevron.imgCheck.isHidden = false
+            }
             
             return cellChevron
         } else if indexPath.row == 14 {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Ibu Mertua"
+            if checkIbuMertua == false {
+                cellChevron.imgCheck.isHidden = true
+            } else {
+                cellChevron.imgCheck.isHidden = false
+            }
             
             return cellChevron
         } else if indexPath.row == 15 {
             let cellChevron = tableView.dequeueReusableCell(withIdentifier: "cellChevron") as! ChevronCell
             
             cellChevron.lblTanggungan.text = "Anak"
+            if checkAnak == false {
+                cellChevron.imgCheck.isHidden = true
+            } else {
+                cellChevron.imgCheck.isHidden = false
+            }
             
             return cellChevron
         } else if indexPath.row == 16 {
             let cellCaption = tableView.dequeueReusableCell(withIdentifier: "cellCaption") as! CaptionCell
             
-            cellCaption.lblCaption.text = "Jumlah tanggungan: 3"
+            cellCaption.lblCaption.isHidden = false
+            if jumlahTanggungan < 0 {
+                cellCaption.lblCaption.text = "Jumlah tanggungan: 0"
+            } else {
+                cellCaption.lblCaption.text = "Jumlah tanggungan: \(jumlahTanggungan)"
+            }
             cellCaption.lblCaption.textColor = .black
             cellCaption.lblCaption.font = UIFont.systemFont(ofSize: 17)
             cellCaption.separatorInset = UIEdgeInsets(top: 0, left: cellCaption.bounds.size.width, bottom: 0, right: 0);
@@ -248,18 +291,22 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showAlert(title: "tes", message: "\(indexPath.row)")
         switch indexPath.row {
         case 11:
-            showAlert(title: "Ayah", message: "ini ayah")
+            idx = 0
+            performSegue(withIdentifier: "toTanggungan", sender: self)
         case 12:
-            showAlert(title: "Ibu", message: "ini ibu")
+            idx = 1
+            performSegue(withIdentifier: "toTanggungan", sender: self)
         case 13:
-            showAlert(title: "Ayah mertua", message: "ini ayah mertua")
+            idx = 2
+            performSegue(withIdentifier: "toTanggungan", sender: self)
         case 14:
-            showAlert(title: "Ibu mertua", message: "ini ibu mertua")
+            idx = 3
+            performSegue(withIdentifier: "toTanggungan", sender: self)
         case 15:
-            showAlert(title: "Anak", message: "ini anak")
+            idx = 4
+            performSegue(withIdentifier: "toTanggungan", sender: self)
         default:
             return
         }
@@ -267,7 +314,6 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         if indexPath.row == 10 {
-            //showAlert(title: "Halo", message: "Lagi pencet info button")
             let slideVC = JumlahTanggunganViewController()
             slideVC.modalPresentationStyle = .custom
             slideVC.transitioningDelegate = self
@@ -287,7 +333,25 @@ extension PTKPViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toTanggungan" {
+            let dest = segue.destination as? TanggunganViewController
+            switch idx {
+            case 0:
+                dest?.titleNavBar = "Ayah"
+            case 1:
+                dest?.titleNavBar = "Ibu"
+            case 2:
+                dest?.titleNavBar = "Ayah Mertua"
+            case 3:
+                dest?.titleNavBar = "Ibu Mertua"
+            case 4:
+                dest?.titleNavBar = "Anak"
+            default:
+                return
+            }
+        }
+    }
     
     @objc func lanjut() {
         performSegue(withIdentifier: "toKesimpulan", sender: self)
@@ -309,8 +373,6 @@ extension PTKPViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView.tag {
         case 0:
-//            let mytextfield = self.view.viewWithTag(100) as! UITextField
-//            mytextfield.text = options[0]
             options = ["Laki-laki", "Perempuan"]
         case 1:
             options = ["Menikah", "Belum menikah"]
@@ -335,15 +397,27 @@ extension PTKPViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 1:
             let mytextfield = self.view.viewWithTag(101) as! UITextField
             mytextfield.text = options[row]
-            isMenikah = mytextfield.text!
+            if mytextfield.text == "Menikah" {
+                isMenikah = true
+            } else {
+                isMenikah = false
+            }
         case 2:
             let mytextfield = self.view.viewWithTag(102) as! UITextField
             mytextfield.text = options[row]
-            isNPWPdigabung = mytextfield.text!
+            if mytextfield.text == "Ya" {
+                isNPWPdigabung = true
+            } else {
+                isNPWPdigabung = false
+            }
         case 3:
             let mytextfield = self.view.viewWithTag(103) as! UITextField
             mytextfield.text = options[row]
-            isSuamiBerpenghasilan = mytextfield.text!
+            if mytextfield.text == "Ya" {
+                isSuamiBerpenghasilan = true
+            } else {
+                isSuamiBerpenghasilan = false
+            }
         case 4:
             let mytextfield = self.view.viewWithTag(104) as! UITextField
             mytextfield.text = options[row]

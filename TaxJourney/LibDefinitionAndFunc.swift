@@ -8,20 +8,20 @@
 import Foundation
 
 //inputnya masukin ke sini
-public var penghasilanPertahun:Int = 0
+public var penghasilanPertahun:Double = 0
 
 //inputnya masukin ke sini
-public var NPPN:Int = 0
+public var NPPN:Double = 0
 
 // penghasilan netp
-public let penghasilanNeto = penghasilanPertahun * (NPPN / 100)
+public let penghasilanNeto = Int(penghasilanPertahun * (NPPN / 100.0))
 
 //jumlahin di total kredit pajak
 public var jumlahKreditPajak:Int = 0
 
 //Status PTKP
-public var isMenikah:Bool = false
-public var jumlahTanggungan:Int = 0
+public var userIsMenikah:Bool = false
+public var jumlahTanggunganUser:Int = 0
 
 public func hitungPTKP(isMenikah:Bool, jumlahTanggungan:Int) -> Int {
     
@@ -42,7 +42,7 @@ public func hitungPTKP(isMenikah:Bool, jumlahTanggungan:Int) -> Int {
 }
 
 // masukin hasil hitungPTKP ke sini
-public let besaranPTKP = hitungPTKP(isMenikah: isMenikah, jumlahTanggungan: jumlahTanggungan)
+public let besaranPTKP = hitungPTKP(isMenikah: userIsMenikah, jumlahTanggungan: jumlahTanggunganUser)
 
 // PKP mesti diround 1000 ke bawah
 public let PKPunrounded = penghasilanNeto - besaranPTKP

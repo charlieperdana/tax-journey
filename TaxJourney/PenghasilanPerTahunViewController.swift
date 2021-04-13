@@ -19,13 +19,14 @@ class PenghasilanPerTahunViewController: UIViewController{
 
     var item: [ListPenghasilanItemModel] = [ListPenghasilanItemModel(item: "Periode", detailInfo: "Pilih tahun yang ingin kamu hitung jumlah pajaknya."),ListPenghasilanItemModel(item: "Penghasilan Setahun", detailInfo: "Masukkan penghasilanmu sepanjang tahun diatas"),ListPenghasilanItemModel(item: "Pekerjaan", detailInfo: ""), ListPenghasilanItemModel(item: "NPPN", detailInfo: ""), ListPenghasilanItemModel(item: "Memiliki Bukti Potong", detailInfo: "Bukti Potong adalah bukti bahwa sebagian dari penghasilanmu sudah dipotong untuk pembayaran pajak")]
 
-    var itemJumlahPotong: [JumlahPotongModel] = [JumlahPotongModel(item: "Jumlah Bukti Potong 1", jumlah: 0),JumlahPotongModel(item: "Jumlah Bukti Potong 2", jumlah: 0)]
+    var itemJumlahPotong: [JumlahPotongModel] = [JumlahPotongModel(item: "Jumlah Bukti Potong 1", jumlah: 0)]
     
     //for custom cell
     var pickerData = [String]()
     let yearPicker = UIPickerView()
     var pickerHaveBukti: UIPickerView!
     var pickerYear: UIPickerView!
+    var pickerPekerjaan: UIPickerView!
 
     
     var yearsTillNow : [String] {
@@ -37,6 +38,8 @@ class PenghasilanPerTahunViewController: UIViewController{
     }
     
     var isBuktiPotong = ["Ya", "Tidak"]
+    
+    var pekerjaan = ["Pekerjaan A", "Pekerjaan B", "Lainnya"]
     
     var dataPenghasilan = PenghasilanPertahunData()
 
@@ -63,7 +66,14 @@ class PenghasilanPerTahunViewController: UIViewController{
     }
     
     @IBAction func buttonLanjut(_ sender: Any) {
+        print("data modelnya \(dataPenghasilan)")
         performSegue(withIdentifier: "toPTKP", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PerhitunganPTKPViewController {
+            destination.dataPenghasilanPerTahun = dataPenghasilan
+        }
     }
     
 }
@@ -76,6 +86,7 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "listPenghasilanCell", for: indexPath) as! PenghasilanTableViewCell
         cell = tableView.dequeueReusableCell(withIdentifier: "listPenghasilanCell", for: indexPath) as! PenghasilanTableViewCell
 //        cell.indexPath = indexPath
+        cell.fieldPilih.delegate = self
         
         if indexPath.section == 0{
             
@@ -83,20 +94,35 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
             
             cell.itemLabel?.text = items.item
             cell.infoLabel?.text = items.detailInfo
+        
             
             //for picker cell
             if indexPath.row == 0 {
                 cell.fieldPilih.inputView = pickerYear
+                cell.fieldPilih.tag = 100
                 cell.fieldPilih.text = ""
                 cell.fieldPilih.placeholder = "Pilih"
                 pickerData = yearsTillNow
-                cell.fieldPilih.tag = 100
             }else if indexPath.row == 4 {
                 cell.fieldPilih.inputView = pickerHaveBukti
+                cell.fieldPilih.tag = 101
                 cell.fieldPilih.text = ""
                 cell.fieldPilih.placeholder = "Pilih"
                 pickerData = isBuktiPotong
-                cell.fieldPilih.tag = 101
+            } else if indexPath.row == 2 {
+                cell.fieldPilih.inputView = pickerPekerjaan
+                cell.fieldPilih.tag = 102
+                cell.fieldPilih.text = ""
+                cell.fieldPilih.placeholder = "Pilih"
+                pickerData = pekerjaan
+            } else if indexPath.row == 1 {
+                cell.fieldPilih.tag = 103
+                cell.fieldPilih.text = ""
+                cell.fieldPilih.placeholder = "Tidak Diatur"
+            } else if indexPath.row == 3 {
+                cell.fieldPilih.tag = 104
+                cell.fieldPilih.text = ""
+                cell.fieldPilih.placeholder = "Tidak Diatur"
             } else {
                 cell.fieldPilih.text = ""
                 cell.fieldPilih.placeholder = "Tidak Diatur"
@@ -105,6 +131,7 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
             
         } else if indexPath.section == 1 {
             let items = itemJumlahPotong[indexPath.row]
+            cell.fieldPilih.tag = 105
             
             cell.itemLabel?.text = items.item
             cell.infoLabel?.text = ""
@@ -118,7 +145,7 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
 //        myPicker.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
 //        cell.accessoryView = myPicker
         
-        if indexPath.row == 3 {
+        if indexPath.row == 3 && indexPath.section == 0 {
             let nppnBtn = UIButton(type: .detailDisclosure)
             nppnBtn.frame = CGRect(x: 45, y: 7, width: 80, height: 40)
             nppnBtn.addTarget(self, action: #selector(showNppnHalfModal), for: .touchUpInside)
@@ -127,23 +154,29 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
             cell.contentView.addSubview(nppnBtn)
         }
         
-        /*
+        
         //saveDataToModel
         switch indexPath.row {
         case 0:
             dataPenghasilan.periode = (cell.fieldPilih?.text)!
         case 1:
-            dataPenghasilan.penghasilanTahun = Int((cell.fieldPilih?.text)!)!
+            if let penghasilanPertahun = Int((cell.fieldPilih?.text)!){
+                dataPenghasilan.penghasilanTahun = penghasilanPertahun
+            }
+//            dataPenghasilan.penghasilanTahun = Int((cell.fieldPilih?.text)!)!
         case 2:
             dataPenghasilan.pekerjaan = (cell.fieldPilih?.text)!
         case 3:
-            dataPenghasilan.nppn = Int((cell.fieldPilih?.text)!)!
+            if let penghasilanNppn = Int((cell.fieldPilih?.text)!){
+                dataPenghasilan.nppn = penghasilanNppn
+            }
+//            dataPenghasilan.nppn = Int((cell.fieldPilih?.text)!)!
         case 4:
             dataPenghasilan.isBuktiPotong = (cell.fieldPilih?.text)!
         default:
             dataPenghasilan.periode = ""
         }
- */
+
         
         
         
@@ -252,8 +285,9 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
         let indexPotong = itemJumlahPotong.count
         itemJumlahPotong.append(JumlahPotongModel(item: "Jumlah Bukti Potong \(indexPotong+1)", jumlah: 0))
         tablePenghasilanView.beginUpdates()
-        tablePenghasilanView.insertRows(at: [IndexPath(row: indexPotong-1, section: 1)], with: .automatic)
+        tablePenghasilanView.insertRows(at: [IndexPath(row: itemJumlahPotong.count-1, section: 1)], with: .bottom)
         tablePenghasilanView.endUpdates()
+        
     }
     
     
@@ -280,6 +314,10 @@ extension PenghasilanPerTahunViewController : UIPickerViewDelegate, UIPickerView
 
         pickerHaveBukti = createPicker()
         pickerHaveBukti.tag = 1
+        
+        pickerPekerjaan = createPicker()
+        pickerPekerjaan.tag = 2
+        
     }
     
     func createPicker() -> UIPickerView {
@@ -296,7 +334,21 @@ extension PenghasilanPerTahunViewController : UIPickerViewDelegate, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 //        return yearsTillNow.count
-        return pickerData.count
+//        return pickerData.count
+        var maxData = 0
+        switch pickerView.tag {
+        case 0:
+            maxData = yearsTillNow.count
+        case 1:
+            maxData = isBuktiPotong.count
+        case 2:
+            maxData = pekerjaan.count
+        default:
+            maxData = pickerData.count
+        }
+        
+        return maxData
+        
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
 //        return yearsTillNow[row]
@@ -305,6 +357,8 @@ extension PenghasilanPerTahunViewController : UIPickerViewDelegate, UIPickerView
             pickerData = yearsTillNow
         case 1:
             pickerData = isBuktiPotong
+        case 2:
+            pickerData = pekerjaan
         default:
             pickerData = ["", ""]
         }
@@ -320,16 +374,51 @@ extension PenghasilanPerTahunViewController : UIPickerViewDelegate, UIPickerView
             let mytextfield = self.view.viewWithTag(100) as! UITextField
             mytextfield.text = pickerData[row]
             mytextfield.resignFirstResponder()
+            dataPenghasilan.periode = mytextfield.text!
         case 1:
             let mytextfield = self.view.viewWithTag(101) as! UITextField
             mytextfield.text = pickerData[row]
             mytextfield.resignFirstResponder()
+            dataPenghasilan.isBuktiPotong = mytextfield.text!
+        case 2:
+            let mytextfield = self.view.viewWithTag(102) as! UITextField
+            mytextfield.text = pickerData[row]
+            mytextfield.resignFirstResponder()
+            dataPenghasilan.pekerjaan = mytextfield.text!
         default:
             return
         }
     }
     
     
+}
+
+
+extension PenghasilanPerTahunViewController : UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField.tag {
+        case 103:
+            dataPenghasilan.penghasilanTahun = Int(textField.text!)!
+        case 104:
+            dataPenghasilan.nppn = Int(textField.text!)!
+        case 105:
+            let values = textField.text
+            dataPenghasilan.jumlahPphPotong.append(Int(values!)!)
+            print("Contoh Potong 1 \(textField.text ?? "kosong")")
+        default:
+            return
+        }
+    }
+    
+//    func textFieldDidChangeSelection(_ textField: UITextField) {
+//        switch textField.tag {
+//        case 105:
+//            dataPenghasilan.jumlahPphPotong.append(Int(textField.text!)!)
+//            print("Conta Potong 1 \(textField.text ?? "kosong")")
+//        default:
+//            return
+//        }
+//    }
 }
 
 
