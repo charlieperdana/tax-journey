@@ -22,12 +22,6 @@
 		55ADF5A7261C5BE8004EAE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ADF5A5261C5BE8004EAE18 /* LaunchScreen.storyboard */; };
 		55ADF5B2261C5BE8004EAE18 /* TaxJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5B1261C5BE8004EAE18 /* TaxJourneyTests.swift */; };
 		55ADF5BD261C5BE8004EAE18 /* TaxJourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5BC261C5BE8004EAE18 /* TaxJourneyUITests.swift */; };
-		DC5525C126214B920047E4CB /* TanggunganIbuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525C026214B920047E4CB /* TanggunganIbuController.swift */; };
-		DC5525C626214F3B0047E4CB /* TanggunganAyahMertuaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525C526214F3B0047E4CB /* TanggunganAyahMertuaController.swift */; };
-		DC5525CB26214F540047E4CB /* TanggunganIbuMertuaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525CA26214F540047E4CB /* TanggunganIbuMertuaController.swift */; };
-		DC5525D02621D45B0047E4CB /* TanggunganAnakController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525CF2621D45B0047E4CB /* TanggunganAnakController.swift */; };
-		DC6798CB261C9AD100D4E44E /* Tanggungan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6798CA261C9AD100D4E44E /* Tanggungan.storyboard */; };
-		DC6798D0261C9DC400D4E44E /* TanggunganAyahController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6798CF261C9DC400D4E44E /* TanggunganAyahController.swift */; };
 		55ADF5D6261C959E004EAE18 /* PenghasilanPerTahun.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ADF5D5261C959E004EAE18 /* PenghasilanPerTahun.storyboard */; };
 		55ADF5DB261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5DA261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift */; };
 		55ADF5E0261DA067004EAE18 /* ListPenghasilanItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5DF261DA067004EAE18 /* ListPenghasilanItemModel.swift */; };
@@ -35,6 +29,13 @@
 		55ADF5EA261EF021004EAE18 /* JumlahPotongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF5E9261EF021004EAE18 /* JumlahPotongTableViewCell.swift */; };
 		95EDB56D261D9EAB005724D1 /* ThankYou.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EDB56C261D9EAB005724D1 /* ThankYou.storyboard */; };
 		95EDB572261DA691005724D1 /* ThankYouController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDB571261DA691005724D1 /* ThankYouController.swift */; };
+		DC446486262435CE00482860 /* LibDefinitionAndFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC446485262435CE00482860 /* LibDefinitionAndFunc.swift */; };
+		DC5525C126214B920047E4CB /* TanggunganIbuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525C026214B920047E4CB /* TanggunganIbuController.swift */; };
+		DC5525C626214F3B0047E4CB /* TanggunganAyahMertuaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525C526214F3B0047E4CB /* TanggunganAyahMertuaController.swift */; };
+		DC5525CB26214F540047E4CB /* TanggunganIbuMertuaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525CA26214F540047E4CB /* TanggunganIbuMertuaController.swift */; };
+		DC5525D02621D45B0047E4CB /* TanggunganAnakController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5525CF2621D45B0047E4CB /* TanggunganAnakController.swift */; };
+		DC6798CB261C9AD100D4E44E /* Tanggungan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6798CA261C9AD100D4E44E /* Tanggungan.storyboard */; };
+		DC6798D0261C9DC400D4E44E /* TanggunganAyahController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6798CF261C9DC400D4E44E /* TanggunganAyahController.swift */; };
 		F848A1D5261D62A00001256C /* StatusPTKP.xib in Resources */ = {isa = PBXBuildFile; fileRef = F848A1D4261D62A00001256C /* StatusPTKP.xib */; };
 		F848A1DA261D67B50001256C /* TotalPTKP.xib in Resources */ = {isa = PBXBuildFile; fileRef = F848A1D9261D67B50001256C /* TotalPTKP.xib */; };
 		F848A1E7261D6AB40001256C /* RincianPTKPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F848A1E6261D6AB40001256C /* RincianPTKPViewController.swift */; };
@@ -100,12 +101,6 @@
 		55ADF5B8261C5BE8004EAE18 /* TaxJourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxJourneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55ADF5BC261C5BE8004EAE18 /* TaxJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxJourneyUITests.swift; sourceTree = "<group>"; };
 		55ADF5BE261C5BE8004EAE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC5525C026214B920047E4CB /* TanggunganIbuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganIbuController.swift; sourceTree = "<group>"; };
-		DC5525C526214F3B0047E4CB /* TanggunganAyahMertuaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganAyahMertuaController.swift; sourceTree = "<group>"; };
-		DC5525CA26214F540047E4CB /* TanggunganIbuMertuaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganIbuMertuaController.swift; sourceTree = "<group>"; };
-		DC5525CF2621D45B0047E4CB /* TanggunganAnakController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganAnakController.swift; sourceTree = "<group>"; };
-		DC6798CA261C9AD100D4E44E /* Tanggungan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tanggungan.storyboard; sourceTree = "<group>"; };
-		DC6798CF261C9DC400D4E44E /* TanggunganAyahController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganAyahController.swift; sourceTree = "<group>"; };
 		55ADF5D5261C959E004EAE18 /* PenghasilanPerTahun.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PenghasilanPerTahun.storyboard; sourceTree = "<group>"; };
 		55ADF5DA261CAEBB004EAE18 /* PenghasilanPerTahunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenghasilanPerTahunViewController.swift; sourceTree = "<group>"; };
 		55ADF5DF261DA067004EAE18 /* ListPenghasilanItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPenghasilanItemModel.swift; sourceTree = "<group>"; };
@@ -113,6 +108,13 @@
 		55ADF5E9261EF021004EAE18 /* JumlahPotongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumlahPotongTableViewCell.swift; sourceTree = "<group>"; };
 		95EDB56C261D9EAB005724D1 /* ThankYou.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThankYou.storyboard; sourceTree = "<group>"; };
 		95EDB571261DA691005724D1 /* ThankYouController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouController.swift; sourceTree = "<group>"; };
+		DC446485262435CE00482860 /* LibDefinitionAndFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibDefinitionAndFunc.swift; sourceTree = "<group>"; };
+		DC5525C026214B920047E4CB /* TanggunganIbuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganIbuController.swift; sourceTree = "<group>"; };
+		DC5525C526214F3B0047E4CB /* TanggunganAyahMertuaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganAyahMertuaController.swift; sourceTree = "<group>"; };
+		DC5525CA26214F540047E4CB /* TanggunganIbuMertuaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganIbuMertuaController.swift; sourceTree = "<group>"; };
+		DC5525CF2621D45B0047E4CB /* TanggunganAnakController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganAnakController.swift; sourceTree = "<group>"; };
+		DC6798CA261C9AD100D4E44E /* Tanggungan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tanggungan.storyboard; sourceTree = "<group>"; };
+		DC6798CF261C9DC400D4E44E /* TanggunganAyahController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanggunganAyahController.swift; sourceTree = "<group>"; };
 		F848A1D4261D62A00001256C /* StatusPTKP.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusPTKP.xib; sourceTree = "<group>"; };
 		F848A1D9261D67B50001256C /* TotalPTKP.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalPTKP.xib; sourceTree = "<group>"; };
 		F848A1E6261D6AB40001256C /* RincianPTKPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RincianPTKPViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				FCD0592A261EE8C4000A4CD8 /* Overlay2View.xib */,
 				FCD0592F261EEA68000A4CD8 /* Overlay2View.swift */,
 				FC24EB86261DF38300E20474 /* KesimpulanTableViewCell.swift */,
+				DC446485262435CE00482860 /* LibDefinitionAndFunc.swift */,
 			);
 			path = TaxJourney;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				F848A1F2261D72210001256C /* TotalPTKP.swift in Sources */,
 				0019AB1C261CA71E0066AEAA /* PerkawinanTableViewCell.swift in Sources */,
 				00D65023261F458E00A7221E /* PTKPViewController.swift in Sources */,
+				DC446486262435CE00482860 /* LibDefinitionAndFunc.swift in Sources */,
 				55ADF59F261C5BE3004EAE18 /* ViewController.swift in Sources */,
 				0019AB17261C9A260066AEAA /* PerhitunganPTKPViewController.swift in Sources */,
 				55ADF59B261C5BE3004EAE18 /* AppDelegate.swift in Sources */,
