@@ -71,7 +71,7 @@ class PenghasilanPerTahunViewController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? PerhitunganPTKPViewController {
+        if let destination = segue.destination as? PTKPViewController {
             destination.dataPenghasilanPerTahun = dataPenghasilan
         }
     }
