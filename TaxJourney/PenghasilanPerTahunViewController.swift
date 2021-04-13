@@ -39,7 +39,7 @@ class PenghasilanPerTahunViewController: UIViewController{
     
     var isBuktiPotong = ["Ya", "Tidak"]
     
-    var pekerjaan = ["Pekerjaan A", "Pekerjaan B", "Lainnya"]
+    var pekerjaan = ["Desain Grafis", "Jasa Fotografi", "Programmer","Digital Marketer", "Entry Data", "Copywriter", "Penerjemah", "Lainnya"]
     
     var dataPenghasilan = PenghasilanPertahunData()
 
@@ -132,6 +132,7 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
         } else if indexPath.section == 1 {
             let items = itemJumlahPotong[indexPath.row]
             cell.fieldPilih.tag = 105
+//            cell.fieldPilih.addTarget(self, action: #selector(ViewController.textFieldDidChange(_:)), for: .editingChanged)
             
             cell.itemLabel?.text = items.item
             cell.infoLabel?.text = ""
@@ -154,31 +155,7 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
             cell.contentView.addSubview(nppnBtn)
         }
         
-        
-        //saveDataToModel
-        switch indexPath.row {
-        case 0:
-            dataPenghasilan.periode = (cell.fieldPilih?.text)!
-        case 1:
-            if let penghasilanPertahun = Int((cell.fieldPilih?.text)!){
-                dataPenghasilan.penghasilanTahun = penghasilanPertahun
-            }
-//            dataPenghasilan.penghasilanTahun = Int((cell.fieldPilih?.text)!)!
-        case 2:
-            dataPenghasilan.pekerjaan = (cell.fieldPilih?.text)!
-        case 3:
-            if let penghasilanNppn = Int((cell.fieldPilih?.text)!){
-                dataPenghasilan.nppn = penghasilanNppn
-            }
-//            dataPenghasilan.nppn = Int((cell.fieldPilih?.text)!)!
-        case 4:
-            dataPenghasilan.isBuktiPotong = (cell.fieldPilih?.text)!
-        default:
-            dataPenghasilan.periode = ""
-        }
-
-        
-        
+                
         
         
         return cell
@@ -409,14 +386,12 @@ extension PenghasilanPerTahunViewController : UITextFieldDelegate {
         }
     }
     
-//    func textFieldDidChangeSelection(_ textField: UITextField) {
-//        switch textField.tag {
-//        case 105:
-//            dataPenghasilan.jumlahPphPotong.append(Int(textField.text!)!)
-//            print("Conta Potong 1 \(textField.text ?? "kosong")")
-//        default:
-//            return
-//        }
-//    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // dismiss keyboard
+        return true
+    }
+    
+   
 }
 
