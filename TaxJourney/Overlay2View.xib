@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Overlay2View" customModule="TaxJourney" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="4HM-zN-6un"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F35-U4-9ys">
+                    <rect key="frame" x="177" y="61" width="60" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blj-e0-fBy">
+                    <rect key="frame" x="31" y="112" width="354" height="304.5"/>
+                    <string key="text">Status SPT melambangkan hubungan
+antara jumlah pajak yang harus dibayar
+dan jumlah pajak yang sudah dibayar.
+
+Nihil berarti jumlah pajak yang sudah kamu
+bayarkan sama dengan jumlah pajak yang
+harus kamu bayarkan.
+
+Lebih bayar berarti jumlah pajak yang
+sudah kamu bayarkan lebih besar dari
+jumlah pajak yang harus kamu bayarkan.
+
+Kurang bayar berarti jumlah pajak yang
+sudah kamu bayarkan kurang dari jumlah
+pajak yang harus kamu bayarkan.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="750-cg-3UF">
+                    <rect key="frame" x="0.0" y="95" width="414" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="414" id="pC7-CJ-3Te"/>
+                        <constraint firstAttribute="height" constant="1" id="vpO-45-BEU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="blj-e0-fBy" secondAttribute="trailing" constant="29" id="7gc-vd-bQH"/>
+                <constraint firstItem="750-cg-3UF" firstAttribute="top" secondItem="F35-U4-9ys" secondAttribute="bottom" constant="10" id="DhP-WJ-vQS"/>
+                <constraint firstItem="blj-e0-fBy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="Dt9-wA-l4N"/>
+                <constraint firstItem="F35-U4-9ys" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="17" id="K2H-i1-86i"/>
+                <constraint firstItem="750-cg-3UF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bGM-Ux-ryt"/>
+                <constraint firstItem="blj-e0-fBy" firstAttribute="top" secondItem="750-cg-3UF" secondAttribute="bottom" constant="16" id="bv3-pr-7mE"/>
+                <constraint firstItem="F35-U4-9ys" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ckg-XH-6X4"/>
+                <constraint firstAttribute="trailing" secondItem="750-cg-3UF" secondAttribute="trailing" id="qep-kf-0nd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="56.521739130434788" y="259.82142857142856"/>
+        </view>
+    </objects>
+</document>
