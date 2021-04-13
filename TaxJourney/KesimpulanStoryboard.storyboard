@@ -121,7 +121,7 @@
                                                     <color key="titleColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="ycC-Pw-bAg" kind="show" id="VI9-Jj-Zpx"/>
+                                                    <segue destination="ycC-Pw-bAg" kind="show" identifier="toAllSummary" id="VI9-Jj-Zpx"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eO-OL-VNN">
