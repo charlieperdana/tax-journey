@@ -60,6 +60,8 @@ class PTKPViewController: UIViewController {
     
     var idx:Int = 0
     
+    var dataPenghasilanPerTahun : PenghasilanPertahunData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tvPTKP.delegate = self
