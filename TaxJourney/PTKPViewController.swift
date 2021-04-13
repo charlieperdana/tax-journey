@@ -84,6 +84,14 @@ class PTKPViewController: UIViewController {
         switch sender.id {
         case 0:
             checkAyah = sender.check!
+        case 1:
+            checkIbu = sender.check!
+        case 2:
+            checkAyahMertua = sender.check!
+        case 3:
+            checkIbuMertua = sender.check!
+        case 4:
+            checkAnak = sender.check!
         default:
             return
         }
