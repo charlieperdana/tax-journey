@@ -137,21 +137,21 @@ berikut:</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rp4.500.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz2-fO-3jF">
-                                        <rect key="frame" x="241" y="96" width="100" height="21"/>
+                                        <rect key="frame" x="236" y="96" width="100" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rp13.500.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ce-T2-Kgk">
-                                        <rect key="frame" x="234" y="125" width="107" height="21"/>
+                                        <rect key="frame" x="229" y="125" width="107" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rp72.000.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-Yy-FoT">
-                                        <rect key="frame" x="227" y="154" width="114" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Rp72.000.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-Yy-FoT">
+                                        <rect key="frame" x="213" y="154" width="123" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -165,7 +165,7 @@ berikut:</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rp54.000.000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMW-LW-T8v">
-                                        <rect key="frame" x="231" y="67" width="110" height="21"/>
+                                        <rect key="frame" x="225" y="67" width="110" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -200,8 +200,9 @@ berikut:</string>
                     <connections>
                         <outlet property="JumlahTanggungan" destination="RbU-bv-Xzm" id="XSh-mq-7wa"/>
                         <outlet property="StatusKawin" destination="nC7-py-MbU" id="gU0-mT-FlR"/>
+                        <outlet property="angkaTanggungan" destination="tea-dj-0S8" id="ERM-SP-Qdf"/>
                         <outlet property="kawinLabel" destination="Jz2-fO-3jF" id="yOc-z0-14M"/>
-                        <outlet property="pribadiLabel" destination="IMW-LW-T8v" id="pK7-gd-cfF"/>
+                        <outlet property="statusPTKP" destination="0am-Cs-PdO" id="hff-ku-Vg1"/>
                         <outlet property="tanggunganLabel" destination="4Ce-T2-Kgk" id="zug-f1-SRo"/>
                         <outlet property="totalLabel" destination="Byo-Yy-FoT" id="pXI-6X-wIZ"/>
                     </connections>
