@@ -155,7 +155,7 @@
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="P0l-gd-J4G" kind="show" id="42u-Xn-0z4"/>
+                                                    <segue destination="P0l-gd-J4G" kind="show" identifier="toThankyou" id="42u-Xn-0z4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMl-rS-eUL">
