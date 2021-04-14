@@ -7,10 +7,6 @@
 
 import UIKit
 
-//struct cekjumlahtotal {
-//    var jmlhtotalutang : Int = 0
-//}
-
 class AllSummaryViewController: UIViewController {
 
     @IBOutlet weak var penghasilanView: UIView!
@@ -70,7 +66,19 @@ class AllSummaryViewController: UIViewController {
         jumlahView.layer.cornerRadius = 10
         jumlahView.clipsToBounds = true
         
+        let buttonBack = UIButton(type: .system)
+        buttonBack.setTitle("Back", for: .normal)
+        buttonBack.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        buttonBack.addTarget(self, action: #selector(buttonBackTapped), for: .touchUpInside)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: buttonBack)
+        
         showDetail()
+    }
+    
+    @objc func buttonBackTapped() {
+        navigationController?.popViewController(animated: true)
+        jmlhtotalutang = (total5 * 5/100 + total15 * 15/100 + total25 * 25/100 + total30 * 30/100)
+        performSegue(withIdentifier: "backKesimpulan", sender: self)
     }
     
     @objc func showMiracle() {
@@ -147,23 +155,23 @@ class AllSummaryViewController: UIViewController {
         
         cek()
         
-        penghasilan.text = "Sepanjang tahun \(data2.periode), kamu memiliki penghasilan sebesar Rp \(data2.penghasilanTahun)."
+        penghasilan.text = "Sepanjang tahun \(data2.periode), kamu memiliki penghasilan sebesar Rp\(data2.penghasilanTahun)."
         nppn.text = "Karena pekerjaanmu \(data2.pekerjaan), maka NPPN-mu adalah sebesar \(data2.nppn)%."
-        neto.text = "Dengan begitu, kamu memiliki penghasilan neto sebesar Rp \(data2.penghasilanTahun) * \(data2.nppn)% = Rp \(totalNeto)."
+        neto.text = "Dengan begitu, kamu memiliki penghasilan neto sebesar Rp\(data2.penghasilanTahun) * \(data2.nppn)% = Rp\(totalNeto)."
         
-        tanggungan.text = "Karena kamu \(kawin!) dan memiliki \(jmlhtanggungan) orang tanggungan, maka jumlah PTKP-mu berjumlah Rp \(jmlhptkp)"
-        penghasilanKenaPajak.text = "Penghasilanmu yang dikenai pajak Rp \(totalNeto) - Rp \(besaranptkp) = Rp \(pkprounded)"
+        tanggungan.text = "Karena kamu \(kawin!) dan memiliki \(jmlhtanggungan) orang tanggungan, maka jumlah PTKP-mu berjumlah Rp\(jmlhptkp)"
+        penghasilanKenaPajak.text = "Penghasilanmu yang dikenai pajak Rp\(totalNeto) - Rp\(besaranptkp) = Rp\(pkprounded)"
         
-        utang1Lbl.text = "5% x Rp \(total5)"
-        utang2Lbl.text = "15% x Rp \(total15)"
-        utang3Lbl.text = "25% x Rp \(total25)"
-        utang4Lbl.text = "30% x Rp \(total30)"
+        utang1Lbl.text = "5% x Rp\(total5)"
+        utang2Lbl.text = "15% x Rp\(total15)"
+        utang3Lbl.text = "25% x Rp\(total25)"
+        utang4Lbl.text = "30% x Rp\(total30)"
         
-        jumlah1Lbl.text = "Rp \(total5 * 5 / 100)"
-        jumlah2Lbl.text = "Rp \(total15 * 15 / 100)"
-        jumlah3Lbl.text = "Rp \(total25 * 25 / 100)"
-        jumlah4Lbl.text = "Rp \(total30 * 30 / 100)"
-        jumlahtotalLbl.text = "Rp \(jmlhtotalutang)"
+        jumlah1Lbl.text = "Rp\(total5 * 5 / 100)"
+        jumlah2Lbl.text = "Rp\(total15 * 15 / 100)"
+        jumlah3Lbl.text = "Rp\(total25 * 25 / 100)"
+        jumlah4Lbl.text = "Rp\(total30 * 30 / 100)"
+        jumlahtotalLbl.text = "Rp\(jmlhtotalutang)"
     }
     
     /*
