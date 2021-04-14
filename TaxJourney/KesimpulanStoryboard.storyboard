@@ -215,11 +215,13 @@
                         <outlet property="miniKesimpulan" destination="zDn-zZ-qBd" id="aem-GW-u8z"/>
                         <outlet property="miniKesimpulanView" destination="1eO-OL-VNN" id="JqF-zJ-zqA"/>
                         <outlet property="selesaiBtn" destination="9lC-PU-JWh" id="7Nm-qN-CtD"/>
+                        <segue destination="2WS-bd-87x" kind="unwind" identifier="backKesimpulan" unwindAction="didUnwindtoKesimpulan:" id="GPC-MV-WQQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ZB-KU-YY8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2WS-bd-87x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="40.579710144927539" y="229.6875"/>
+            <point key="canvasLocation" x="59" y="230"/>
         </scene>
         <!--AllSummary-->
         <scene sceneID="O9w-Vd-tmX">

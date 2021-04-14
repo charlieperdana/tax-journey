@@ -14,6 +14,7 @@ class ThankYouController: UIViewController {
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var btnRestart: UIButton!
     
+    var spt : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -299,11 +299,23 @@ maka jumlah PTKP-mu berjumlah RpXXX.XXX</string>
                         <outlet property="utang2Lbl" destination="W7L-W0-fJZ" id="pib-l6-vPz"/>
                         <outlet property="utang3Lbl" destination="nMP-LI-68A" id="3ko-Rl-NbA"/>
                         <outlet property="utang4Lbl" destination="nkp-UA-5q9" id="xJs-I3-i2a"/>
+                        <segue destination="V8k-LF-3Vn" kind="unwind" identifier="backKesimpulan" unwindAction="didUnwindtoKesimpulan:" id="zqw-TP-6hZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEO-IH-QIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="V8k-LF-3Vn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1360.8695652173915" y="67.633928571428569"/>
+        </scene>
+        <!--Kesimpulan-->
+        <scene sceneID="zXA-NG-acU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KesimpulanStoryboard" referencedIdentifier="Kesimpulan" id="XEl-s1-Yha" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gEg-Rl-Xut"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCC-Lc-zR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="-402"/>
         </scene>
     </scenes>
     <resources>
