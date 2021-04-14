@@ -36,7 +36,7 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
     var sectionDetail:[String] = []
     var statusspt:String!
     var jumlahstatusspt:Int = 0
-    var jmlhutng : cekjumlahtotal!
+    //var jmlhutng : cekjumlahtotal!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
         kesimpulanTV.dataSource = self
         design()
         
-        let penghasilan = jmlhutng.jmlhtotalutang
+        let penghasilan = data.penghasilanTahun
         var pajakDibayar : Int = 0
         
         for i in data.jumlahPphPotong{
