@@ -19,6 +19,7 @@ var jumlahStatusSPT : Int?
 
 class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    @IBOutlet weak var miniKesimpulanView: UIView!
     @IBOutlet weak var lihatRngkasanBtn: UIButton!
     @IBOutlet weak var selesaiBtn: UIButton!
     @IBOutlet weak var miniKesimpulan: UILabel!
@@ -45,7 +46,8 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
         
         kesimpulanTV.delegate = self
         kesimpulanTV.dataSource = self
-        //print("\(data.penghasilanTahun)")
+        design()
+        
         let penghasilan = data.penghasilanTahun
         var pajakDibayar : Int = 0
         
@@ -65,7 +67,7 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
         
         miniKesimpulan.text = "Berdasarkan perhitungan di atas, kamu masih harus membayar pajak sebesar Rp. \(jumlahstatusspt)"
         
-        design()
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -108,6 +110,9 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
         
         selesaiBtn.layer.cornerRadius = 10
         selesaiBtn.clipsToBounds = true
+        
+        miniKesimpulanView.layer.cornerRadius = 10
+        miniKesimpulanView.clipsToBounds = true
         
     }
     
