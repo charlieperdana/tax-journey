@@ -26,5 +26,9 @@ class ViewController: UIViewController {
     @IBAction func startBtnDipTap(_ sender: Any) {
         performSegue(withIdentifier: "toPenghasilanPerTahun", sender: self)
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
 }
 
