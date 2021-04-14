@@ -40,6 +40,19 @@ class AllSummaryViewController: UIViewController {
     var cektanggungan = CheckTanggungan()
     var kawin : String!
     var jmlhtanggungan : Int = 0
+    var jmlhptkp : Int = 0
+    var besaranptkp : Int = 0
+    var pkprounded : Int = 0
+    var besaranpkp : Int = 0
+    var total5 : Int = 0
+    var total15 : Int = 0
+    var total25 : Int = 0
+    var total30 : Int = 0
+    var jmlhtotal1 : Int = 0
+    var jmlhtotal2 : Int = 0
+    var jmlhtotal3 : Int = 0
+    var jmlhtotal4 : Int = 0
+    var jmlhtotalutang : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +80,18 @@ class AllSummaryViewController: UIViewController {
     }
     
     func cek() {
+        
+        var ptkp = 54000000
+        var tambahanptkp = 4500000
+        var x = 100
+        
+        totalpenghasilan = data2.penghasilanTahun
+        print(totalpenghasilan)
+        totalnppn = data2.nppn
+        print(totalnppn)
+        totalNeto = totalpenghasilan * totalnppn
+        print(totalNeto)
+        
         if cekkawin.isMenikah == true {
             kawin = "sudah menikah"
         }
@@ -80,24 +105,64 @@ class AllSummaryViewController: UIViewController {
         else{
             jmlhtanggungan = cektanggungan.jumlahTanggungan
         }
+        
+        if jmlhtanggungan <= 3 {
+            jmlhptkp = ptkp + (tambahanptkp * jmlhtanggungan)
+        }
+        
+        besaranptkp = jmlhptkp
+        
+        pkprounded = totalNeto - besaranptkp
+        
+        besaranpkp = pkprounded
+        
+        if besaranPKP <= 50000000 {
+            total5 = 50000000
+            jmlhtotal1 = (total5 * 5 / 100)
+            
+            if besaranpkp <= 250000000 {
+                total15 = besaranpkp - 50000000
+                jmlhtotal2 = (total15 * 15 / 100)
+                
+                if besaranpkp <= 500000000 {
+                    total25 = besaranpkp - 250000000
+                    jmlhtotal3 = (total25 * 25 / 100)
+                    
+                    if besaranpkp > 500000000 {
+                        total30 = besaranpkp - 500000000
+                        jmlhtotal4 = (total30 * 30 / 100)
+                    }
+                }
+                
+            }
+            
+        }
+        
+        jmlhtotalutang = jmlhtotal1 + jmlhtotal2 + jmlhtotal3 + jmlhtotal4
+        
     }
     
     func showDetail() {
         
         cek()
         
-        let totalpenghasilan = data2.penghasilanTahun
-        print(totalpenghasilan)
-        let totalnppn = data2.nppn / 100
-        print(totalnppn)
-        totalNeto = totalpenghasilan * totalnppn
-        
         penghasilan.text = "Sepanjang tahun \(data2.periode), kamu memiliki penghasilan sebesar Rp \(data2.penghasilanTahun)."
         nppn.text = "Karena pekerjaanmu \(data2.pekerjaan), maka NPPN-mu adalah sebesar \(data2.nppn)%."
         neto.text = "Dengan begitu, kamu memiliki penghasilan neto sebesar Rp \(data2.penghasilanTahun) * \(data2.nppn)% = Rp \(totalNeto)."
         
-        tanggungan.text = "Karena kamu \(kawin!) dan memiliki \(jmlhtanggungan) orang tanggungan, maka jumlah PTKP-mu berjumlah RpXXX.XXX"
-        penghasilanKenaPajak.text = "Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX = RpXXX.XXX"
+        tanggungan.text = "Karena kamu \(kawin!) dan memiliki \(jmlhtanggungan) orang tanggungan, maka jumlah PTKP-mu berjumlah Rp \(jmlhptkp)"
+        penghasilanKenaPajak.text = "Penghasilanmu yang dikenai pajak Rp \(totalNeto) - Rp \(besaranptkp) = Rp \(pkprounded)"
+        
+        utang1Lbl.text = "5% x Rp \(total5)"
+        utang2Lbl.text = "15% x Rp \(total15)"
+        utang3Lbl.text = "25% x Rp \(total25)"
+        utang4Lbl.text = "30% x Rp \(total30)"
+        
+        jumlah1Lbl.text = "Rp \(jmlhtotal1)"
+        jumlah2Lbl.text = "Rp \(jmlhtotal2)"
+        jumlah3Lbl.text = "Rp \(jmlhtotal3)"
+        jumlah4Lbl.text = "Rp \(jmlhtotal4)"
+        jumlahtotalLbl.text = "Rp \(jmlhtotalutang)"
     }
     
     /*
@@ -117,3 +182,36 @@ extension AllSummaryViewController: UIViewControllerTransitioningDelegate {
         PresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
+
+//if menikah == "sudah menikah"{
+//    kawinLabel.text = "Rp4.500.000"
+//}else{
+//    kawinLabel.text = "Rp0"
+//}
+//if cekTanggungan.jumlahTanggungan == 0 {
+//    tanggunganLabel.text = "Rp0"
+//}else if cekTanggungan.jumlahTanggungan == 1 {
+//    tanggunganLabel.text = "Rp4.500.000"
+//}else if cekTanggungan.jumlahTanggungan == 2{
+//    tanggunganLabel.text = "Rp9.000.000"
+//}else{
+//    tanggunganLabel.text = "Rp13.500.000"
+//}
+//angkaTanggungan.text = String("Tanggungan(\(cekTanggungan.jumlahTanggungan))")
+//if cekKawin.isMenikah == false {
+//    totalLabel.text = "Rp54.000.000"
+//}else if cekKawin.isMenikah == true{
+//    switch cekTanggungan.jumlahTanggungan {
+//    case 0:
+//        totalLabel.text = "Rp.58.500.000"
+//    case 1:
+//        totalLabel.text = "Rp.63.000.000"
+//    case 2:
+//        totalLabel.text = "Rp.67.500.000"
+//    case 3:
+//        totalLabel.text = "Rp.72.000.000"
+//    default:
+//        return
+//    }
+//
+//}
