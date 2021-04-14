@@ -40,7 +40,7 @@ class TanggunganViewController: UIViewController, UITableViewDataSource, UITable
         tvTanggungan.dataSource = self
         navigationItem.title = titleNavBar
         
-        let buttonBack = UIButton()
+        let buttonBack = UIButton(type: .system)
         buttonBack.setTitle("Back", for: .normal)
         buttonBack.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         buttonBack.addTarget(self, action: #selector(buttonBackTapped), for: .touchUpInside)
