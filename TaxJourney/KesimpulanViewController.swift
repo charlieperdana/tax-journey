@@ -59,7 +59,7 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
             statusspt = "Lebih Bayar"
         }
         
-        sectionDetail = ["Rp. \(penghasilan)", "Rp. \(pajakDibayar)", "\(statusspt!)", "Rp. \(jumlahstatusspt)"]
+        sectionDetail = ["Rp. \(jmlhtotalutang)", "Rp. \(pajakDibayar)", "\(statusspt!)", "Rp. \(jumlahstatusspt)"]
         sectionTitle = ["Jumlah hutang pajak", "Pajak yang sudah dibayar", "Status SPT", "Jumlah \(statusspt!)"]
         
         miniKesimpulan.text = "Berdasarkan perhitungan di atas, kamu masih harus membayar pajak sebesar Rp. \(jumlahstatusspt)"
