@@ -154,6 +154,7 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
         if indexPath.row == 3 && indexPath.section == 0 {
             let nppnBtn = UIButton(type: .detailDisclosure)
             nppnBtn.frame = CGRect(x: 45, y: 7, width: 80, height: 40)
+            nppnBtn.tintColor =  #colorLiteral(red: 0.1568627451, green: 0.1568627451, blue: 0.2745098039, alpha: 1)
             nppnBtn.addTarget(self, action: #selector(showNppnHalfModal), for: .touchUpInside)
 //            myPicker.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
 //            cell.accessoryView = nppnBtn
@@ -196,6 +197,7 @@ extension PenghasilanPerTahunViewController: UITableViewDelegate, UITableViewDat
             headerView.addSubview(title)
 
             let button = UIButton(type: .contactAdd)
+            button.tintColor =  #colorLiteral(red: 0.1568627451, green: 0.1568627451, blue: 0.2745098039, alpha: 1)
 
             button.translatesAutoresizingMaskIntoConstraints = false
 //            button.setTitle("+", for: .normal)
