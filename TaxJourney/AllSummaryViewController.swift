@@ -7,6 +7,8 @@
 
 import UIKit
 
+public var jmlhtotalutang : Int = 0
+
 class AllSummaryViewController: UIViewController {
 
     @IBOutlet weak var penghasilanView: UIView!
@@ -43,6 +45,7 @@ class AllSummaryViewController: UIViewController {
     var jmlhptkp : Int = 0
     var besaranptkp : Int = 0
     var pkprounded : Int = 0
+    var pkproundseribu : Int = 0
     var besaranpkp : Int = 0
     var total5 : Int = 0
     var total15 : Int = 0
@@ -52,7 +55,7 @@ class AllSummaryViewController: UIViewController {
     var jmlhtotal2 : Int = 0
     var jmlhtotal3 : Int = 0
     var jmlhtotal4 : Int = 0
-    var jmlhtotalutang : Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +92,7 @@ class AllSummaryViewController: UIViewController {
         print(totalpenghasilan)
         totalnppn = data2.nppn
         print(totalnppn)
-        totalNeto = totalpenghasilan * totalnppn
+        totalNeto = totalpenghasilan * totalnppn / x
         print(totalNeto)
         
         if cekkawin.isMenikah == true {
@@ -114,31 +117,27 @@ class AllSummaryViewController: UIViewController {
         
         pkprounded = totalNeto - besaranptkp
         
-        besaranpkp = pkprounded
+        pkproundseribu = (pkprounded / 1000) * 1000
         
-        if besaranPKP <= 50000000 {
+        besaranpkp = pkproundseribu
+        
+        if besaranpkp <= 50000000 {
+            total5 = besaranPKP
+        } else if besaranpkp <= 250000000 {
             total5 = 50000000
-            jmlhtotal1 = (total5 * 5 / 100)
-            
-            if besaranpkp <= 250000000 {
-                total15 = besaranpkp - 50000000
-                jmlhtotal2 = (total15 * 15 / 100)
-                
-                if besaranpkp <= 500000000 {
-                    total25 = besaranpkp - 250000000
-                    jmlhtotal3 = (total25 * 25 / 100)
-                    
-                    if besaranpkp > 500000000 {
-                        total30 = besaranpkp - 500000000
-                        jmlhtotal4 = (total30 * 30 / 100)
-                    }
-                }
-                
-            }
-            
+            total15 = besaranpkp - 50000000
+        } else if besaranpkp <= 500000000 {
+            total5 = 50000000
+            total15 = 200000000
+            total25 = besaranpkp - 250000000
+        } else {
+            total5 = 50000000
+            total15 = 200000000
+            total25 = 250000000
+            total30 = besaranpkp - 500000000
         }
         
-        jmlhtotalutang = jmlhtotal1 + jmlhtotal2 + jmlhtotal3 + jmlhtotal4
+        jmlhtotalutang = (total5 * 5/100 + total15 * 15/100 + total25 * 25/100 + total30 * 30/100)
         
     }
     
@@ -158,10 +157,10 @@ class AllSummaryViewController: UIViewController {
         utang3Lbl.text = "25% x Rp \(total25)"
         utang4Lbl.text = "30% x Rp \(total30)"
         
-        jumlah1Lbl.text = "Rp \(jmlhtotal1)"
-        jumlah2Lbl.text = "Rp \(jmlhtotal2)"
-        jumlah3Lbl.text = "Rp \(jmlhtotal3)"
-        jumlah4Lbl.text = "Rp \(jmlhtotal4)"
+        jumlah1Lbl.text = "Rp \(total5 * 5 / 100)"
+        jumlah2Lbl.text = "Rp \(total15 * 15 / 100)"
+        jumlah3Lbl.text = "Rp \(total25 * 25 / 100)"
+        jumlah4Lbl.text = "Rp \(total30 * 30 / 100)"
         jumlahtotalLbl.text = "Rp \(jmlhtotalutang)"
     }
     

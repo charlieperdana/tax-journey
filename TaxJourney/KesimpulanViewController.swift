@@ -12,11 +12,6 @@ import UIKit
 //    var detail: String?
 //}
 
-var statusSPT : String?
-var jumlahHutangPajak : Int?
-var pajakSudahDibayar : Int?
-var jumlahStatusSPT : Int?
-
 class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var miniKesimpulanView: UIView!
@@ -31,7 +26,8 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
     
 //    let kesimpulan:[kesimpulanDetail] = [kesimpulanDetail(title: "Jumlah hutang pajak", detail: "Rp 4.800.000.000"), kesimpulanDetail(title: "Pajak yang sudah dibayar", detail: "Rp 4.000.000.000"), kesimpulanDetail(title: "Status SPT", detail: "Kurang Bayar"), kesimpulanDetail(title: "Jumlah status SPT", detail: "Rp 800.000.000")]
     
-    let sectionTitle:[String] = ["Jumlah hutang pajak", "Pajak yang sudah dibayar", "Status SPT", "Jumlah status SPT"]
+    //let sectionTitle:[String] = ["Jumlah hutang pajak", "Pajak yang sudah dibayar", "Status SPT", "Jumlah status SPT"]
+    var sectionTitle:[String] = []
     
     //let sectionDetail:[String] = ["Rp 4.800.000.000", "Rp 4.000.000.000", "Kurang Bayar", "Rp 800.000.000"]
     
@@ -54,7 +50,7 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
         for i in data.jumlahPphPotong{
             pajakDibayar = pajakDibayar+i
         }
-        jumlahstatusspt = penghasilan - pajakDibayar
+        jumlahstatusspt = jmlhtotalutang - pajakDibayar
         if jumlahstatusspt < 0 {
             statusspt = "Kurang Bayar"
         } else if jumlahstatusspt == 0 {
@@ -64,6 +60,7 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         sectionDetail = ["Rp. \(penghasilan)", "Rp. \(pajakDibayar)", "\(statusspt!)", "Rp. \(jumlahstatusspt)"]
+        sectionTitle = ["Jumlah hutang pajak", "Pajak yang sudah dibayar", "Status SPT", "Jumlah \(statusspt!)"]
         
         miniKesimpulan.text = "Berdasarkan perhitungan di atas, kamu masih harus membayar pajak sebesar Rp. \(jumlahstatusspt)"
         
