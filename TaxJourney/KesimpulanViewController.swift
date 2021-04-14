@@ -36,6 +36,7 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
     var sectionDetail:[String] = []
     var statusspt:String!
     var jumlahstatusspt:Int = 0
+    var jmlhutng : cekjumlahtotal!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +45,13 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
         kesimpulanTV.dataSource = self
         design()
         
-        let penghasilan = data.penghasilanTahun
+        let penghasilan = jmlhutng.jmlhtotalutang
         var pajakDibayar : Int = 0
         
         for i in data.jumlahPphPotong{
             pajakDibayar = pajakDibayar+i
         }
-        jumlahstatusspt = jmlhtotalutang - pajakDibayar
+        jumlahstatusspt = penghasilan - pajakDibayar
         if jumlahstatusspt < 0 {
             statusspt = "Kurang Bayar"
         } else if jumlahstatusspt == 0 {
@@ -59,7 +60,7 @@ class KesimpulanViewController: UIViewController, UITableViewDelegate, UITableVi
             statusspt = "Lebih Bayar"
         }
         
-        sectionDetail = ["Rp. \(jmlhtotalutang)", "Rp. \(pajakDibayar)", "\(statusspt!)", "Rp. \(jumlahstatusspt)"]
+        sectionDetail = ["Rp. \(penghasilan)", "Rp. \(pajakDibayar)", "\(statusspt!)", "Rp. \(jumlahstatusspt)"]
         sectionTitle = ["Jumlah hutang pajak", "Pajak yang sudah dibayar", "Status SPT", "Jumlah \(statusspt!)"]
         
         miniKesimpulan.text = "Berdasarkan perhitungan di atas, kamu masih harus membayar pajak sebesar Rp. \(jumlahstatusspt)"

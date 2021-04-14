@@ -7,7 +7,9 @@
 
 import UIKit
 
-public var jmlhtotalutang : Int = 0
+struct cekjumlahtotal {
+    var jmlhtotalutang : Int = 0
+}
 
 class AllSummaryViewController: UIViewController {
 
@@ -55,7 +57,7 @@ class AllSummaryViewController: UIViewController {
     var jmlhtotal2 : Int = 0
     var jmlhtotal3 : Int = 0
     var jmlhtotal4 : Int = 0
-    
+    var totalutang = cekjumlahtotal()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -137,7 +139,7 @@ class AllSummaryViewController: UIViewController {
             total30 = besaranpkp - 500000000
         }
         
-        jmlhtotalutang = (total5 * 5/100 + total15 * 15/100 + total25 * 25/100 + total30 * 30/100)
+        totalutang.jmlhtotalutang = (total5 * 5/100 + total15 * 15/100 + total25 * 25/100 + total30 * 30/100)
         
     }
     
@@ -161,7 +163,7 @@ class AllSummaryViewController: UIViewController {
         jumlah2Lbl.text = "Rp \(total15 * 15 / 100)"
         jumlah3Lbl.text = "Rp \(total25 * 25 / 100)"
         jumlah4Lbl.text = "Rp \(total30 * 30 / 100)"
-        jumlahtotalLbl.text = "Rp \(jmlhtotalutang)"
+        jumlahtotalLbl.text = "Rp \(totalutang.jmlhtotalutang)"
     }
     
     /*
