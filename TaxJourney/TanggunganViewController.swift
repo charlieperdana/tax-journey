@@ -136,7 +136,7 @@ class TanggunganViewController: UIViewController, UITableViewDataSource, UITable
                 cell.separatorInset = UIEdgeInsets(top: 0, left: cell.bounds.size.width, bottom: 0, right: 0)
             case 3:
                 if cekPilihan1 == "Ya" {
-                    cell.label.text = "Tinggal dengan \(titleNavBar!)"
+                    cell.label.text = "\(titleNavBar!) masih berpenghasilan"
                     cell.picker.inputView = picker2
                     cell.picker.inputAccessoryView = toolbar
                     cell.picker.tag = 11

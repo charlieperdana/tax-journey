@@ -75,7 +75,11 @@ class RincianPTKPViewController: UIViewController {
         }else{
             tanggunganLabel.text = "Rp13.500.000"
         }
+        if cekTanggungan.jumlahTanggungan > 3 {
+            angkaTanggungan.text = String("Tanggungan(3)")
+        }else{
         angkaTanggungan.text = String("Tanggungan(\(cekTanggungan.jumlahTanggungan))")
+        }
         if cekKawin.isMenikah == false {
             totalLabel.text = "Rp54.000.000"
         }else if cekKawin.isMenikah == true{
