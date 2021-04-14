@@ -18,10 +18,10 @@ class RPenghasilanViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        penghasilanSetahun.text = "Sepanjang tahun \(dataPenghasilan.periode), kamu memiliki penghasilan sebesar \(dataPenghasilan.penghasilanTahun)"
-        penghasilanNeto1.text = "Karena pekerjaanmu adalah \(dataPenghasilan.pekerjaan), maka NPPN-mu adalah sebesar \(dataPenghasilan.nppn)."
-        penghasilanNeto2.text = "Penghasilan netomu didapatkan dari jumlah penghasilan x NPPN, sehingga jumlahnya adalah \(dataPenghasilan.nppn * dataPenghasilan.penghasilanTahun)."
-        JumlahPajak.text = "Sementara itu, berdasarkan jumlah PPh Dipotong yang kamu lampirkan dari Bukti Potongmu sepanjang tahun \(dataPenghasilan.periode), kamu sudah membayar pajak sebesar \(dataPenghasilan.jumlahPphPotong.reduce(0, +))."
+        penghasilanSetahun.text = "Sepanjang tahun \(dataPenghasilan.periode), kamu memiliki penghasilan sebesar Rp.\(dataPenghasilan.penghasilanTahun)"
+        penghasilanNeto1.text = "Karena pekerjaanmu adalah \(dataPenghasilan.pekerjaan), maka NPPN-mu adalah sebesar \(dataPenghasilan.nppn)%."
+        penghasilanNeto2.text = "Penghasilan netomu didapatkan dari jumlah penghasilan x NPPN, sehingga jumlahnya adalah Rp. \(dataPenghasilan.nppn * dataPenghasilan.penghasilanTahun/100)."
+        JumlahPajak.text = "Sementara itu, berdasarkan jumlah PPh Dipotong yang kamu lampirkan dari Bukti Potongmu sepanjang tahun \(dataPenghasilan.periode), kamu sudah membayar pajak sebesar Rp. \(dataPenghasilan.jumlahPphPotong.reduce(0, +))."
     }
     @objc func miniView() {
             let slideVC = PenghasilanNettoViewController()
