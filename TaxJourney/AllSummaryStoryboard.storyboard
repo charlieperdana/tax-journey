@@ -11,7 +11,6 @@
         <!--Navigation Controller-->
         <scene sceneID="q7P-3q-htE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uTD-JX-W0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="zEn-LR-aA2" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XdW-dX-rjL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -21,6 +20,7 @@
                         <segue destination="gKA-Sq-pH3" kind="relationship" relationship="rootViewController" id="89c-Uz-aOc"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTD-JX-W0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="500" y="68"/>
         </scene>
@@ -45,16 +45,25 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbN-Wi-MSt">
-                                                <rect key="frame" x="16" y="48" width="382" height="235"/>
+                                                <rect key="frame" x="16" y="48" width="382" height="224"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-zk-Tz9">
-                                                        <rect key="frame" x="16" y="16" width="350" height="203"/>
+                                                        <rect key="frame" x="16" y="16" width="350" height="41"/>
                                                         <string key="text">Sepanjang tahun 2020, kamu memiliki
-penghasilan sebesar Rp100.000.000.
-
-Karena pekerjaanmu Web Developer, maka NPPN-mu adalah sebesar 2%.
-
-Dengan begitu, kamu memiliki 
+penghasilan sebesar Rp100.000.000.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Karena pekerjaanmu Web Developer, maka NPPN-mu adalah sebesar 2%." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efM-Mx-U0S">
+                                                        <rect key="frame" x="16" y="73" width="350" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVl-5X-gw1">
+                                                        <rect key="frame" x="16" y="130" width="350" height="81.5"/>
+                                                        <string key="text">Dengan begitu, kamu memiliki 
 penghasilan neto sebesar
 Rp100.000.000 * 2%
 = Rp2.000.000.</string>
@@ -65,28 +74,39 @@ Rp100.000.000 * 2%
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="UWO-zk-Tz9" firstAttribute="leading" secondItem="SbN-Wi-MSt" secondAttribute="leading" constant="16" id="84S-3r-3hF"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="224" id="X6c-e3-dym"/>
-                                                    <constraint firstItem="UWO-zk-Tz9" firstAttribute="top" secondItem="SbN-Wi-MSt" secondAttribute="top" constant="16" id="eEZ-dT-OT1"/>
-                                                    <constraint firstAttribute="bottom" secondItem="UWO-zk-Tz9" secondAttribute="bottom" constant="16" id="ghz-JK-dV6"/>
-                                                    <constraint firstAttribute="trailing" secondItem="UWO-zk-Tz9" secondAttribute="trailing" constant="16" id="hoA-dG-yk7"/>
+                                                    <constraint firstAttribute="width" constant="382" id="1Z5-3n-6QT"/>
+                                                    <constraint firstItem="efM-Mx-U0S" firstAttribute="top" secondItem="UWO-zk-Tz9" secondAttribute="bottom" constant="16" id="EY6-Tn-uTu"/>
+                                                    <constraint firstItem="UWO-zk-Tz9" firstAttribute="top" secondItem="SbN-Wi-MSt" secondAttribute="top" constant="16" id="Gmp-jY-rq0"/>
+                                                    <constraint firstItem="efM-Mx-U0S" firstAttribute="leading" secondItem="SbN-Wi-MSt" secondAttribute="leading" constant="16" id="HPe-ZN-oGs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="efM-Mx-U0S" secondAttribute="trailing" constant="16" id="HkD-Nc-H0W"/>
+                                                    <constraint firstAttribute="height" constant="224" id="L6T-cb-JfE"/>
+                                                    <constraint firstItem="aVl-5X-gw1" firstAttribute="top" secondItem="efM-Mx-U0S" secondAttribute="bottom" constant="16" id="hdd-Yl-zyR"/>
+                                                    <constraint firstItem="UWO-zk-Tz9" firstAttribute="leading" secondItem="SbN-Wi-MSt" secondAttribute="leading" constant="16" id="hsO-XU-AKR"/>
+                                                    <constraint firstItem="aVl-5X-gw1" firstAttribute="leading" secondItem="SbN-Wi-MSt" secondAttribute="leading" constant="16" id="jD7-PB-Mwe"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aVl-5X-gw1" secondAttribute="trailing" constant="16" id="orX-I2-fAb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UWO-zk-Tz9" secondAttribute="trailing" constant="16" id="sWV-Ms-cLy"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perhitungan PTKP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-Jy-V3d">
-                                                <rect key="frame" x="16" y="307" width="159" height="24"/>
+                                                <rect key="frame" x="16" y="296" width="159" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETp-gr-tS6">
-                                                <rect key="frame" x="16" y="339" width="382" height="208"/>
+                                                <rect key="frame" x="16" y="328" width="382" height="208"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbN-cu-9f3">
-                                                        <rect key="frame" x="16" y="16" width="350" height="176"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZL4-BP-ltS">
+                                                        <rect key="frame" x="16" y="16" width="350" height="81.5"/>
                                                         <string key="text">Karena kamu sudah menikah dan memiliki 3 orang tanggungan, 
-maka jumlah PTKP-mu berjumlah RpXXX.XXX
-
-Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX
+maka jumlah PTKP-mu berjumlah RpXXX.XXX</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swH-MI-29V">
+                                                        <rect key="frame" x="16" y="113.5" width="350" height="61"/>
+                                                        <string key="text">Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX
 = RpXXX.XXX</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -95,21 +115,24 @@ Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="vbN-cu-9f3" secondAttribute="trailing" constant="16" id="FZH-1Z-KT8"/>
-                                                    <constraint firstAttribute="bottom" secondItem="vbN-cu-9f3" secondAttribute="bottom" constant="16" id="bYn-xI-0Rf"/>
-                                                    <constraint firstItem="vbN-cu-9f3" firstAttribute="top" secondItem="ETp-gr-tS6" secondAttribute="top" constant="16" id="jAO-mj-sQ5"/>
-                                                    <constraint firstItem="vbN-cu-9f3" firstAttribute="leading" secondItem="ETp-gr-tS6" secondAttribute="leading" constant="16" id="kev-kD-pWW"/>
-                                                    <constraint firstAttribute="height" constant="208" id="oY6-Ym-VXf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="swH-MI-29V" secondAttribute="trailing" constant="16" id="2Jh-l8-Igx"/>
+                                                    <constraint firstAttribute="height" constant="208" id="K9P-PO-QzT"/>
+                                                    <constraint firstItem="swH-MI-29V" firstAttribute="leading" secondItem="ETp-gr-tS6" secondAttribute="leading" constant="16" id="R7S-B8-1BK"/>
+                                                    <constraint firstItem="ZL4-BP-ltS" firstAttribute="top" secondItem="ETp-gr-tS6" secondAttribute="top" constant="16" id="USC-KF-nO9"/>
+                                                    <constraint firstItem="swH-MI-29V" firstAttribute="top" secondItem="ZL4-BP-ltS" secondAttribute="bottom" constant="16" id="bES-ht-iy2"/>
+                                                    <constraint firstAttribute="width" constant="382" id="dpR-ai-fjC"/>
+                                                    <constraint firstItem="ZL4-BP-ltS" firstAttribute="leading" secondItem="ETp-gr-tS6" secondAttribute="leading" constant="16" id="i9s-ol-p17"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZL4-BP-ltS" secondAttribute="trailing" constant="16" id="wTh-16-P5u"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah Utang Pajak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSo-N7-R6K">
-                                                <rect key="frame" x="16" y="571" width="174" height="24"/>
+                                                <rect key="frame" x="16" y="560" width="174" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDL-QA-4LT">
-                                                <rect key="frame" x="16" y="603" width="382" height="189"/>
+                                                <rect key="frame" x="16" y="592" width="382" height="189"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah utang pajakmu adalah sebesar:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLk-n8-Wx9">
                                                         <rect key="frame" x="16" y="16" width="296" height="21"/>
@@ -180,33 +203,34 @@ Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="S67-JS-cCK" firstAttribute="top" secondItem="4vH-FM-zzx" secondAttribute="bottom" constant="5" id="1HX-CQ-Zca"/>
-                                                    <constraint firstItem="YCm-Eg-mHP" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="4GT-vP-TFb"/>
-                                                    <constraint firstAttribute="trailing" secondItem="S67-JS-cCK" secondAttribute="trailing" constant="16" id="APS-Vv-Obw"/>
-                                                    <constraint firstAttribute="trailing" secondItem="4vH-FM-zzx" secondAttribute="trailing" constant="16" id="Ewr-dI-xY9"/>
-                                                    <constraint firstItem="b3l-NA-j9u" firstAttribute="top" secondItem="nkp-UA-5q9" secondAttribute="bottom" constant="8" id="FnO-kw-C58"/>
-                                                    <constraint firstItem="YCm-Eg-mHP" firstAttribute="top" secondItem="mLk-n8-Wx9" secondAttribute="bottom" constant="8" id="GgI-sH-xs6"/>
-                                                    <constraint firstItem="nMP-LI-68A" firstAttribute="top" secondItem="W7L-W0-fJZ" secondAttribute="bottom" constant="5" id="J4p-xj-Qjd"/>
-                                                    <constraint firstAttribute="trailing" secondItem="D54-hl-aQZ" secondAttribute="trailing" constant="16" id="P8g-Qm-MHb"/>
-                                                    <constraint firstAttribute="trailing" secondItem="UG3-58-00U" secondAttribute="trailing" constant="16" id="TRT-11-dOS"/>
-                                                    <constraint firstItem="b3l-NA-j9u" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="Vif-3R-i6W"/>
-                                                    <constraint firstItem="4vH-FM-zzx" firstAttribute="top" secondItem="UG3-58-00U" secondAttribute="bottom" constant="5" id="XNJ-Ah-zen"/>
-                                                    <constraint firstAttribute="trailing" secondItem="L4m-cw-6Vj" secondAttribute="trailing" constant="16" id="b6F-f0-D5j"/>
-                                                    <constraint firstItem="W7L-W0-fJZ" firstAttribute="top" secondItem="YCm-Eg-mHP" secondAttribute="bottom" constant="5" id="cfK-Dg-va2"/>
-                                                    <constraint firstItem="nkp-UA-5q9" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="eJ2-gH-Etz"/>
-                                                    <constraint firstItem="mLk-n8-Wx9" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="iYU-zG-kEa"/>
-                                                    <constraint firstItem="UG3-58-00U" firstAttribute="top" secondItem="mLk-n8-Wx9" secondAttribute="bottom" constant="8" id="j9P-j1-bpw"/>
-                                                    <constraint firstItem="W7L-W0-fJZ" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="l1H-YD-TvS"/>
-                                                    <constraint firstItem="nMP-LI-68A" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="lpT-NQ-e0R"/>
-                                                    <constraint firstItem="nkp-UA-5q9" firstAttribute="top" secondItem="nMP-LI-68A" secondAttribute="bottom" constant="5" id="n8b-5v-iSH"/>
-                                                    <constraint firstItem="L4m-cw-6Vj" firstAttribute="top" secondItem="D54-hl-aQZ" secondAttribute="bottom" constant="8" id="nl5-7Z-Om4"/>
-                                                    <constraint firstItem="mLk-n8-Wx9" firstAttribute="top" secondItem="SDL-QA-4LT" secondAttribute="top" constant="16" id="rl8-Wh-ciE"/>
-                                                    <constraint firstItem="D54-hl-aQZ" firstAttribute="top" secondItem="S67-JS-cCK" secondAttribute="bottom" constant="5" id="sey-eB-H8l"/>
-                                                    <constraint firstAttribute="height" constant="189" id="xD3-ec-6Gz"/>
+                                                    <constraint firstAttribute="height" constant="189" id="00C-mH-k5l"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UG3-58-00U" secondAttribute="trailing" constant="16" id="1Y4-ZO-Gfz"/>
+                                                    <constraint firstItem="nkp-UA-5q9" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="25j-im-FzV"/>
+                                                    <constraint firstAttribute="width" constant="382" id="79o-V0-DgJ"/>
+                                                    <constraint firstItem="nMP-LI-68A" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="9Xw-K7-gl8"/>
+                                                    <constraint firstItem="S67-JS-cCK" firstAttribute="top" secondItem="4vH-FM-zzx" secondAttribute="bottom" constant="5" id="Bdi-GW-dTJ"/>
+                                                    <constraint firstItem="L4m-cw-6Vj" firstAttribute="top" secondItem="D54-hl-aQZ" secondAttribute="bottom" constant="8" id="BjX-H9-LzO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="S67-JS-cCK" secondAttribute="trailing" constant="16" id="HYg-qE-X75"/>
+                                                    <constraint firstItem="YCm-Eg-mHP" firstAttribute="top" secondItem="mLk-n8-Wx9" secondAttribute="bottom" constant="8" id="Kop-jD-loq"/>
+                                                    <constraint firstItem="nMP-LI-68A" firstAttribute="top" secondItem="W7L-W0-fJZ" secondAttribute="bottom" constant="5" id="RcZ-d6-oqQ"/>
+                                                    <constraint firstItem="b3l-NA-j9u" firstAttribute="top" secondItem="nkp-UA-5q9" secondAttribute="bottom" constant="8" id="U9s-kB-CbK"/>
+                                                    <constraint firstItem="nkp-UA-5q9" firstAttribute="top" secondItem="nMP-LI-68A" secondAttribute="bottom" constant="5" id="XDC-EN-HF0"/>
+                                                    <constraint firstItem="mLk-n8-Wx9" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="ZEp-p8-hGd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4vH-FM-zzx" secondAttribute="trailing" constant="16" id="arA-8u-7VR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="D54-hl-aQZ" secondAttribute="trailing" constant="16" id="cdm-cl-6vd"/>
+                                                    <constraint firstItem="W7L-W0-fJZ" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="d7e-FN-cTm"/>
+                                                    <constraint firstItem="D54-hl-aQZ" firstAttribute="top" secondItem="S67-JS-cCK" secondAttribute="bottom" constant="5" id="kB9-KC-b1A"/>
+                                                    <constraint firstItem="W7L-W0-fJZ" firstAttribute="top" secondItem="YCm-Eg-mHP" secondAttribute="bottom" constant="5" id="lJ7-z8-996"/>
+                                                    <constraint firstItem="mLk-n8-Wx9" firstAttribute="top" secondItem="SDL-QA-4LT" secondAttribute="top" constant="16" id="lzB-XD-OWk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="L4m-cw-6Vj" secondAttribute="trailing" constant="16" id="oAh-ao-JQg"/>
+                                                    <constraint firstItem="4vH-FM-zzx" firstAttribute="top" secondItem="UG3-58-00U" secondAttribute="bottom" constant="5" id="oBq-Xh-g4q"/>
+                                                    <constraint firstItem="b3l-NA-j9u" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="oVl-15-uY1"/>
+                                                    <constraint firstItem="UG3-58-00U" firstAttribute="top" secondItem="mLk-n8-Wx9" secondAttribute="bottom" constant="8" id="poE-lm-OZc"/>
+                                                    <constraint firstItem="YCm-Eg-mHP" firstAttribute="leading" secondItem="SDL-QA-4LT" secondAttribute="leading" constant="16" id="zcy-pb-uzg"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jK8-0j-mcA">
-                                                <rect key="frame" x="378" y="571" width="20" height="22"/>
+                                                <rect key="frame" x="378" y="560" width="20" height="22"/>
                                                 <color key="tintColor" red="0.20900556449999999" green="0.21290200949999999" blue="0.3372685909" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" image="info.circle" catalog="system"/>
                                                 <connections>
@@ -216,24 +240,24 @@ Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="ETp-gr-tS6" firstAttribute="top" secondItem="qCf-Jy-V3d" secondAttribute="bottom" constant="8" id="1kr-Nw-xS5"/>
-                                            <constraint firstItem="SDL-QA-4LT" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="2Fw-ts-Wgl"/>
-                                            <constraint firstAttribute="trailing" secondItem="SbN-Wi-MSt" secondAttribute="trailing" constant="16" id="2eQ-ap-9Jh"/>
-                                            <constraint firstItem="ETp-gr-tS6" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="8pM-nq-aak"/>
-                                            <constraint firstAttribute="trailing" secondItem="ETp-gr-tS6" secondAttribute="trailing" constant="16" id="GYV-3f-Ki4"/>
-                                            <constraint firstItem="SbN-Wi-MSt" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="H0y-Fe-6ek"/>
+                                            <constraint firstItem="oSo-N7-R6K" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="19o-uC-gFZ"/>
+                                            <constraint firstItem="SbN-Wi-MSt" firstAttribute="top" secondItem="DcR-aB-klX" secondAttribute="bottom" constant="8" id="2o2-Ya-bv9"/>
+                                            <constraint firstItem="ETp-gr-tS6" firstAttribute="top" secondItem="qCf-Jy-V3d" secondAttribute="bottom" constant="8" id="4bE-pi-OgB"/>
+                                            <constraint firstItem="SDL-QA-4LT" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="6Cy-g4-guO"/>
+                                            <constraint firstItem="oSo-N7-R6K" firstAttribute="top" secondItem="ETp-gr-tS6" secondAttribute="bottom" constant="24" id="DpT-b3-IpR"/>
                                             <constraint firstAttribute="trailing" secondItem="jK8-0j-mcA" secondAttribute="trailing" constant="16" id="Kkc-D6-jvY"/>
+                                            <constraint firstItem="SDL-QA-4LT" firstAttribute="top" secondItem="oSo-N7-R6K" secondAttribute="bottom" constant="8" id="PsB-wp-n9c"/>
+                                            <constraint firstItem="qCf-Jy-V3d" firstAttribute="top" secondItem="SbN-Wi-MSt" secondAttribute="bottom" constant="24" id="QC6-lS-0W2"/>
                                             <constraint firstAttribute="height" constant="920" id="QUF-vh-mlE"/>
-                                            <constraint firstItem="SDL-QA-4LT" firstAttribute="top" secondItem="oSo-N7-R6K" secondAttribute="bottom" constant="8" id="QUu-fH-c8n"/>
-                                            <constraint firstItem="qCf-Jy-V3d" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="Qo4-xq-CLl"/>
-                                            <constraint firstItem="oSo-N7-R6K" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="Ttj-gg-Sg8"/>
-                                            <constraint firstItem="oSo-N7-R6K" firstAttribute="top" secondItem="ETp-gr-tS6" secondAttribute="bottom" constant="24" id="Zrd-DA-z6e"/>
+                                            <constraint firstItem="ETp-gr-tS6" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="VPk-DD-GBO"/>
+                                            <constraint firstItem="SbN-Wi-MSt" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="ZTD-kY-b3A"/>
                                             <constraint firstItem="DcR-aB-klX" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="cgo-YF-BPp"/>
                                             <constraint firstItem="DcR-aB-klX" firstAttribute="top" secondItem="M5Q-qe-ovp" secondAttribute="top" constant="16" id="eOt-SI-F7J"/>
-                                            <constraint firstItem="jK8-0j-mcA" firstAttribute="top" secondItem="ETp-gr-tS6" secondAttribute="bottom" constant="24" id="oPJ-lx-Lwq"/>
-                                            <constraint firstItem="qCf-Jy-V3d" firstAttribute="top" secondItem="SbN-Wi-MSt" secondAttribute="bottom" constant="24" id="sOf-Mi-wwf"/>
-                                            <constraint firstAttribute="trailing" secondItem="SDL-QA-4LT" secondAttribute="trailing" constant="16" id="v1y-1A-Voc"/>
-                                            <constraint firstItem="SbN-Wi-MSt" firstAttribute="top" secondItem="DcR-aB-klX" secondAttribute="bottom" constant="8" id="wIo-dN-D9P"/>
+                                            <constraint firstItem="qCf-Jy-V3d" firstAttribute="leading" secondItem="M5Q-qe-ovp" secondAttribute="leading" constant="16" id="ein-LB-3lY"/>
+                                            <constraint firstAttribute="trailing" secondItem="SDL-QA-4LT" secondAttribute="trailing" constant="16" id="rYq-EC-vDV"/>
+                                            <constraint firstAttribute="trailing" secondItem="ETp-gr-tS6" secondAttribute="trailing" constant="16" id="s7o-Ot-SPI"/>
+                                            <constraint firstItem="jK8-0j-mcA" firstAttribute="top" secondItem="ETp-gr-tS6" secondAttribute="bottom" constant="24" id="sB8-sX-W8r"/>
+                                            <constraint firstAttribute="trailing" secondItem="SbN-Wi-MSt" secondAttribute="trailing" constant="16" id="t5K-HK-j3S"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -264,19 +288,34 @@ Penghasilanmu yang dikenai pajak RpXXX.XXX - RpXXX.XXX
                         <outlet property="jumlah4Lbl" destination="D54-hl-aQZ" id="C2m-nu-zLk"/>
                         <outlet property="jumlahView" destination="SDL-QA-4LT" id="3oF-zo-dlX"/>
                         <outlet property="jumlahtotalLbl" destination="L4m-cw-6Vj" id="Tvc-Sn-hUG"/>
-                        <outlet property="penghasilanLbl" destination="UWO-zk-Tz9" id="wt6-YE-5rl"/>
+                        <outlet property="neto" destination="aVl-5X-gw1" id="s3B-q6-uym"/>
+                        <outlet property="nppn" destination="efM-Mx-U0S" id="Znf-Pa-O48"/>
+                        <outlet property="penghasilan" destination="UWO-zk-Tz9" id="ZoN-Ic-vJ2"/>
+                        <outlet property="penghasilanKenaPajak" destination="swH-MI-29V" id="jhi-jY-NCk"/>
                         <outlet property="penghasilanView" destination="SbN-Wi-MSt" id="rz7-ZT-hr5"/>
-                        <outlet property="perhitunganLbl" destination="vbN-cu-9f3" id="o5j-Ue-Hc6"/>
                         <outlet property="perhitunganView" destination="ETp-gr-tS6" id="ax7-sq-HxC"/>
+                        <outlet property="tanggungan" destination="ZL4-BP-ltS" id="CvH-nV-w8K"/>
                         <outlet property="utang1Lbl" destination="YCm-Eg-mHP" id="Niz-UW-Lx4"/>
                         <outlet property="utang2Lbl" destination="W7L-W0-fJZ" id="pib-l6-vPz"/>
                         <outlet property="utang3Lbl" destination="nMP-LI-68A" id="3ko-Rl-NbA"/>
                         <outlet property="utang4Lbl" destination="nkp-UA-5q9" id="xJs-I3-i2a"/>
+                        <segue destination="V8k-LF-3Vn" kind="unwind" identifier="backKesimpulan" unwindAction="didUnwindtoKesimpulan:" id="zqw-TP-6hZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEO-IH-QIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="V8k-LF-3Vn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1362" y="68"/>
+            <point key="canvasLocation" x="1360.8695652173915" y="67.633928571428569"/>
+        </scene>
+        <!--Kesimpulan-->
+        <scene sceneID="zXA-NG-acU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KesimpulanStoryboard" referencedIdentifier="Kesimpulan" id="XEl-s1-Yha" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gEg-Rl-Xut"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCC-Lc-zR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="-402"/>
         </scene>
     </scenes>
     <resources>

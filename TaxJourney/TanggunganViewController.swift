@@ -8,6 +8,7 @@
 import UIKit
 
 var jumlahanak:Int = 0
+var jumlahtanggungan:Int = 0
 
 class Tanggungan:UITableViewCell {
     @IBOutlet weak var label:UILabel!
@@ -33,12 +34,13 @@ class TanggunganViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        stepperAnak.value = 0
 //        print(id!)
         tvTanggungan.delegate = self
         tvTanggungan.dataSource = self
         navigationItem.title = titleNavBar
         
-        let buttonBack = UIButton()
+        let buttonBack = UIButton(type: .system)
         buttonBack.setTitle("Back", for: .normal)
         buttonBack.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         buttonBack.addTarget(self, action: #selector(buttonBackTapped), for: .touchUpInside)
@@ -52,10 +54,12 @@ class TanggunganViewController: UIViewController, UITableViewDataSource, UITable
 //        print(id!)
         if titleNavBar == "Anak"{
             if cekPilihan1 == "Tidak" || (cekPilihan1 == "Ya" && jumlahanak > 0) {
+                jumlahtanggungan += jumlahanak
                 check = true
             } else { check = false }
         } else {
             if cekPilihan1 == "Tidak" || (cekPilihan1 == "Ya" && !cekPilihan2.isEmpty) {
+                if cekPilihan2 == "Ya" { jumlahtanggungan += 1 }
                 check = true
             } else { check = false }
         }
@@ -132,7 +136,7 @@ class TanggunganViewController: UIViewController, UITableViewDataSource, UITable
                 cell.separatorInset = UIEdgeInsets(top: 0, left: cell.bounds.size.width, bottom: 0, right: 0)
             case 3:
                 if cekPilihan1 == "Ya" {
-                    cell.label.text = "Tinggal dengan \(titleNavBar!)"
+                    cell.label.text = "\(titleNavBar!) masih berpenghasilan"
                     cell.picker.inputView = picker2
                     cell.picker.inputAccessoryView = toolbar
                     cell.picker.tag = 11

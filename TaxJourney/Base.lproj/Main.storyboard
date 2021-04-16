@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L5S-kV-saw">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -26,7 +26,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lsh-28-NcK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="lsh-28-NcK">
                                 <rect key="frame" x="75" y="180" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="hCd-OQ-Uc6"/>
@@ -78,7 +78,8 @@
                     <connections>
                         <outlet property="btnStart" destination="Ljm-8D-TAK" id="RCe-MR-TcM"/>
                         <outlet property="haiLabel" destination="QUt-BA-cfd" id="Jfl-qA-I54"/>
-                        <segue destination="Wcp-dO-Kgn" kind="presentation" identifier="toPenghasilanPerTahun" modalPresentationStyle="fullScreen" id="TjH-6q-Z89"/>
+                        <outlet property="imgLogo" destination="lsh-28-NcK" id="FYQ-oG-z2D"/>
+                        <segue destination="Wcp-dO-Kgn" kind="show" identifier="toPenghasilanPerTahun" id="TjH-6q-Z89"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -143,6 +144,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="500" height="500"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
