@@ -3,8 +3,5 @@
 
 TaxJourney for Your Personal Tax Calculation
 
-TAXJOURNEY
---------------------
-
-# header H1
-## header H2
+# TAXJOURNEY
+## Screenshoot
