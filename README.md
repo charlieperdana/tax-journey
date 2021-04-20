@@ -4,4 +4,6 @@
 TaxJourney for Your Personal Tax Calculation
 
 # TAXJOURNEY
+An app that provides personal tax counting simulation for freelancers (whose income per year is below IDR4,8Mio and who already have NPWP). This helps freelancers to understand how their personal tax is calculated, so they can take care of their own personal tax.
+
 ## Screenshoot
